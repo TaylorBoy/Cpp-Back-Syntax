@@ -1,0 +1,56 @@
+#include <iostream>
+#include <stdexcept>  //runtime_error
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+ifstream& openFile(ifstream &in, const string &fileName)
+{
+    in.close();
+    in.clear();
+    in.open(fileName.c_str());
+    return in;
+}
+
+std::istream& get(std::istream& in)
+{
+    //该函数应一直读取流
+    int val;
+
+    while (in >> val, !in.eof()){
+        if (in.bad()){
+            throw runtime_error("IO stream error!");
+        }
+        if (in.fail()) {
+            std::cerr << "Data error, try again." << std::endl;
+            in.clear();
+            in.ignore(200, '\n');
+            continue;
+        }
+        std::cout << "输入的数据是：" << val << std::endl;
+    }
+
+    in.clear();
+
+    return in;
+}
+
+int main()
+{
+    string fileName;
+    cout << "Input the file name: " ;
+    cin  >> fileName;
+
+    ifstream inFile;
+    openFile(inFile, fileName);
+
+    if (!inFile){
+        cerr << "Can not open the file: " << fileName << endl;
+        return -1;
+    }
+    get(inFile);
+
+
+    return 0;
+}
