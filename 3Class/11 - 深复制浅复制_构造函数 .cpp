@@ -18,7 +18,7 @@ public :
         strcpy(this->str, cpp_str);
     }
 
-    //C++默认写一个复制构造函数
+    // C++默认写一个复制构造函数
     // 深复制: 指针复制, 指正所指向的对象也复制
     // 浅复制: 指针复制, 指正所指向的对象没复制, 指向了同一对象
 
@@ -32,6 +32,7 @@ public :
             strcpy(this->str, c.str);
         }
     }
+
 
     // 浅复制:
 /*    CppDemo(CppDemo &c)
