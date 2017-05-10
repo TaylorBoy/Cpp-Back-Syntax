@@ -4,7 +4,7 @@
 #include <iterator>
 using namespace std;
 
-/* heap Ëã·¨--ÌØÊâ¶ş²æÊ÷
+/* heap ç®—æ³•--ç‰¹æ®ŠäºŒå‰æ ‘
  *
  */
 
@@ -21,32 +21,32 @@ int main()
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //make_heap() ±ä³É¶Ñ
+    //make_heap() å˜æˆå †
     make_heap(vec.begin(),vec.end());
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //pop_heap(),Î´É¾³ı
+    //pop_heap(),æœªåˆ é™¤
     pop_heap(vec.begin(),vec.end());
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //³ÉÔ±º¯Êı£¬É¾³ı ³öÕ»
+    //æˆå‘˜å‡½æ•°ï¼Œåˆ é™¤ å‡ºæ ˆ
     vec.pop_back();
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //³ÉÔ±º¯Êı£¬ÈëÕ»
+    //æˆå‘˜å‡½æ•°ï¼Œå…¥æ ˆ
     vec.push_back(12);
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //push_heap(),°Ñ12¼ÓÈë¶Ñ£¬±ä³ÉĞÂµÄ¶Ñ
+    //push_heap(),æŠŠ12åŠ å…¥å †ï¼Œå˜æˆæ–°çš„å †
     push_heap(vec.begin(),vec.end());
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //sort_heap()£¬°Ñheap±ä³ÉÆÕÍ¨ÅÅĞò
+    //sort_heap()ï¼ŒæŠŠheapå˜æˆæ™®é€šæ’åº
     sort_heap(vec.begin(),vec.end());
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;

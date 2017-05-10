@@ -3,7 +3,7 @@
 
 using namespace std;
 
-/*文件流对象的使用*/
+/*鏂囦欢娴佸璞＄殑浣跨敤*/
 
 int main()
 {
@@ -11,23 +11,23 @@ int main()
     outFile << "wo le ge cao\nni ge dan dan!";
     outFile.close();
 
-    string fileName("main.cpp"); //必须是风格字符串
+    string fileName("main.cpp"); //蹇呴』鏄鏍煎瓧绗︿覆
     ifstream inFile(fileName.c_str());
-///    ifstream infile; 没有绑定文件
-///    infile.open(file.c_str());  //绑定
+///    ifstream infile; 娌℃湁缁戝畾鏂囦欢
+///    infile.open(file.c_str());  //缁戝畾
 
-    //逐个读取
-    cout << "第二次读取文件：\n";
+    //閫愪釜璇诲彇
+    cout << "绗簩娆¤鍙栨枃浠讹細\n";
     string str;
     while (inFile >> str ){
         cout << str << endl;
     }
-    inFile.close();  //inFile流状态：EOF
-    inFile.clear();  //恢复流状态，才能更好操作新的文件
+    inFile.close();  //inFile娴佺姸鎬侊細EOF
+    inFile.clear();  //鎭㈠娴佺姸鎬侊紝鎵嶈兘鏇村ソ鎿嶄綔鏂扮殑鏂囦欢
 
-    //逐个读取
+    //閫愪釜璇诲彇
     inFile.open("test.txt");
-    cout << "\n第二次读取文件：\n\n";
+    cout << "\n绗簩娆¤鍙栨枃浠讹細\n\n";
     while (inFile >> str){
         cout << str << endl;
     }

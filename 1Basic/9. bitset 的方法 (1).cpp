@@ -1,6 +1,6 @@
 #include <iostream>
 
-/*bitsetµÄ·½·¨*/
+/*bitsetçš„æ–¹æ³•*/
 #include <bitset>
 
 using namespace std;
@@ -10,18 +10,18 @@ int main()
     bitset<32> bit(888);
     cout << "bit888: " << bit << endl;
 
-    bool is_set = bit.any(); //ÖÁÉÙÓÐÒ»¸ö1
+    bool is_set = bit.any(); //è‡³å°‘æœ‰ä¸€ä¸ª1
     if (is_set){
-        cout << "bitÖÐÖÁÉÙÓÐÒ»¸ö1£¡\n";
+        cout << "bitä¸­è‡³å°‘æœ‰ä¸€ä¸ª1ï¼\n";
     }
 
-    bool no_set = bit.none(); //Ò»¸ö1¶¼Ã»ÓÐ
+    bool no_set = bit.none(); //ä¸€ä¸ª1éƒ½æ²¡æœ‰
     if (!no_set){
-        cout << "bitÖÐº¬ÓÐ1\n";
+        cout << "bitä¸­å«æœ‰1\n";
     }
 
-    cout << "bitµÄ´óÐ¡£º" << bit.size() << endl;
-    cout << "bit¹²ÓÐ " << bit.count() << " ¸ö1£¡\n";
+    cout << "bitçš„å¤§å°ï¼š" << bit.size() << endl;
+    cout << "bitå…±æœ‰ " << bit.count() << " ä¸ª1ï¼\n";
 
     return 0;
 }

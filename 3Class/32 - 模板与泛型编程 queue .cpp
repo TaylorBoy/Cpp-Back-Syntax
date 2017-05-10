@@ -3,15 +3,15 @@
 using namespace std;
 
 /*
-    *  Ä£°åºÍ·ºĞÍ±à³Ì
+    *  æ¨¡æ¿å’Œæ³›å‹ç¼–ç¨‹
 
-    1. Á½ÖÖÄ£°å: ÀàÄ£°å / º¯ÊıÄ£°å
-    2. ·ºĞÍ±à³Ì: Ö÷ÒªÓÃÓÚ ÈİÆ÷ / µü´úÆ÷ / Ëã·¨ (STL±ê×¼Ä£°å¿â)
+    1. ä¸¤ç§æ¨¡æ¿: ç±»æ¨¡æ¿ / å‡½æ•°æ¨¡æ¿
+    2. æ³›å‹ç¼–ç¨‹: ä¸»è¦ç”¨äº å®¹å™¨ / è¿­ä»£å™¨ / ç®—æ³• (STLæ ‡å‡†æ¨¡æ¿åº“)
 */
 
 /*
-    * Ë³Ğò¶ÓÁĞ: Êı×é
-    * Á´Ê½¶ÓÁĞ: Á´±í
+    * é¡ºåºé˜Ÿåˆ—: æ•°ç»„
+    * é“¾å¼é˜Ÿåˆ—: é“¾è¡¨
 */
 
 int main()
@@ -28,7 +28,7 @@ int main()
     q.Push('C');
     q.Push('D');
     cout << "size: " <<  q.GetSize() << "  Capacity: " << q.GetQueueSize() << endl;
-    q.Pop();  // ÏÈ½øÏÈ³ö
+    q.Pop();  // å…ˆè¿›å…ˆå‡º
     cout << "size: " <<  q.GetSize() << "  Capacity: " << q.GetQueueSize() << endl;    cout << "Front: " << q.Front() << "  Rear: " << q.Rear() << endl;
 
     return 0;
@@ -79,16 +79,16 @@ template<class T>
 void Queue<T>::Push(const T &item)
 {
 
-    // ¶ÓÁĞÂú, ĞèÔö¼Ó
+    // é˜Ÿåˆ—æ»¡, éœ€å¢åŠ 
     if (((rear+1) % capacity) == front)
     {
         std::cout << std::endl << "Add .." << std::endl;
 
-        // ¼Ó±¶
+        // åŠ å€
         T *newQueue = new T[2 * capacity];
 
         int start = (front + 1) % capacity;
-        if (start < 2) // Ã»ÓĞ»ØÈÆ
+        if (start < 2) // æ²¡æœ‰å›ç»•
             std::copy(queue+start, queue+start+capacity-1, newQueue);  // [f00000r]
         else
         {
@@ -111,7 +111,7 @@ inline T& Queue<T>::Front(void) const
 {
     if (isEmpty())
         throw "Queue is empty !" ;
-    return queue[front+1];  // ¶ÓÊ×Îª¿Õ
+    return queue[front+1];  // é˜Ÿé¦–ä¸ºç©º
 }
 
 template<class T>
@@ -127,8 +127,8 @@ void Queue<T>::Pop(void)
 {
     if (isEmpty())
         throw "Queue Is empty, Cannot delete !";
-    front = (front + 1) % capacity;  // ÅĞ¶ÏÊÇ·ñ»ØÈÆ
-    queue[front].~T();  // ÓĞ¿ÉÄÜÎª¶ÔÏó, µ÷ÓÃËüµÄÄ£°åÀàÎö¹¹
+    front = (front + 1) % capacity;  // åˆ¤æ–­æ˜¯å¦å›ç»•
+    queue[front].~T();  // æœ‰å¯èƒ½ä¸ºå¯¹è±¡, è°ƒç”¨å®ƒçš„æ¨¡æ¿ç±»ææ„
 }
 
 template<class T>

@@ -2,31 +2,31 @@
 #include <string>
 using namespace std;
 
-/*ÀàµÄ³ÉÔ±º¯Êı*/
+/*ç±»çš„æˆå‘˜å‡½æ•°*/
 
 class SalesItem{
 
 public:
-        /// Íâ²¿³ÉÔ±º¯Êı£¬±ØĞëÏÈÉùÃ÷
+        /// å¤–éƒ¨æˆå‘˜å‡½æ•°ï¼Œå¿…é¡»å…ˆå£°æ˜
         void printAverage() const;
 
-        /// ÀàµÄÄÚ²¿³ÉÔ±º¯Êı
+        /// ç±»çš„å†…éƒ¨æˆå‘˜å‡½æ•°
         bool isSameItem(const SalesItem &rhs) const{
-            //this£ºµ±Ç°¶ÔÏó£¬thisÊÇÖ¸Õë
+            //thisï¼šå½“å‰å¯¹è±¡ï¼Œthisæ˜¯æŒ‡é’ˆ
             return (this->isbn == rhs.isbn);
         }
 
 public:
-        std::string isbn;   //ÊéºÅ
-        unsigned allSold;   //ÏúÁ¿
-        double revenue;     //ÊÕÈë
+        std::string isbn;   //ä¹¦å·
+        unsigned allSold;   //é”€é‡
+        double revenue;     //æ”¶å…¥
 };
 
-/// Íâ²¿³ÉÔ±º¯Êı£¬±ØĞëÏÈÉùÃ÷
+/// å¤–éƒ¨æˆå‘˜å‡½æ•°ï¼Œå¿…é¡»å…ˆå£°æ˜
 void SalesItem::printAverage() const
 {
-    //this->isbn = "0000";  const·ÅºóÃæĞŞÊÎ,²»ÄÜĞŞ¸Ä¡£
-    cout << "** Æ½¾ù **\n";
+    //this->isbn = "0000";  constæ”¾åé¢ä¿®é¥°,ä¸èƒ½ä¿®æ”¹ã€‚
+    cout << "** å¹³å‡ **\n";
 }
 
 
@@ -43,9 +43,9 @@ int main()
     item2.revenue = 450.00;
 
     if (item1.isSameItem(item2)){
-        cout << "ÕâÁ½¸öitemÊÇ  Ò»ÑùµÄ£¡\n";
+        cout << "è¿™ä¸¤ä¸ªitemæ˜¯  ä¸€æ ·çš„ï¼\n";
     }else{
-        cout << "ÕâÁ½¸öitemÊÇ²»Ò»ÑùµÄ£¡\n";
+        cout << "è¿™ä¸¤ä¸ªitemæ˜¯ä¸ä¸€æ ·çš„ï¼\n";
     }
 
     item1.printAverage();

@@ -3,31 +3,31 @@
 using namespace std;
 
 /*
- * Îö¹¹º¯Êý: C++×Ô¶¯´´½¨Ò»¸öºÏ³ÉµÄÎö¹¹º¯Êý
-             * Ö»ÄÜÓÐÒ»¸öÎö¹¹
+ * æžæž„å‡½æ•°: C++è‡ªåŠ¨åˆ›å»ºä¸€ä¸ªåˆæˆçš„æžæž„å‡½æ•°
+             * åªèƒ½æœ‰ä¸€ä¸ªæžæž„
  *
-   ÈýÔ­Ôò:  ÈôÐ´ÁËÎö¹¹º¯Êý
-            ¾ÍÒªÐ´¸´ÖÆ¹¹Ôìº¯Êý ºÍ ¸³Öµ²Ù×÷·û
+   ä¸‰åŽŸåˆ™:  è‹¥å†™äº†æžæž„å‡½æ•°
+            å°±è¦å†™å¤åˆ¶æž„é€ å‡½æ•° å’Œ èµ‹å€¼æ“ä½œç¬¦
  *
  */
 
 class NoName
 {
 public :
-    //¹¹Ôì: ÀýÈçnewÒ»¸östring¸øÖ¸Õë,ÕâÊ±±ØÐëÒªdelete,ËùÒÔÐèÒªÎö¹¹º¯Êý
+    //æž„é€ : ä¾‹å¦‚newä¸€ä¸ªstringç»™æŒ‡é’ˆ,è¿™æ—¶å¿…é¡»è¦delete,æ‰€ä»¥éœ€è¦æžæž„å‡½æ•°
     NoName():pStr(new string),i(0),d(0)
     {
-        //´ò¿ªÎÄ¼þ
-        //Á¬½ÓÊý¾Ý¿â
-        //¶¯Ì¬µÄ·ÖÅäÄÚ´æ
-        cout << "** ¹¹Ôìº¯Êý±»µ÷ÓÃÁË! **" << endl;
+        //æ‰“å¼€æ–‡ä»¶
+        //è¿žæŽ¥æ•°æ®åº“
+        //åŠ¨æ€çš„åˆ†é…å†…å­˜
+        cout << "** æž„é€ å‡½æ•°è¢«è°ƒç”¨äº†! **" << endl;
     }
-    //¸´ÖÆ
+    //å¤åˆ¶
     NoName(const NoName &t);
-    //¸³Öµ
+    //èµ‹å€¼
     NoName& operator = (const NoName &t);
 
-    //Îö¹¹, Ö»ÄÜÓÐÒ»¸ö
+    //æžæž„, åªèƒ½æœ‰ä¸€ä¸ª
     ~NoName();
 
 private:
@@ -38,18 +38,18 @@ private:
 
 
 /////////////////////
-//Îö¹¹
+//æžæž„
 NoName::~NoName()
 {
-    //¹Ø±ÕÎÄ¼þ
-    //¶Ï¿ªÊý¾Ý¿â
-    //ÊÍ·Å¶¯Ì¬·ÖÅäµÄÄÚ´æ
-    cout << "** Îö¹¹º¯Êý±»µ÷ÓÃÁË **" << endl;
+    //å…³é—­æ–‡ä»¶
+    //æ–­å¼€æ•°æ®åº“
+    //é‡Šæ”¾åŠ¨æ€åˆ†é…çš„å†…å­˜
+    cout << "** æžæž„å‡½æ•°è¢«è°ƒç”¨äº† **" << endl;
     delete pStr;
     pStr = NULL;
 }
 
-//¸´ÖÆ
+//å¤åˆ¶
 NoName::NoName(const NoName &t)
 {
     pStr = new string;
@@ -58,7 +58,7 @@ NoName::NoName(const NoName &t)
     d = t.d;
 }
 
-//¸³Öµ
+//èµ‹å€¼
 NoName &NoName::operator=(const NoName &t)
 {
     pStr = new string;
@@ -71,14 +71,14 @@ NoName &NoName::operator=(const NoName &t)
 
 
 ///////////////////////////////////////
-//              Ö÷º¯Êý
+//              ä¸»å‡½æ•°
 ///////////////////////////////////////
 
 int main()
 {
-    NoName n;  //Ò»¶ÔÒ»: ¹¹ÔìÓëÎö¹¹
+    NoName n;  //ä¸€å¯¹ä¸€: æž„é€ ä¸Žæžæž„
 
-    NoName *p = new NoName;  //ÕâÀïÐèÒªÁíÍâdelete Ö¸Õëp
+    NoName *p = new NoName;  //è¿™é‡Œéœ€è¦å¦å¤–delete æŒ‡é’ˆp
     delete p;
 
 

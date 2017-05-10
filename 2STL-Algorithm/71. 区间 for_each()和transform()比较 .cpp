@@ -6,17 +6,17 @@
 using namespace std;
 
 /*
- * for_each()   ËÙ¶È¿ì  ²»Áé»î
- * transform()  ËÙ¶ÈÂı  ·Ç³£Áé»î
+ * for_each()   é€Ÿåº¦å¿«  ä¸çµæ´»
+ * transform()  é€Ÿåº¦æ…¢  éå¸¸çµæ´»
  */
 
-//Æ½·½, for_each():ÒıÓÃ
+//å¹³æ–¹, for_each():å¼•ç”¨
 void square(int & elem)
 {
     elem *= elem;
 }
 
-//transform()£¬·µ»ØÖµ
+//transform()ï¼Œè¿”å›å€¼
 int square2(int elem)
 {
     return elem * elem;
@@ -38,12 +38,12 @@ int main()
     copy(b.begin(),b.end(), ostream_iterator<int>(cout, " "));
     cout << endl << "for_each to a: ";
 
-    //for_each£ºÒıÓÃĞŞ¸Ä
+    //for_eachï¼šå¼•ç”¨ä¿®æ”¹
     for_each(a.begin(),a.end(),square);
     copy(a.begin(),a.end(), ostream_iterator<int>(cout, " "));
     cout << endl << "transform ot b: ";
 
-    //transform£ºÃ¿´Î¶¼ÊÇ¿½±´
+    //transformï¼šæ¯æ¬¡éƒ½æ˜¯æ‹·è´
     transform(b.begin(),b.end(),b.begin(), square2);
     copy(b.begin(),b.end(), ostream_iterator<int>(cout, " "));
 

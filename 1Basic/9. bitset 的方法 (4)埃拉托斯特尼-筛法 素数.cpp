@@ -1,6 +1,6 @@
 #include <iostream>
 
-/*°£À­ÍĞË¹ÌØÄá¡ª¡ªÉ¸·¨*/
+/*åŸƒæ‹‰æ‰˜æ–¯ç‰¹å°¼â€”â€”ç­›æ³•*/
 #include <bitset>
 #include <cmath>
 
@@ -13,18 +13,18 @@ int main()
 
     bitset<max_num+1> numbers;
     numbers.set();
-    //numbers[0] ²»ÒªÁË
+    //numbers[0] ä¸è¦äº†
 
     numbers[1] = 0;
     for (int i(1); i != max_num; ++i){
         if (numbers[i]){
-            //É¸Ñ¡±¶Êı
+            //ç­›é€‰å€æ•°
             for (int j(i*i); j < max_num+1; j += i){
                 numbers[j] = 0;
             }
         }
     }
-    cout << "¹²ÓĞ£º" << numbers.count() << endl;
+    cout << "å…±æœ‰ï¼š" << numbers.count() << endl;
 
     for (int i(1); i != max_num+1; ++i){
         if (numbers[i]){

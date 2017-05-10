@@ -14,7 +14,7 @@ int main()
     for (vector<char>::iterator it = source.begin(); it != source.end(); ++it)
         cout << *it << ' ';  cout << endl;
 
-    //copy在同一个容器内部执行，内容覆盖
+    //copy鍦ㄥ悓涓�涓鍣ㄥ唴閮ㄦ墽琛岋紝鍐呭瑕嗙洊
     vector<char> c1(source.begin(), source.end());
 
     copy(c1.begin()+10, c1.begin()+16, c1.begin()+7);

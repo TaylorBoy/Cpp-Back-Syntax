@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 /*
- * bitset£¬¶ş½øÖÆ
+ * bitsetï¼ŒäºŒè¿›åˆ¶
  **/
 #include <bitset>
 
@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    bitset<32> a; //aµÄ´óĞ¡ÊÇ32Î»¶ş½øÖÆ£¬¶¼Îª0
+    bitset<32> a; //açš„å¤§å°æ˜¯32ä½äºŒè¿›åˆ¶ï¼Œéƒ½ä¸º0
     cout << "a32: " << a << endl;
 
     bitset<16> b(0xfeee); //1111 1110 1110 1110
@@ -22,9 +22,9 @@ int main()
     cout << "d10: " << d << endl;
 
     string str("1111111111010000110101");
-    bitset<32> e(str);      //È«²¿
-    bitset<16> f(str,2,8);  //½ØÈ¡
-    bitset<16> h(str,str.size()-8); //×îºónÎ»
+    bitset<32> e(str);      //å…¨éƒ¨
+    bitset<16> f(str,2,8);  //æˆªå–
+    bitset<16> h(str,str.size()-8); //æœ€ånä½
     cout << "e32: " << e << endl;
     cout << "f16: " << f << endl;
     cout << "h16: " << h << endl;

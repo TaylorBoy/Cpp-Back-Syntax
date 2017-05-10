@@ -5,11 +5,11 @@
 #include <iterator>
 using namespace std;
 
-/* É¾³ı--remove() remove_if()
+/* åˆ é™¤--remove() remove_if()
  *
- * ×¢Òâ£º
-    1. ²¢²»ÊÇÕæÕıÉ¾³ı£¬¶øÊÇ°ÑºóÃæµÄÔªËØÏòÇ°ÒÆ¶¯£¬¸²¸Ç±»É¾³ıÔªËØ
-    2. ·µ»ØĞÂµÄÂß¼­ÖÕµã¡££¨Êµ¼ÊÈİÆ÷ÄÚµÄÔªËØ¸öÊı²»±ä£©
+ * æ³¨æ„ï¼š
+    1. å¹¶ä¸æ˜¯çœŸæ­£åˆ é™¤ï¼Œè€Œæ˜¯æŠŠåé¢çš„å…ƒç´ å‘å‰ç§»åŠ¨ï¼Œè¦†ç›–è¢«åˆ é™¤å…ƒç´ 
+    2. è¿”å›æ–°çš„é€»è¾‘ç»ˆç‚¹ã€‚ï¼ˆå®é™…å®¹å™¨å†…çš„å…ƒç´ ä¸ªæ•°ä¸å˜ï¼‰
  */
 
 int main()
@@ -28,23 +28,23 @@ int main()
 
     //remove()
     list<int>::iterator end;
-    end = remove(int_list.begin(),int_list.end(), 4);  //·µ»ØºóÃæÃ»ÓĞ±»¸²¸ÇµÄµÚÒ»¸öÔªËØ
+    end = remove(int_list.begin(),int_list.end(), 4);  //è¿”å›åé¢æ²¡æœ‰è¢«è¦†ç›–çš„ç¬¬ä¸€ä¸ªå…ƒç´ 
 
 
-    cout << "É¾³ıºó£¬ºóÃæÔªËØÏòÇ°ÒÆ¶¯£º" << endl;
+    cout << "åˆ é™¤åï¼Œåé¢å…ƒç´ å‘å‰ç§»åŠ¨ï¼š" << endl;
     copy(int_list.begin(),int_list.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //Ê¹ÓÃÂß¼­ÖÕµã end
+    //ä½¿ç”¨é€»è¾‘ç»ˆç‚¹ end
     for (list<int>::iterator it = int_list.begin(); it != end; ++it)
         cout << *it << ' ';
 
-    //¹²É¾³ıµÄÔªËØ¸öÊı
-    cout << "    É¾³ı¸öÊı£º" << distance(end, int_list.end()) << endl;
+    //å…±åˆ é™¤çš„å…ƒç´ ä¸ªæ•°
+    cout << "    åˆ é™¤ä¸ªæ•°ï¼š" << distance(end, int_list.end()) << endl;
 
-    //ÕæÕıÉ¾³ı
+    //çœŸæ­£åˆ é™¤
     int_list.erase(end, int_list.end());
-    cout << "\nÕæÕıÉ¾³ı£º\n";
+    cout << "\nçœŸæ­£åˆ é™¤ï¼š\n";
     copy(int_list.begin(),int_list.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
@@ -60,14 +60,14 @@ int main()
 
     cout << endl << "vec: " << endl;
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
-    cout << endl << "ÕæÕıÉ¾³ı£º" << endl; ;
+    cout << endl << "çœŸæ­£åˆ é™¤ï¼š" << endl; ;
 
-    //ÕæÕıµÄÉ¾³ı£¬ÀûÓÃĞÂµÄÂß¼­ÖÕµã
-    vec.erase(remove(vec.begin(),vec.end(), 6), vec.end());  //É¾³ı6
+    //çœŸæ­£çš„åˆ é™¤ï¼Œåˆ©ç”¨æ–°çš„é€»è¾‘ç»ˆç‚¹
+    vec.erase(remove(vec.begin(),vec.end(), 6), vec.end());  //åˆ é™¤6
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl << "remove_if():" << endl;
 
-    //ÕæÕıÉ¾³ı£¬remove_if()
+    //çœŸæ­£åˆ é™¤ï¼Œremove_if()
     vec.erase(remove_if(vec.begin(),vec.end(), bind2nd(less<int>(), 4)), vec.end());
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;

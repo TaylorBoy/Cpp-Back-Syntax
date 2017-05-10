@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-/*Ö¸Õë*/
+/*æŒ‡é’ˆ*/
 
 using namespace std;
 
@@ -15,13 +15,13 @@ int main()
     cout << "sp: " << sp << endl;
 
     int ival = 0;
-    int *pi = 0;  //Ö¸ÕëÎª0£¬±íÊ¾²»Ö¸ÏòÈÎºÎ¶ÔÏó
-    int *pi2;     //Ã»ÓĞ³õÊ¼»¯
+    int *pi = 0;  //æŒ‡é’ˆä¸º0ï¼Œè¡¨ç¤ºä¸æŒ‡å‘ä»»ä½•å¯¹è±¡
+    int *pi2;     //æ²¡æœ‰åˆå§‹åŒ–
 
     int *pi3 = &ival;
-    //´íÎó£ºint *pi3 = ival;
+    //é”™è¯¯ï¼šint *pi3 = ival;
 
-    //ÍòÄÜÖ¸Õë
+    //ä¸‡èƒ½æŒ‡é’ˆ
     double val = 3.14;
     int val2 = 52;
     void *p = 0;
@@ -31,24 +31,24 @@ int main()
     cout << "int: " << p << endl;
 
 
-    //ÒıÓÃ
+    //å¼•ç”¨
     int test1 = 1024, test2 = 2048;
     int *p1 = &test1, *p2 = &test2;
-    int &ri = test1, &ri2 = test2; //ÒıÓÃ²»ÄÜÔÙ¸Ä±ä
+    int &ri = test1, &ri2 = test2; //å¼•ç”¨ä¸èƒ½å†æ”¹å˜
 
     cout << "test1: " << test1 << "," << *p1 << "," << ri << endl;
     cout << "test2: " << test2 << "," << *p2 << "," << ri2 << endl;
 
-    //Ö¸ÏòÖ¸ÕëµÄÖ¸Õë
+    //æŒ‡å‘æŒ‡é’ˆçš„æŒ‡é’ˆ
     int **pp = &p1;
     cout << "**pp: " << **pp << endl;
 
     const size_t arr_size = 5;
     int arr[arr_size] = {1,2,3,4,5};
     int *ap  = arr;
-    int *ap2 = ap + arr_size;  //³¬³öÄ©¶ËµÄÖ¸Õë
+    int *ap2 = ap + arr_size;  //è¶…å‡ºæœ«ç«¯çš„æŒ‡é’ˆ
 
-    cout << endl << "³¬³öÄ©¶ËµÄÖ¸Õë£º";
+    cout << endl << "è¶…å‡ºæœ«ç«¯çš„æŒ‡é’ˆï¼š";
     for (int *aptr = ap; aptr != ap2; ++aptr){
         cout << *aptr << ",";
     }

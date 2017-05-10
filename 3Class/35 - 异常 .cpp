@@ -3,16 +3,16 @@
 using namespace std;
 
 /*
-    Òì³£:
+    å¼‚å¸¸:
         try catch throw
 
-    Òì³£ÀàĞÍ:
-        * Êı×Ö
-        * ×Ö·û´®
-        * ¶ÔÏó
+    å¼‚å¸¸ç±»å‹:
+        * æ•°å­—
+        * å­—ç¬¦ä¸²
+        * å¯¹è±¡
 */
 
-// ´«Í³·½Ê½
+// ä¼ ç»Ÿæ–¹å¼
 double div(double n1, double n2)
 {
     if (0 == n2)
@@ -22,7 +22,7 @@ double div(double n1, double n2)
     return n1 / n2;
 }
 
-// Òì³£: Êı×Ö
+// å¼‚å¸¸: æ•°å­—
 double div2(double n1, double n2)
 {
     if (0 == n2)
@@ -33,45 +33,45 @@ double div2(double n1, double n2)
     return n1 / n2;
 }
 
-// Àà
+// ç±»
 class ErrorType{};
 void test(int *t)
 {
     if (NULL == t)
-        throw ErrorType(); // Å×³öÀàÒì³£
+        throw ErrorType(); // æŠ›å‡ºç±»å¼‚å¸¸
     else
         cout << "Nothding was done!" << endl;
 }
 
 int main()
 {
-    // ´«Í³´¦Àí
+    // ä¼ ç»Ÿå¤„ç†
     cout << "Classic: " << div(56, 8) << endl;
     cout << "Classic: " << div(56, 0) << endl;
 
     try
     {
-        // ÓĞ¿ÉÄÜ³öÏÖÒì³£µÄ´úÂë
+        // æœ‰å¯èƒ½å‡ºç°å¼‚å¸¸çš„ä»£ç 
         cout << "Exception: " << div2(8, 3) << endl;
         cout << "Exception: " << div2(8, 5) << endl;
-        // ²»Í¬µÄÒì³£ÀàĞÍĞèÒª¶à¸öcatch
+        // ä¸åŒçš„å¼‚å¸¸ç±»å‹éœ€è¦å¤šä¸ªcatch
         test(NULL);
     }
-    catch (int error) // int: Òì³£ÀàĞÍ
+    catch (int error) // int: å¼‚å¸¸ç±»å‹
     {
-        // ´¦ÀíÒì³£
-        cout << "Òì³£´úÂë: " << error << endl;
+        // å¤„ç†å¼‚å¸¸
+        cout << "å¼‚å¸¸ä»£ç : " << error << endl;
     }
     catch (ErrorType e)
     {
-        // catchÊÇÓĞĞòµÄ, Óöµ½Òì³£Ö´ĞĞcatchÖ®ºó¾Í½áÊøÁË,²»»á¼ÌĞøÖ´ĞĞ
+        // catchæ˜¯æœ‰åºçš„, é‡åˆ°å¼‚å¸¸æ‰§è¡Œcatchä¹‹åå°±ç»“æŸäº†,ä¸ä¼šç»§ç»­æ‰§è¡Œ
         cout << "2nd Catch !" << endl;
     }
     catch (...)
     {
-        // ÈÎÒâ, Ì«¶à¸öÒì³£ÁË
-        // ¾¡Á¿°ÑÖØÒªµÄÒì³£·ÅÇ°Ãæµ¥¶Àcatch
-        cout << "ÕâÀï×¥µÄÊÇÂ©ÍøÖ®Óã!" << endl;
+        // ä»»æ„, å¤ªå¤šä¸ªå¼‚å¸¸äº†
+        // å°½é‡æŠŠé‡è¦çš„å¼‚å¸¸æ”¾å‰é¢å•ç‹¬catch
+        cout << "è¿™é‡ŒæŠ“çš„æ˜¯æ¼ç½‘ä¹‹é±¼!" << endl;
     }
 
     return 0;

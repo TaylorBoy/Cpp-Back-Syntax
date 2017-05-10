@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-//¼ÇÂ¼
-class Record   /* ÕâÊÇÒ»¸öÍêÕûµÄÀà: Àà¶¨Òå,ÀàÉùÃ÷ */
+//è®°å½•
+class Record   /* è¿™æ˜¯ä¸€ä¸ªå®Œæ•´çš„ç±»: ç±»å®šä¹‰,ç±»å£°æ˜ */
 {
 
 
@@ -19,7 +19,7 @@ public:
 
 private:
     size byte_count;
-    string name;  //¼ÇÂ¼Ãû³Æ
+    string name;  //è®°å½•åç§°
 };
 
 int main()

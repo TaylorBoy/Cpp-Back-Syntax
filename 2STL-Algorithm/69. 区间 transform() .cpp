@@ -17,12 +17,12 @@ int main()
     cout << endl;
 
     //transform(b1, e1, b2, b3, op)
-    transform(vec.begin(),vec.end(),vec.begin(),vec.begin(),multiplies<int>()); //×Ô¼ºÏà³Ë
+    transform(vec.begin(),vec.end(),vec.begin(),vec.begin(),multiplies<int>()); //è‡ªå·±ç›¸ä¹˜
 
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    transform(vec.begin(),vec.end(),vec.rbegin(),back_inserter(lst), plus<int>()); //Í·ºÍÎ²Ïà¼Ó
+    transform(vec.begin(),vec.end(),vec.rbegin(),back_inserter(lst), plus<int>()); //å¤´å’Œå°¾ç›¸åŠ 
 
     copy(lst.begin(),lst.end(), ostream_iterator<int>(cout, " "));
     cout << endl;

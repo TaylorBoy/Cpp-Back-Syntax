@@ -5,15 +5,15 @@
 using namespace std;
 
 /*
-    函数对象: 二元
-    二元谓词: 二元函数对象的返回值为bool
+    鍑芥暟瀵硅薄: 浜屽厓
+    浜屽厓璋撹瘝: 浜屽厓鍑芥暟瀵硅薄鐨勮繑鍥炲�间负bool
 */
 
 template<typename elementType>
-class CMultiply  // 乘法
+class CMultiply  // 涔樻硶
 {
 public :
-    // 重载
+    // 閲嶈浇
     elementType operator()(const elementType &elem1, const elementType &elem2)
     {
         return elem1 * elem2;
@@ -22,7 +22,7 @@ public :
 
 int main()
 {
-    cout << "二元函数对象: " << endl;
+    cout << "浜屽厓鍑芥暟瀵硅薄: " << endl;
 
     vector<int> a, b;
 
@@ -32,7 +32,7 @@ int main()
         b.push_back(i);
 
     vector<int> vecResult;
-    vecResult.resize(10);  // 调整大小
+    vecResult.resize(10);  // 璋冩暣澶у皬
 
     transform(a.begin(), a.end(), b.begin(), vecResult.begin(), CMultiply<int>());
 

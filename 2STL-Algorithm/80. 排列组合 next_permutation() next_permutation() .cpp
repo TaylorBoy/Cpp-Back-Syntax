@@ -4,10 +4,10 @@
 #include <iterator>
 using namespace std;
 
-/* ÅÅÁĞ×éºÏ
-   * ±ØĞëÏÈÅÅĞò *
- * next_permutation() ÉıĞòÅÅÁĞ
- * prev_permutation() ½µĞòÅÅÁĞ
+/* æ’åˆ—ç»„åˆ
+   * å¿…é¡»å…ˆæ’åº *
+ * next_permutation() å‡åºæ’åˆ—
+ * prev_permutation() é™åºæ’åˆ—
  */
 
 int main()
@@ -18,8 +18,8 @@ int main()
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl << endl;
 
-    //ÉıĞòÅÅÁĞ
-    //×éºÏ£¬next_permutation()
+    //å‡åºæ’åˆ—
+    //ç»„åˆï¼Œnext_permutation()
     while (next_permutation(vec.begin(),vec.end()))
     {
         copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
@@ -28,8 +28,8 @@ int main()
 
     cout << endl << endl;
 
-    //½µĞòÅÅÁĞ
-    //ÉÏÒ»¸öÅÅÁĞ×éºÏ£¬prev_permutation()
+    //é™åºæ’åˆ—
+    //ä¸Šä¸€ä¸ªæ’åˆ—ç»„åˆï¼Œprev_permutation()
     vector<int> vec2;
     for (int i = 3; i > 0; --i)
         vec2.push_back(i);

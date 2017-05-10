@@ -3,28 +3,28 @@
 
 using namespace std;
 
-/*文件模式*/
+/*鏂囦欢妯″紡*/
 
 int main()
 {
     string str;
 
     ifstream inFile("file1.txt", ifstream::in);
-    //  可以省略 fstream inFile("file.txt");
+    //  鍙互鐪佺暐 fstream inFile("file.txt");
     inFile >> str;
     inFile.close();
     cout << str << endl;
 
-    /// 如果文件不存在，则新建一个空文件；若已存在，则清空原内容
-    //  ofstream outFile("file2.txt", ofstream::out | ofsream::trunc); //trunc截取
+    /// 濡傛灉鏂囦欢涓嶅瓨鍦紝鍒欐柊寤轰竴涓┖鏂囦欢锛涜嫢宸插瓨鍦紝鍒欐竻绌哄師鍐呭
+    //  ofstream outFile("file2.txt", ofstream::out | ofsream::trunc); //trunc鎴彇
     ofstream outFile("file2.txt", ofstream::out | ofstream::app);
     //  ofstream outFile("file2.txt");
     outFile << "Hello World !" << endl;
     outFile.close();
 
-    //  追加方式：ofstream outFile("file", ofstream::out | ofstream::app); //app: append
+    //  杩藉姞鏂瑰紡锛歰fstream outFile("file", ofstream::out | ofstream::app); //app: append
 
-    /// 既可以输入又可以输出
+    /// 鏃㈠彲浠ヨ緭鍏ュ張鍙互杈撳嚭
     fstream IOFile("file2.txt", fstream::in | fstream::out | fstream::app | fstream::ate); //ate:at end
     //  fstream IOFile("file2.txt");
     IOFile << "fstream";

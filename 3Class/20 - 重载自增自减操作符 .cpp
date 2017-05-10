@@ -4,7 +4,7 @@
 using namespace std;
 
 /*
- * ÖØÔØ×ÔÔö×Ô¼õ²Ù×÷·û: ++ --
+ * é‡è½½è‡ªå¢è‡ªå‡æ“ä½œç¬¦: ++ --
  */
 
 
@@ -17,9 +17,9 @@ public :
 
     void display();
 
-    //ÖØÔØ
-    String& operator++();  //Ç°++
-    String const operator++(int);  //ºó++
+    //é‡è½½
+    String& operator++();  //å‰++
+    String const operator++(int);  //å++
 
     String& operator--();
     String const operator--(int);
@@ -28,7 +28,7 @@ private:
     char *ptrChars;
 };
 
-// ¹¹Ôìº¯Êı yu Îö¹¹º¯Êı
+// æ„é€ å‡½æ•° yu ææ„å‡½æ•°
 String::String(char const *chars)
 {
     chars = chars ? chars : "";
@@ -55,7 +55,7 @@ void String::display()
 
 //////////////////////////////////////////////
 
-// ÖØÔØÇ°++
+// é‡è½½å‰++
 String& String::operator++()
 {
     for (std::size_t i = 0; i < std::strlen(ptrChars); ++i)
@@ -66,15 +66,15 @@ String& String::operator++()
     return *this;
 }
 
-// ÖØÔØºó++
+// é‡è½½å++
 String const String::operator++(int)
 {
     String str_copy(*this);
-    ++(*this);  //½èÓÃÇ°++
+    ++(*this);  //å€Ÿç”¨å‰++
     return str_copy;
 }
 
-// ÖØÔØ--
+// é‡è½½--
 String& String::operator--()
 {
     for (std::size_t i = 0; i < std::strlen(ptrChars); ++i)

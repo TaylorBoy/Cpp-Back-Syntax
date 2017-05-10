@@ -5,8 +5,8 @@
 #include <functional>  //greater
 using namespace std;
 
-/* 排序算法
- * sort()不适用于list容器
+/* 鎺掑簭绠楁硶
+ * sort()涓嶉�傜敤浜巐ist瀹瑰櫒
  */
 
 int main()
@@ -19,12 +19,12 @@ int main()
     copy(deq.begin(),deq.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //sort(),默认从小到大
+    //sort(),榛樿浠庡皬鍒板ぇ
     sort(deq.begin(),deq.end());
     copy(deq.begin(),deq.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //谓词
+    //璋撹瘝
     sort(deq.begin(),deq.end(), greater<int>());
     copy(deq.begin(),deq.end(), ostream_iterator<int>(cout, " "));
     cout << endl;

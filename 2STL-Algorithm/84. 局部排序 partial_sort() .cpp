@@ -4,7 +4,7 @@
 #include <iterator>
 using namespace std;
 
-/* ¾Ö²¿ÅÅĞò
+/* å±€éƒ¨æ’åº
  * partial_sort()
  */
 
@@ -21,12 +21,12 @@ int main()
     copy(deq.begin(),deq.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //ÅÅÇ°Ãæ5¸ö
+    //æ’å‰é¢5ä¸ª
     partial_sort(deq.begin(),deq.begin()+5, deq.end());
     copy(deq.begin(),deq.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //Î½´Ê
+    //è°“è¯
     partial_sort(deq.begin(),deq.begin()+5,deq.end(), greater<int>());
     copy(deq.begin(),deq.end(), ostream_iterator<int>(cout, " "));
     cout << endl;

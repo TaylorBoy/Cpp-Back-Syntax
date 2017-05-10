@@ -3,7 +3,7 @@
 #include <string>
 #include <cstring>
 
-/*stringºÍchar×Ö·û´®*/
+/*stringå’Œcharå­—ç¬¦ä¸²*/
 
 using namespace std;
 
@@ -33,7 +33,7 @@ int main()
         cout << s[i] << endl;
     }
 
-    //ÓÐnew¾ÍÒªÓÐdelete
+    //æœ‰newå°±è¦æœ‰delete
     for (int i = 0; i < vec.size(); ++i){
         delete[] s[i];
     }

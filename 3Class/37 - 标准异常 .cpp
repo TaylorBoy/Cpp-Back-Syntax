@@ -1,18 +1,18 @@
 #include <iostream>
 #include <bitset>
 #include <string>
-#include <stdexcept>  // Òì³£
+#include <stdexcept>  // å¼‚å¸¸
 using namespace std;
 
 /*
-    ±ê×¼Òì³£
+    æ ‡å‡†å¼‚å¸¸
     * exception
     * runtime_error
     * rang_error
     * overflow_error
     * underflow_error
     * logic_error
-    * invalid_argument      : ²ÎÊı´íÎó
+    * invalid_argument      : å‚æ•°é”™è¯¯
     * length_error
     * out_of_range          : throw out_of_range("Out of range !");
     * bad_alloc             : new
@@ -22,8 +22,8 @@ using namespace std;
 void test(int i)
 {
     if (i < 0 || i > 100)
-        throw out_of_range("³¬³ö·¶Î§ÁËÁË!!");
-    cout << "¸Õ¸ÕºÃ!!" << endl;
+        throw out_of_range("è¶…å‡ºèŒƒå›´äº†äº†!!");
+    cout << "åˆšåˆšå¥½!!" << endl;
 }
 
 int main()

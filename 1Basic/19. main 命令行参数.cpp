@@ -1,21 +1,21 @@
 #include <iostream>
 using namespace std;
 
-/*mainÃüÁîĞĞÑ¡Ïî*/
+/*mainå‘½ä»¤è¡Œé€‰é¡¹*/
 
-/// argc Ñ¡Ïî¸öÊı£»argv Ã¿Ò»¸öÑ¡ÏîÊÇÒ»¸ö×Ö·û´®
+/// argc é€‰é¡¹ä¸ªæ•°ï¼›argv æ¯ä¸€ä¸ªé€‰é¡¹æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²
 int main(int argc, char **argv)
 {
     for (int i = 0; i < argc; ++i){
         cout << argv[i] << endl;
     }
-    //argv[0] ÊÇ³ÌĞòÃû
+    //argv[0] æ˜¯ç¨‹åºå
 
     return 0;
 }
 
 
-//¼ÆËãÁ½¸öÊıÖ®ºÍ/*
+//è®¡ç®—ä¸¤ä¸ªæ•°ä¹‹å’Œ/*
 main (int argc, char **agrv)
 {
 	if (3 == argc){

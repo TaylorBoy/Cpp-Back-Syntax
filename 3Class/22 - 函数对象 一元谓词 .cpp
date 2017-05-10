@@ -5,10 +5,10 @@
 using namespace std;
 
 /*
- * º¯Êı¶ÔÏó: Ò»Ôª
+ * å‡½æ•°å¯¹è±¡: ä¸€å…ƒ
 
-   * Î½´Ê: ·µ»ØboolĞÍ
-     Ò»ÔªÎ½´Ê: Ò»Ôªº¯Êı¶ÔÏóµÄ·µ»ØÖµÀàĞÍÎªbool
+   * è°“è¯: è¿”å›boolå‹
+     ä¸€å…ƒè°“è¯: ä¸€å…ƒå‡½æ•°å¯¹è±¡çš„è¿”å›å€¼ç±»å‹ä¸ºbool
  */
 
 template<typename numberType>
@@ -21,7 +21,7 @@ struct IsMultiple
         m_Divisor = divisor;
     }
 
-    // ÖØÔØº¯Êıµ÷ÓÃ²Ù×÷·û
+    // é‡è½½å‡½æ•°è°ƒç”¨æ“ä½œç¬¦
     bool operator()(const numberType &element) const
     {
         return ((element % m_Divisor) == 0);
@@ -38,11 +38,11 @@ int main()
 
     vector<int>::iterator iElement;
     iElement = find_if(vecIntegers.begin(), vecIntegers.end(), a);
-    // ÄäÃû¶ÔÏó: find_if(vecIntegers.begin(), vecIntegers.end(), IsMultiple<int>(4));
+    // åŒ¿åå¯¹è±¡: find_if(vecIntegers.begin(), vecIntegers.end(), IsMultiple<int>(4));
 
     if (iElement != vecIntegers.end());
     {
-        cout << "µÚÒ»¸ö4µÄÕûÊı±¶ÊıÊÇ: " << *iElement << endl;
+        cout << "ç¬¬ä¸€ä¸ª4çš„æ•´æ•°å€æ•°æ˜¯: " << *iElement << endl;
     }
 
     return 0;

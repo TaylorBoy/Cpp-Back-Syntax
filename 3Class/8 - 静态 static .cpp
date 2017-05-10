@@ -3,9 +3,9 @@
 using namespace std;
 
 /*
- * ¾²Ì¬: static
-        * ¾²Ì¬¾ÍÊÇÖ»ÓĞÒ»¸ö,¹²ÓÃÍ¬Ò»¸ö
-        * ¾¡Á¿ÓÃ¾²Ì¬³ÉÔ±, ÉÙÓÃÈ«¾Ö±äÁ¿,È«¾Öº¯Êı
+ * é™æ€: static
+        * é™æ€å°±æ˜¯åªæœ‰ä¸€ä¸ª,å…±ç”¨åŒä¸€ä¸ª
+        * å°½é‡ç”¨é™æ€æˆå‘˜, å°‘ç”¨å…¨å±€å˜é‡,å…¨å±€å‡½æ•°
  *
  */
 
@@ -24,24 +24,24 @@ public :
 
     static void SetInterestRate(double rate)
     {
-        //¾²Ì¬±äÁ¿²»ÊôÓÚ¶ÔÏó,²»ÄÜÓÃthis¹Ø¼ü×Ö
+        //é™æ€å˜é‡ä¸å±äºå¯¹è±¡,ä¸èƒ½ç”¨thiså…³é”®å­—
         interest_rate = rate;
     }
 
 private:
     string owner;
     double money;
-    static double interest_rate;  //ÀûÂÊ,Ö»ÓĞÒ»¸ö
-    //ÀıÍâ: ¾²Ì¬ÕûĞÎ³£Á¿¿ÉÒÔÔÚ´Ë³õÊ¼»¯
+    static double interest_rate;  //åˆ©ç‡,åªæœ‰ä¸€ä¸ª
+    //ä¾‹å¤–: é™æ€æ•´å½¢å¸¸é‡å¯ä»¥åœ¨æ­¤åˆå§‹åŒ–
     static const int CHANG_LIANG = 5;
 };
 
-//³õÊ¼»¯¾²Ì¬±äÁ¿, Ë½ÓĞ
+//åˆå§‹åŒ–é™æ€å˜é‡, ç§æœ‰
 double Account::interest_rate = 0.015;
 
 
 ///////////////////////////////////////
-//              Ö÷º¯Êı
+//              ä¸»å‡½æ•°
 ///////////////////////////////////////
 int main()
 {
@@ -50,7 +50,7 @@ int main()
 
     cout << "Interest Rate: " << a.GetInterestRate() << endl;
 
-    //¾²Ì¬,¿ÉÒÔ²»ĞèÒª¶ÔÏóÀ´³õÊ¼»¯
+    //é™æ€,å¯ä»¥ä¸éœ€è¦å¯¹è±¡æ¥åˆå§‹åŒ–
     Account::SetInterestRate(0.026);
 
     cout << a.GetName() << ": " << a.GetMoney() << endl;

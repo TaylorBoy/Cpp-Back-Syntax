@@ -3,17 +3,17 @@
 using namespace std;
 
 /*
- *  ÓÑÔª:
-        ÓÑÔªÆÕÍ¨º¯Êı
-        ÓÑÔªÀà
-        ÓÑÔªµÄÀàµÄ³ÉÔ±º¯Êı
+ *  å‹å…ƒ:
+        å‹å…ƒæ™®é€šå‡½æ•°
+        å‹å…ƒç±»
+        å‹å…ƒçš„ç±»çš„æˆå‘˜å‡½æ•°
  *
  */
 
-class Screen;  //ÌáÇ°ÉùÃ÷
+class Screen;  //æå‰å£°æ˜
 
 //////////////////////////////////////
-//ÓÑÔª¶ÔÏó
+//å‹å…ƒå¯¹è±¡
 class MyScreen
 {
 public :
@@ -23,21 +23,21 @@ public :
 };
 
 /////////////////////////////////////
-//ÓÑÔª³ÉÔ±º¯Êı
+//å‹å…ƒæˆå‘˜å‡½æ•°
 class YourScreen
 {
 public :
-    //ÓÑÔª³ÉÔ±º¯Êı
+    //å‹å…ƒæˆå‘˜å‡½æ•°
     string GetContent(Screen &s);
 
-    //·ÇÓÑÔª³ÉÔ±º¯Êı, ²»ÄÜµ÷ÓÃScreenµÄ³ÉÔ±
+    //éå‹å…ƒæˆå‘˜å‡½æ•°, ä¸èƒ½è°ƒç”¨Screençš„æˆå‘˜
     void GetSomething(Screen &s);
 
 
 };
 
 ///////////////////////////////////////////
-// ²âÊÔÀà
+// æµ‹è¯•ç±»
 class Screen
 {
 public :
@@ -52,11 +52,11 @@ public :
         return height * width;
     }
 
-    //ÓÑÔªº¯Êı
+    //å‹å…ƒå‡½æ•°
     friend int CalcArea(Screen &screen);
-    //ÓÑÔª¶ÔÏó
+    //å‹å…ƒå¯¹è±¡
     friend class MyScreen;
-    //ÓÑÔª³ÉÔ±º¯Êı
+    //å‹å…ƒæˆå‘˜å‡½æ•°
     friend string YourScreen::GetContent(Screen &s);
 
 
@@ -67,38 +67,38 @@ private:
 };
 
 
-////////////////////// º¯Êı¶¨Òå /////////////////////////
+////////////////////// å‡½æ•°å®šä¹‰ /////////////////////////
 
-//Õâ²»ÊÇÀàµÄ³ÉÔ±º¯Êı, ÊÇÆÕÍ¨º¯Êı
+//è¿™ä¸æ˜¯ç±»çš„æˆå‘˜å‡½æ•°, æ˜¯æ™®é€šå‡½æ•°
 int CalcArea(Screen &screen)
 {
     return screen.height * screen.width;
 }
 
 
-//ÓÑÔª¶ÔÏóµÄº¯Êı
+//å‹å…ƒå¯¹è±¡çš„å‡½æ•°
 int MyScreen::GetArea(Screen &s)
 {
     return (s.height+2) * (s.width+2);
 }
 
-//ÓÑÔª³ÉÔ±º¯Êı
+//å‹å…ƒæˆå‘˜å‡½æ•°
 string YourScreen::GetContent(Screen &s)
 {
     return s.contents;
 }
 
-//·ÇÓÑÔª³ÉÔ±º¯Êı, ²»ÄÜµ÷ÓÃScreenµÄ³ÉÔ±
+//éå‹å…ƒæˆå‘˜å‡½æ•°, ä¸èƒ½è°ƒç”¨Screençš„æˆå‘˜
 void YourScreen::GetSomething(Screen &s)
 {
-    //cout << s.contents << endl; //ÕâÊÇ´íÎóµÄ
+    //cout << s.contents << endl; //è¿™æ˜¯é”™è¯¯çš„
 }
 
 
 
 
 ///////////////////////////////////////
-//              Ö÷º¯Êı
+//              ä¸»å‡½æ•°
 ///////////////////////////////////////
 int main()
 {
@@ -106,11 +106,11 @@ int main()
     MyScreen m;
     YourScreen y;
 
-    cout << "ÓÑÔªÆÕÍ¨º¯Êı: " << CalcArea(s) << endl;
+    cout << "å‹å…ƒæ™®é€šå‡½æ•°: " << CalcArea(s) << endl;
 
-    cout << "ÓÑÔª¶ÔÏó: " << m.GetArea(s) << endl;
+    cout << "å‹å…ƒå¯¹è±¡: " << m.GetArea(s) << endl;
 
-    cout << "ÓÑÔª³ÉÔ±º¯Êı: " << y.GetContent(s) << endl;
+    cout << "å‹å…ƒæˆå‘˜å‡½æ•°: " << y.GetContent(s) << endl;
 
 
     return 0;

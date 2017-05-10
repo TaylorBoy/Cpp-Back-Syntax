@@ -5,8 +5,8 @@
 #include <iterator>
 using namespace std;
 
-/* É¾³ıĞÔËã·¨-- remove_copy(b1,e1,b2,num)
-                remove_copy_if(b1,e1,b2,Î½´Ê)
+/* åˆ é™¤æ€§ç®—æ³•-- remove_copy(b1,e1,b2,num)
+                remove_copy_if(b1,e1,b2,è°“è¯)
  *
  */
 
@@ -28,11 +28,11 @@ int main()
     copy(iset.begin(),iset.end(), ostream_iterator<int>(cout, " "));
 
     //remove_copy()
-    cout << "\nremove_copy()µ½Êä³öÁ÷£º";
+    cout << "\nremove_copy()åˆ°è¾“å‡ºæµï¼š";
     remove_copy(lst.begin(),lst.end(),ostream_iterator<int>(cout, " "), 3);
     cout << endl;
 
-    //remove_copy_if()µ½Êä³öÁ÷,´óÓÚ4µÄ¶¼remove
+    //remove_copy_if()åˆ°è¾“å‡ºæµ,å¤§äº4çš„éƒ½remove
     remove_copy_if(lst.begin(),lst.end(), ostream_iterator<int>(cout, " "), bind2nd(greater<int>(),4));
 
     return 0;

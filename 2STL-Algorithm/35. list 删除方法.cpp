@@ -2,9 +2,9 @@
 #include <list>
 using namespace std;
 
-/*listµÄÉ¾³ı*/
+/*listçš„åˆ é™¤*/
 
-//ÏÔÊ¾
+//æ˜¾ç¤º
 void display(list<int>list_a);
 
 int main()
@@ -15,25 +15,25 @@ int main()
     list_a.push_front(400);
     list_a.push_front(300);
 
-    //insert·µ»ØÒ»¸öµü´úÆ÷
+    //insertè¿”å›ä¸€ä¸ªè¿­ä»£å™¨
     it = list_a.insert(list_a.begin(), 222);
     list_a.push_front(100);
 
-    cout << "É¾³ıÇ°£º\n";
+    cout << "åˆ é™¤å‰ï¼š\n";
     display(list_a);
 
-    //É¾³ı
+    //åˆ é™¤
     list_a.erase(it);
-    //list_a.erase(it, list_a.end()); //´Óit_1µ½it_2£¬Ç°°üºó²»°ü
+    //list_a.erase(it, list_a.end()); //ä»it_1åˆ°it_2ï¼Œå‰åŒ…åä¸åŒ…
 
-    cout << "É¾³ıºó£º\n";
+    cout << "åˆ é™¤åï¼š\n";
     display(list_a);
 
 
     return 0;
 }
 
-//ÏÔÊ¾
+//æ˜¾ç¤º
 void display(list<int>list_a)
 {
     list<int>::const_iterator it;

@@ -17,14 +17,14 @@ int main()
     for (vector<int>::iterator it = vec.begin(); it != vec.end(); ++it)
         cout << *it << " ";  cout << endl;
 
-    //transform(b1, e1, b2, op)                 negate取反
-    transform(vec.begin(),vec.end(),vec.begin(),negate<int>()); //目标与源相同==for_each()
+    //transform(b1, e1, b2, op)                 negate鍙栧弽
+    transform(vec.begin(),vec.end(),vec.begin(),negate<int>()); //鐩爣涓庢簮鐩稿悓==for_each()
 
-    copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " ")); //复制到输出流
+    copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " ")); //澶嶅埗鍒拌緭鍑烘祦
 
     transform(vec.begin(),vec.end(),back_inserter(lst),bind2nd(multiplies<int>(),10));
 
-    cout << endl;  //transform 显示
+    cout << endl;  //transform 鏄剧ず
     transform(lst.begin(),lst.end(), ostream_iterator<int>(cout," "), negate<int>());
 
     return 0;

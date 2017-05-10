@@ -15,7 +15,7 @@ ifstream& openFile(ifstream &in, const string &fileName)
 
 std::istream& get(std::istream& in)
 {
-    //¸Ãº¯ÊıÓ¦Ò»Ö±¶ÁÈ¡Á÷
+    //è¯¥å‡½æ•°åº”ä¸€ç›´è¯»å–æµ
     int val;
 
     while (in >> val, !in.eof()){
@@ -28,7 +28,7 @@ std::istream& get(std::istream& in)
             in.ignore(200, '\n');
             continue;
         }
-        std::cout << "ÊäÈëµÄÊı¾İÊÇ£º" << val << std::endl;
+        std::cout << "è¾“å…¥çš„æ•°æ®æ˜¯ï¼š" << val << std::endl;
     }
 
     in.clear();

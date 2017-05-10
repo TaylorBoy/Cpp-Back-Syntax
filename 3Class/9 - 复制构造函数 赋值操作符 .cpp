@@ -3,26 +3,26 @@
 using namespace std;
 
 /*
- * ¸´ÖÆ¹¹Ôìº¯ÊıºÍ¸³Öµ²Ù×÷·û: ÎÒÃÇ²»×ö,C++»á×Ô¶¯²Ù×÷
-        * ÓĞÖ¸ÕëµÈÊ±,C++Ã»ÓĞ×öµÃÍêÃÀ,Õâ¾ÍĞèÒª×Ô¼ºÀ´Ğ´
-        * Ò»°ãÁ½¸öÒ»ÆğĞ´»ò²»Ğ´
+ * å¤åˆ¶æ„é€ å‡½æ•°å’Œèµ‹å€¼æ“ä½œç¬¦: æˆ‘ä»¬ä¸åš,C++ä¼šè‡ªåŠ¨æ“ä½œ
+        * æœ‰æŒ‡é’ˆç­‰æ—¶,C++æ²¡æœ‰åšå¾—å®Œç¾,è¿™å°±éœ€è¦è‡ªå·±æ¥å†™
+        * ä¸€èˆ¬ä¸¤ä¸ªä¸€èµ·å†™æˆ–ä¸å†™
  *
  */
 
 class TestClass
 {
 public :
-    //¸´ÖÆ¹¹Ôìº¯Êı
+    //å¤åˆ¶æ„é€ å‡½æ•°
     TestClass(const TestClass &t)
         :pString(new string( *(t.pstring)) )
     {}
 
-    //C++×Ô¶¯´´½¨µÄÈçÏÂ, Ö»¸´ÖÆÖ¸Õë, Ã»ÓĞ¸´ÖÆÖ¸ÕëÖ¸ÏòµÄ¶ÔÏó
+    //C++è‡ªåŠ¨åˆ›å»ºçš„å¦‚ä¸‹, åªå¤åˆ¶æŒ‡é’ˆ, æ²¡æœ‰å¤åˆ¶æŒ‡é’ˆæŒ‡å‘çš„å¯¹è±¡
     //TestClass(const TestClass &t)
     //    :pString( t.pString )
     //{}
 
-    //¸³Öµ²Ù×÷·û
+    //èµ‹å€¼æ“ä½œç¬¦
     TestClass& operator = (const TestClass &t)
     {
         pString = new string ;
@@ -39,26 +39,26 @@ class SalesItem
 {
 public :
 
-    //ÆÕÍ¨¹¹Ôìº¯Êı
+    //æ™®é€šæ„é€ å‡½æ•°
     SalesItem() :units_sold(0),revenue(0) {};
     SalesItem(const string &book):isbn(book),units_sold(0),revenue(0){};
 
-    //¸´ÖÆ¹¹Ôìº¯Êı
+    //å¤åˆ¶æ„é€ å‡½æ•°
     SalesItem(const SalesItem &orig)
         :isbn(orig.isbn),units_sold(orig.units_sold),revenue(orig.revenue)
     {
-        cout << "**1 ¸´ÖÆ¹¹Ôìº¯Êı±»µ÷ÓÃÁË! **" << endl;
+        cout << "**1 å¤åˆ¶æ„é€ å‡½æ•°è¢«è°ƒç”¨äº†! **" << endl;
     }
 
 
-    //¸³Öµ²Ù×÷·û
+    //èµ‹å€¼æ“ä½œç¬¦
     SalesItem& operator = (const SalesItem &rhs)
     {
         isbn = rhs.isbn;
         units_sold = rhs.units_sold;
         revenue = rhs.revenue;
 
-        cout << "**2 ¸³Öµ²Ù×÷·û±»µ÷ÓÃÁË! **" << endl;
+        cout << "**2 èµ‹å€¼æ“ä½œç¬¦è¢«è°ƒç”¨äº†! **" << endl;
         return *this;
     }
 
@@ -72,7 +72,7 @@ private:
 
 
 ///////////////////////////////////////
-//              Ö÷º¯Êı
+//              ä¸»å‡½æ•°
 ///////////////////////////////////////
 int main()
 {

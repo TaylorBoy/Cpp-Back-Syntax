@@ -8,23 +8,23 @@ int main(int argc, char *argv[])
 	
 	std::list<int>::iterator it;
 
-	//ÔÚÇ°ÃæÌí¼Ó
+	//åœ¨å‰é¢æ·»åŠ 
 	list_int.push_front(40);  
 	list_int.push_front(30);  
 	list_int.push_front(20);  
 	list_int.push_front(10);  
-	list_int.push_back(100);  //ÔÚÄ©Î²Ìí¼Ó
+	list_int.push_back(100);  //åœ¨æœ«å°¾æ·»åŠ 
 	
-	//ÔÚÇ°Ãæ²åÈë
+	//åœ¨å‰é¢æ’å…¥
 	it = list_int.begin();
 	list_int.insert(it, 55); 
-	//ÔÚÖĞ¼ä²åÈë
+	//åœ¨ä¸­é—´æ’å…¥
 	++it; ++it;
 	list_int.insert(it, 56);
-	//ÔÚºóÃæ²åÈë
+	//åœ¨åé¢æ’å…¥
 	list_int.insert(list_int.end(), 66);
 
-	//ÏÔÊ¾
+	//æ˜¾ç¤º
 	for (it = list_int.begin(); it != list_int.end(); ++it){
 		cout << *it << endl;
 	}

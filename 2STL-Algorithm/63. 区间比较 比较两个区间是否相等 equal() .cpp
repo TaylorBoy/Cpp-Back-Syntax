@@ -5,14 +5,14 @@
 
 using namespace std;
 
-/* Çø¼ä±È½Ï
- * equal() ÅÐ¶ÏÁ½¸öÇø¼äÊÇ·ñÏàµÈ
+/* åŒºé—´æ¯”è¾ƒ
+ * equal() åˆ¤æ–­ä¸¤ä¸ªåŒºé—´æ˜¯å¦ç›¸ç­‰
  */
 
-//Î½´Ê            µÚÒ»¸öÇø¼ä  µÚ¶þ¸öÇø¼ä
+//è°“è¯            ç¬¬ä¸€ä¸ªåŒºé—´  ç¬¬äºŒä¸ªåŒºé—´
 bool bothEvenOrOdd(int elem1, int elem2)
 {
-    //ÆæÊýÓëÅ¼ÊýÊÇ·ñ¶ÔÓ¦
+    //å¥‡æ•°ä¸Žå¶æ•°æ˜¯å¦å¯¹åº”
     return elem1%2 == elem2%2;
 }
 
@@ -39,11 +39,11 @@ int main()
     else
         cout << "Not Equal !" << endl;
 
-    //equal Î½´Ê
+    //equal è°“è¯
     if (equal(vec.begin(),vec.end(), lst.begin(), bothEvenOrOdd))
-        cout << "ÆæÅ¼¶ÔÓ¦!" << endl;
+        cout << "å¥‡å¶å¯¹åº”!" << endl;
     else
-        cout << "ÆæÅ¼²»¶ÔÓ¦!" << endl;
+        cout << "å¥‡å¶ä¸å¯¹åº”!" << endl;
 
 
 

@@ -3,7 +3,7 @@
 
 using namespace std;
 
-/*Ö»ÊÊºÏstringÀàµÄ²Ù×÷
+/*åªé€‚åˆstringç±»çš„æ“ä½œ
  *
  */
 
@@ -13,19 +13,19 @@ int main()
 
     string str("hello world");
 
-    string str2 = str.substr(6, 30); //´ÓµÚ6¸ö¿ªÊ¼¼ô50¸ö£¬²»¹»ÔòÓĞ¶àÉÙ¸ø¶àÉÙ
+    string str2 = str.substr(6, 30); //ä»ç¬¬6ä¸ªå¼€å§‹å‰ª50ä¸ªï¼Œä¸å¤Ÿåˆ™æœ‰å¤šå°‘ç»™å¤šå°‘
     cout << str2 << endl;
 
-    str2 = str.substr(2);  //´ÓµÚ2¸ö¿ªÊ¼£¬ÓĞ¼¸¸ö¼ô¼¸¸ö
+    str2 = str.substr(2);  //ä»ç¬¬2ä¸ªå¼€å§‹ï¼Œæœ‰å‡ ä¸ªå‰ªå‡ ä¸ª
     cout << str2 << endl;
 
-    str2 = str.substr();  //È«²¿,str2 = str
+    str2 = str.substr();  //å…¨éƒ¨,str2 = str
     cout << str2 << endl;
 
     //append()
 
     str = "hello c++";
-    str.append(" My God"); //µÈ¼ÛÓÚ str.insert(str.size(), " My God");
+    str.append(" My God"); //ç­‰ä»·äº str.insert(str.size(), " My God");
     cout << str << endl;
 
     //replace()
@@ -33,7 +33,7 @@ int main()
     str.insert(str.size(), " one day");
     cout << str << endl;
 
-    str.replace(17,3,"Four");  //°Ñ17Î»¿ªÊ¼µÄ3Î»Ìæ»»³É¡°Four¡±
+    str.replace(17,3,"Four");  //æŠŠ17ä½å¼€å§‹çš„3ä½æ›¿æ¢æˆâ€œFourâ€
     cout << str << endl;
 
     str.replace(17,4,"Two");

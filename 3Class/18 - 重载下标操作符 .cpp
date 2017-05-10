@@ -4,10 +4,10 @@
 using namespace std;
 
 /*
- * ÖØÔØÏÂ±ê²Ù×÷·û []: Ö÷ÒªÓÃÓÚÊı×é
+ * é‡è½½ä¸‹æ ‡æ“ä½œç¬¦ []: ä¸»è¦ç”¨äºæ•°ç»„
  *
-    * ¿É±ä³ÉÔ±º¯Êı
-    * ³£Á¿³ÉÔ±º¯Êı
+    * å¯å˜æˆå‘˜å‡½æ•°
+    * å¸¸é‡æˆå‘˜å‡½æ•°
  */
 
 class Str
@@ -15,11 +15,11 @@ class Str
 public :
     Str(char const *chars = "");
 
-    //ÏÂ±ê²Ù×÷·ûÖØÔØ
+    //ä¸‹æ ‡æ“ä½œç¬¦é‡è½½
 
-    // ¿É±ä
+    // å¯å˜
     char& operator[](size_t index) throw(Str);
-    //³£Á¿
+    //å¸¸é‡
     char operator[](size_t index) const throw(Str);
 
     void print(void);
@@ -33,7 +33,7 @@ private:
 Str Str::errorMessage("Subscript out of range!");
 
 //////////////////////
-// ¹¹Ôìº¯Êı
+// æ„é€ å‡½æ•°
 Str::Str(char const *chars)
 {
     chars = chars ? chars : "";
@@ -42,21 +42,21 @@ Str::Str(char const *chars)
 }
 
 //////////////////////
-// ÖØÔØÏÂ±ê: ¿É±ä
+// é‡è½½ä¸‹æ ‡: å¯å˜
 char& Str::operator[](size_t index) throw(Str)
 {
     cout << "\n====== none const ======\n";
     if (index >= strlen(ptrCh))
-        throw errorMessage;  //Å×³öÒì³£
+        throw errorMessage;  //æŠ›å‡ºå¼‚å¸¸
     return ptrCh[index];
 }
 
-//³£Á¿
+//å¸¸é‡
 char Str::operator[](size_t index) const throw(Str)
 {
     cout << "\n====== const ======\n";
     if (index >= strlen(ptrCh))
-        throw errorMessage;  //Å×³öÒì³£
+        throw errorMessage;  //æŠ›å‡ºå¼‚å¸¸
     return ptrCh[index];
 }
 
@@ -64,7 +64,7 @@ char Str::operator[](size_t index) const throw(Str)
 // print
 void Str::print(void)
 {
-    cout << ptrCh << endl; //ptrCh -> %s, *ptrChÖ¸ÏòÊ×µØÖ·
+    cout << ptrCh << endl; //ptrCh -> %s, *ptrChæŒ‡å‘é¦–åœ°å€
 }
 
 /*--------------------------------------------*/
@@ -74,7 +74,7 @@ int main()
     Str s("My god !");
 
     cout << s[5] << endl;
-    s[5] = 'X';  //¿É±ä³ÉÔ±º¯Êı, ¿ÉĞŞ¸Ä
+    s[5] = 'X';  //å¯å˜æˆå‘˜å‡½æ•°, å¯ä¿®æ”¹
     s.print();
 
     Str const s2("How are you?");

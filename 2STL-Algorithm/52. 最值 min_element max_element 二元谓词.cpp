@@ -4,7 +4,7 @@
 
 using namespace std;
 
-//¶şÔªÎ½´Ê
+//äºŒå…ƒè°“è¯
 bool absLess(int elem1, int elem2)
 {
     return abs(elem1) < abs(elem2);
@@ -26,13 +26,13 @@ int main()
         cout << *it << ' ';
     } cout << endl;
 
-    //×îĞ¡Öµ
+    //æœ€å°å€¼
     cout << "Min: " << *min_element(deq.begin(), deq.end()) << endl;
 
-    //×î´óÖµ
+    //æœ€å¤§å€¼
     cout << "Max: " << *max_element(deq.begin(), deq.end()) << endl;
 
-    //×îĞ¡¡¢´óÖµ(¾ø¶ÔÖµ)
+    //æœ€å°ã€å¤§å€¼(ç»å¯¹å€¼)
     cout << "|Min|: " << *min_element(deq.begin(), deq.end(), absLess) << endl;
 
     cout << "|Max|: " << *max_element(deq.begin(), deq.end(), absLess) << endl;

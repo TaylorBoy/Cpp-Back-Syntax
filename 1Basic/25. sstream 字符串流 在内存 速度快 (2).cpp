@@ -1,30 +1,30 @@
 #include <iostream>
-#include <sstream>  //×Ö·û´®Á÷
+#include <sstream>  //å­—ç¬¦ä¸²æµ
 
-/*×Ö·û´®Á÷ÔÚÄÚ´æÀï£¬ËÙ¶È¿ì*/
+/*å­—ç¬¦ä¸²æµåœ¨å†…å­˜é‡Œï¼Œé€Ÿåº¦å¿«*/
 
 using namespace std;
 
 int main()
 {
-    cout << "½«Êı¾İÊäÈëµ½×Ö·û´®Á÷...\n";
+    cout << "å°†æ•°æ®è¾“å…¥åˆ°å­—ç¬¦ä¸²æµ...\n";
 
     ostringstream osstream;
-    osstream << "ĞÕÃû: " << "douBi" << "\n" //±ØĞë¼Ó¿Õ¸ñÀ´Çø·Ö×Ö·û´®£¬ÕâÀïÔÚĞÕÃûºó¼Ó¿Õ¸ñ
-             << "ÄêÁä: " << 22 << "\n"
-             << "ÌåÖØ: " << 88.8 << "\n";
+    osstream << "å§“å: " << "douBi" << "\n" //å¿…é¡»åŠ ç©ºæ ¼æ¥åŒºåˆ†å­—ç¬¦ä¸²ï¼Œè¿™é‡Œåœ¨å§“åååŠ ç©ºæ ¼
+             << "å¹´é¾„: " << 22 << "\n"
+             << "ä½“é‡: " << 88.8 << "\n";
 
-    cout << "½«ÄÚ´æÖĞµÄ×Ö·ûÁ÷¶Á³ö£º\n" << osstream.str();
+    cout << "å°†å†…å­˜ä¸­çš„å­—ç¬¦æµè¯»å‡ºï¼š\n" << osstream.str();
 
-    cout << endl << "¶ÁÈ¡ÄÚ´æÖĞµÄ×Ö·ûÁ÷£º" << endl;
+    cout << endl << "è¯»å–å†…å­˜ä¸­çš„å­—ç¬¦æµï¼š" << endl;
 
-    string dump;   //¶ªÆúµÄÊı¾İ
+    string dump;   //ä¸¢å¼ƒçš„æ•°æ®
     string name;
     int age;
     double weight;
 
     istringstream isstream(osstream.str());
-    isstream >> dump;  //¶ªÆú ĞÕÃû
+    isstream >> dump;  //ä¸¢å¼ƒ å§“å
     cout << "dump: " << dump << endl;
     isstream >> name;
     isstream >> dump;

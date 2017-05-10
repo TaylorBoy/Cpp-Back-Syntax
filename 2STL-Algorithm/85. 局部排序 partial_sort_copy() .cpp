@@ -5,7 +5,7 @@
 #include <iterator>
 using namespace std;
 
-/* ÅÅĞòËã·¨
+/* æ’åºç®—æ³•
  * partial_sort_copy()
  */
 
@@ -26,11 +26,11 @@ int main()
 
     //partial_sort_copy()
     partial_sort_copy(deq.begin(),deq.end(), vec6.begin(),vec6.end());
-    copy(vec6.begin(),vec6.end(),ostream_iterator<int>(cout, " ")); //¿Õ¼äÏŞÖÆ
+    copy(vec6.begin(),vec6.end(),ostream_iterator<int>(cout, " ")); //ç©ºé—´é™åˆ¶
     cout << endl;
 
-    //ÈİÁ¿ÈßÓà
-    vector<int>::iterator pos; //Âß¼­ÖÕµã
+    //å®¹é‡å†—ä½™
+    vector<int>::iterator pos; //é€»è¾‘ç»ˆç‚¹
 
     pos = partial_sort_copy(deq.begin(),deq.end(), vec30.begin(),vec30.end(), greater<int>());
 

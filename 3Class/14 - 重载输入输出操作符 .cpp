@@ -3,19 +3,19 @@
 using namespace std;
 
 /*
- * ÖØÔØ: ÊäÈëÊä³ö²Ù×÷·û
+ * é‡è½½: è¾“å…¥è¾“å‡ºæ“ä½œç¬¦
  *       >>  <<
  */
 
 class SalesItem
 {
     public :
-        //ÖØÔØ²Ù×÷·û
+        //é‡è½½æ“ä½œç¬¦
         friend ostream& operator<<(ostream& out, const SalesItem& s);
         friend istream& operator>>(istream& in, SalesItem& s);
 
     public :
-        //¹¹Ôìº¯Êı
+        //æ„é€ å‡½æ•°
         SalesItem(const string &book, unsigned c, double r)
             :isbn(book), num(c), revenue(c*r) { }
         SalesItem():isbn("NULL"), num(0), revenue(0.0){}
@@ -27,14 +27,14 @@ class SalesItem
 
 };
 
-//ÓÑÔª: ÖØÔØÊä³ö²Ù×÷·û
+//å‹å…ƒ: é‡è½½è¾“å‡ºæ“ä½œç¬¦
 ostream& operator<<(ostream& out, const SalesItem& s)
 {
     out << s.isbn << "\t" << s.num << "\t" << s.revenue;
     return out;
 }
 
-//ÓÑÔª: ÖØÔØÊäÈë²Ù×÷·û
+//å‹å…ƒ: é‡è½½è¾“å…¥æ“ä½œç¬¦
 istream& operator>>(istream& in, SalesItem& s)
 {
     double price;
@@ -43,7 +43,7 @@ istream& operator>>(istream& in, SalesItem& s)
     if (in)
         s.revenue = price * s.num;
     else
-        s = SalesItem();  //ÊäÈë´íÎó,Ä¬ÈÏ¹¹Ôìº¯Êı
+        s = SalesItem();  //è¾“å…¥é”™è¯¯,é»˜è®¤æ„é€ å‡½æ•°
 
     return in;
 }

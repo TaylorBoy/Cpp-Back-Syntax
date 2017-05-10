@@ -1,26 +1,26 @@
 #include <iostream>
 
-/*×Ö·û´®*/
+/*å­—ç¬¦ä¸²*/
 
 #include <string>
 
 int main()
 {
-    char name1[] = "cyy";       //CÓïÑÔµÄ×ö·¨
+    char name1[] = "cyy";       //Cè¯­è¨€çš„åšæ³•
 
     std::string name2("c++");   //c++
 
     std::cout << "c: " << name1 << std::endl;
     std::cout << "c++: " << name2 << std::endl;
 
-    //c++µÄËÄÖÖ¹¹Ôì·½·¨
+    //c++çš„å››ç§æ„é€ æ–¹æ³•
     std::string s1;
     std::string s2("Hello S2");
     std::string s3(s2);
     std::string s4(10, 'Y');
 
-    //×îºÃ²»ÒªÕâÑù
-    std::string s5 = "Hello S5";  //ÏÈ¶¨ÒåÒ»¸ös5±äÁ¿£¬ÔÙ¸³Öµ£¬ËÙ¶ÈÂı£¡
+    //æœ€å¥½ä¸è¦è¿™æ ·
+    std::string s5 = "Hello S5";  //å…ˆå®šä¹‰ä¸€ä¸ªs5å˜é‡ï¼Œå†èµ‹å€¼ï¼Œé€Ÿåº¦æ…¢ï¼
 
     std::cout << "s1: " << s1 << std::endl;
     std::cout << "s2: " << s2 << std::endl;
@@ -30,9 +30,9 @@ int main()
 
     //string
     std::cout << "\ns2: " << s2 << std::endl;       //C++ string
-    std::cout << "hello: " << "hello" << std::endl;  //c·ç¸ñ×Ö·û´®£¬¶àÁË'\0'½áÊø±êÖ¾
+    std::cout << "hello: " << "hello" << std::endl;  //cé£æ ¼å­—ç¬¦ä¸²ï¼Œå¤šäº†'\0'ç»“æŸæ ‡å¿—
 
-    //cin Óöµ½¿Õ°××Ö·ûÍ£Ö¹£¬£¨¶ÁÈ¡²¢ºöÂÔÇ°ÃæµÄ¿Õ°××Ö·û£¬¶ÁÈ¡Ö±µ½ÔÙ´ÎÓöµ½¿Õ°××Ö·ûÍ£Ö¹£©
+    //cin é‡åˆ°ç©ºç™½å­—ç¬¦åœæ­¢ï¼Œï¼ˆè¯»å–å¹¶å¿½ç•¥å‰é¢çš„ç©ºç™½å­—ç¬¦ï¼Œè¯»å–ç›´åˆ°å†æ¬¡é‡åˆ°ç©ºç™½å­—ç¬¦åœæ­¢ï¼‰
     std::cin  >> s2;
     std::cout << "cin s2: " << s2 << std::endl;
 

@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <iostream>
 
-#include <deque>  //Ë«¶Ë¶ÓÁĞ
+#include <deque>  //åŒç«¯é˜Ÿåˆ—
 
-/*Ë³ĞòÈİÆ÷STL dequeºÍvector·Ç³£ÀàËÆ£¬vectorÖ»ÄÜpop_back(),
-  deque¼ÈÄÜºóÃæÒ²ÄÜ´ÓÇ°Ãæpop*/
+/*é¡ºåºå®¹å™¨STL dequeå’Œvectoréå¸¸ç±»ä¼¼ï¼Œvectoråªèƒ½pop_back(),
+  dequeæ—¢èƒ½åé¢ä¹Ÿèƒ½ä»å‰é¢pop*/
 
 using namespace std;
 
@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
 		cout << "deque[" << count << "] = " << d[count] << endl;
 	}
 
-	d.pop_front();  //´ÓÇ°Ãæ·Å³ö,
-  	d.pop_back();   //´ÓºóÃæ·Å³ö
-	cout << "\nÉ¾³ıÖ®ºó£º\n";
+	d.pop_front();  //ä»å‰é¢æ”¾å‡º,
+  	d.pop_back();   //ä»åé¢æ”¾å‡º
+	cout << "\nåˆ é™¤ä¹‹åï¼š\n";
 
-	//Ê¹ÓÃdequeµÄµü´úÆ÷Êä³ö
+	//ä½¿ç”¨dequeçš„è¿­ä»£å™¨è¾“å‡º
 	deque<int>::iterator it;
 	for (it = d.begin(); it != d.end(); ++it){
 		cout << "deque->" << *it << endl;

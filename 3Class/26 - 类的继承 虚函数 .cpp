@@ -4,10 +4,10 @@
 using namespace std;
 
 /*
- *  ÀàµÄ¼Ì³Ğ yu Ğéº¯Êı(virtual)
+ *  ç±»çš„ç»§æ‰¿ yu è™šå‡½æ•°(virtual)
 
-    ¹«ÓĞ¼Ì³Ğ: class ×ÓÀà : public ¸¸Àà
-    Ğéº¯Êı: ¿ÉÖØĞ´µÄ¼Ì³Ğº¯Êı
+    å…¬æœ‰ç»§æ‰¿: class å­ç±» : public çˆ¶ç±»
+    è™šå‡½æ•°: å¯é‡å†™çš„ç»§æ‰¿å‡½æ•°
  */
 
 class Item_base
@@ -17,14 +17,14 @@ public :
     Item_base(const std::string &book="",
           double sales_price=0.0) :x(100000), isbn(book), price(sales_price) {}
 
-    //(protectedÖ»ÄÜÔÚ¸¸ÀàÄÚ²¿Ê¹ÓÃ, »ò¼Ì³Ğ)
+    //(protectedåªèƒ½åœ¨çˆ¶ç±»å†…éƒ¨ä½¿ç”¨, æˆ–ç»§æ‰¿)
     virtual double get_prot(void)
     {
         cout << "Father get_prot" << endl;
         return price ;
     }
 
-    // Ğéº¯Êı, ¼Ì³Ğºó¿ÉÒÔÖØĞÂ¶¨Òå
+    // è™šå‡½æ•°, ç»§æ‰¿åå¯ä»¥é‡æ–°å®šä¹‰
     virtual double get_price(size_t n) const
     {
         return n * price;
@@ -35,18 +35,18 @@ public :
     string isbn;
 
 protected:
-    double price;  //ÊÜ±£»¤µÄ¿ÉÒÔ¼Ì³Ğ, µ«¸¸Àà²»ÄÜÖ±½Ó·ÃÎÊ
+    double price;  //å—ä¿æŠ¤çš„å¯ä»¥ç»§æ‰¿, ä½†çˆ¶ç±»ä¸èƒ½ç›´æ¥è®¿é—®
 };
 
 
 ///////////////////////////////////////////////////////////
-/*-------------------- ¼Ì³ĞItem_base --------------------*/
+/*-------------------- ç»§æ‰¿Item_base --------------------*/
 ///////////////////////////////////////////////////////////
 
 class Bulk_item : public Item_base
 {
 public :
-    // ³õÊ¼»¯×ÓÀàºÍ¼Ì³ĞµÄ¸¸Àà
+    // åˆå§‹åŒ–å­ç±»å’Œç»§æ‰¿çš„çˆ¶ç±»
     Bulk_item(const std::string &book="",
         double sales_price = 0.0,
         size_t qty=0,
@@ -55,31 +55,31 @@ public :
         {
         }
 
-    // ²âÊÔ1
+    // æµ‹è¯•1
     void print(void)
     {
         cout << "x = " << x << endl;
         cout << "price = " << price << endl;
-        //isbnÎªË½ÓĞµÄ, ²»ÄÜÖ±½Ó·ÃÎÊ;
+        //isbnä¸ºç§æœ‰çš„, ä¸èƒ½ç›´æ¥è®¿é—®;
     }
 
-    // ²âÊÔ2
+    // æµ‹è¯•2
     void print2(const Bulk_item &d, const Item_base &i)
     {
         cout << d.x << endl;
         cout << d.price << endl;
         cout << i.x << endl;
-        //cout << i.price << endl; //priceÊÜ±£»¤²»ÄÜ·ÃÎÊ
+        //cout << i.price << endl; //priceå—ä¿æŠ¤ä¸èƒ½è®¿é—®
     }
 
-    // ÖØĞÂ¶¨Òå: ¸²¸Ç¸¸ÀàµÄ
+    // é‡æ–°å®šä¹‰: è¦†ç›–çˆ¶ç±»çš„
     double get_prot(void)
     {
         cout << "Sun: get_prot" << endl;
         return 3 * price ;
     }
 
-    // Ğéº¯Êı: ÖØĞ´(ĞèÒªÊÇĞéº¯Êı)
+    // è™šå‡½æ•°: é‡å†™(éœ€è¦æ˜¯è™šå‡½æ•°)
     double get_price(size_t n) const
     {
         if (n > min_qty)
@@ -110,11 +110,11 @@ int main()
     item2.get_prot();
 
     cout << endl;
-    // ¸¸Àà
+    // çˆ¶ç±»
     cout << item.isbn << ": " << item.get_price(10) << endl;
-    // ¼Ì³Ğ
+    // ç»§æ‰¿
     cout << item2.isbn << ": " << item2.get_price(10) << endl;
-    // ÕÛ¿Û¼Û
+    // æŠ˜æ‰£ä»·
     cout << item2.isbn << ": " << item2.get_price(16) << endl;
 
     return 0;

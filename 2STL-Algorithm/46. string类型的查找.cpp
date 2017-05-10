@@ -3,15 +3,15 @@
 
 using namespace std;
 
-/*stringÀàĞÍµÄ²éÕÒ
+/*stringç±»å‹çš„æŸ¥æ‰¾
  *
  */
 
 int main()
 {
-    /*ÕıÏò²éÕÒ*/
+    /*æ­£å‘æŸ¥æ‰¾*/
 
-    //²éÕÒ×Ö·û´®£ºfind ËùÓĞµÄ
+    //æŸ¥æ‰¾å­—ç¬¦ä¸²ï¼šfind æ‰€æœ‰çš„
 
     string name("AnanaBabava");
     string::size_type pst = name.find("Baba");
@@ -21,10 +21,10 @@ int main()
     else
         cout << "In Here: " << pst << endl;
 
-    //²éÕÒ×Ö·û£ºfind_first_of º¬ÓĞµÄÄ³¸ö
+    //æŸ¥æ‰¾å­—ç¬¦ï¼šfind_first_of å«æœ‰çš„æŸä¸ª
 
     name = "a2v3b5";
-    string str_num("0123456789");  //²éÕÒstr_numº¬ÓĞµÄÊı
+    string str_num("0123456789");  //æŸ¥æ‰¾str_numå«æœ‰çš„æ•°
 
     string::size_type pst2 = name.find_first_of(str_num);
 
@@ -33,7 +33,7 @@ int main()
     else
         cout << "In Here: " << pst2 << endl;
 
-    //²éÕÒ²»Æ¥ÅäµÄ×Ö·û£ºfind_first_not_of
+    //æŸ¥æ‰¾ä¸åŒ¹é…çš„å­—ç¬¦ï¼šfind_first_not_of
     string::size_type i = 0;
     while ( (i = name.find_first_not_of(str_num, i)) != string::npos ){
         cout << "- " << name[i] << endl;
@@ -41,7 +41,7 @@ int main()
     }
 
 
-    /*·´Ïò²éÕÒ£º(ÏÂ±êÕıÏò)
+    /*åå‘æŸ¥æ‰¾ï¼š(ä¸‹æ ‡æ­£å‘)
      * rfind
      * find_last_of
      * find_last_not_of

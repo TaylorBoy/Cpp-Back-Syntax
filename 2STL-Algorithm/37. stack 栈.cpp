@@ -7,35 +7,35 @@
 using namespace std;
 
 /* STL stack
- * LIFO,ºó½øÏÈ³ö
- * ×ÔÊÊÓ¦ÈİÆ÷£¨ÈİÆ÷ÊÊÅäÆ÷£©*/
+ * LIFO,åè¿›å…ˆå‡º
+ * è‡ªé€‚åº”å®¹å™¨ï¼ˆå®¹å™¨é€‚é…å™¨ï¼‰*/
 
 int main()
 {
-    //stackÊÇÒ»¸öÈİÆ÷ÊÊÅäÆ÷£¬Ä¬ÈÏÊ¹ÓÃdeque
-    stack<int,deque<int> >  a; //codeblocksÁ½¸ö<<Ç¶Ì×ÖĞ¼äĞèÒª¼Ó¿Õ¸ñ < <
+    //stackæ˜¯ä¸€ä¸ªå®¹å™¨é€‚é…å™¨ï¼Œé»˜è®¤ä½¿ç”¨deque
+    stack<int,deque<int> >  a; //codeblocksä¸¤ä¸ª<<åµŒå¥—ä¸­é—´éœ€è¦åŠ ç©ºæ ¼ < <
     stack<int,vector<int> > b;
     stack<int,list<int> >   c;
-    stack<int>              d; //Ä¬ÈÏdeque
+    stack<int>              d; //é»˜è®¤deque
 
     d.push(25);
     d.push(38);
     d.push(4);
     d.push(1);
 
-    cout << "dÕ»µÄÊı¾İ¸öÊı£º" << d.size() << endl;
-    cout << "dÕ»µÄÕ»¶¥ÔªËØ£º" << d.top() << endl;
+    cout << "dæ ˆçš„æ•°æ®ä¸ªæ•°ï¼š" << d.size() << endl;
+    cout << "dæ ˆçš„æ ˆé¡¶å…ƒç´ ï¼š" << d.top() << endl;
 
-    cout << "dÕ»³öÕ»£º";
+    cout << "dæ ˆå‡ºæ ˆï¼š";
     int x = 0;
     while (0 != d.size()){
-        x = d.top();  //Ö»²é¿´£¬²»É¾³ı
-        d.pop();      //³öÕ»£¬É¾³ı
+        x = d.top();  //åªæŸ¥çœ‹ï¼Œä¸åˆ é™¤
+        d.pop();      //å‡ºæ ˆï¼Œåˆ é™¤
         cout << x << " ";
     }
 
-    cout << "\ndÕ»µÄÊı¾İ¸öÊı£º" << d.size() << endl;
-    cout << "dÕ»ÊÇ·ñÎª¿Õ£º" << d.empty() << endl;
+    cout << "\ndæ ˆçš„æ•°æ®ä¸ªæ•°ï¼š" << d.size() << endl;
+    cout << "dæ ˆæ˜¯å¦ä¸ºç©ºï¼š" << d.empty() << endl;
 
 
 

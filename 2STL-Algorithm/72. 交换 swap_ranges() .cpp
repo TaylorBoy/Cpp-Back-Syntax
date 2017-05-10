@@ -6,7 +6,7 @@
 using namespace std;
 
 /*
- * Ëã·¨½»»»--swap_ranges()
+ * ç®—æ³•äº¤æ¢--swap_ranges()
  */
 
 int main()
@@ -26,7 +26,7 @@ int main()
     cout << endl;
 
     /// swap_ranges()
-    deque<int>::iterator pos; //Ã»ÓĞ½»»»µÄ
+    deque<int>::iterator pos; //æ²¡æœ‰äº¤æ¢çš„
 
     pos = swap_ranges(vec.begin(),vec.end(),deq.begin());
     cout << "swap for vec: ";
@@ -36,22 +36,22 @@ int main()
     cout << endl;
 
     if (deq.end() != pos){
-        cout << "µÚÒ»¸öÃ»ÓĞ½»»»µÄÊı£º" << *pos << endl;
+        cout << "ç¬¬ä¸€ä¸ªæ²¡æœ‰äº¤æ¢çš„æ•°ï¼š" << *pos << endl;
     }
 
-    //Ê×Î²½»»»
-    swap_ranges(deq.begin(),deq.begin()+3, deq.rbegin()); //½»»»Èı¸ö
+    //é¦–å°¾äº¤æ¢
+    swap_ranges(deq.begin(),deq.begin()+3, deq.rbegin()); //äº¤æ¢ä¸‰ä¸ª
     cout << "sRwap for deq: ";
     copy(deq.begin(),deq.end(), ostream_iterator<int>(cout, " "));
 
-    /// Ëã·¨ÄÚswap()£¬ËÙ¶È¿ì
+    /// ç®—æ³•å†…swap()ï¼Œé€Ÿåº¦å¿«
     vector<int> vec_tmp;
 
     for (int i = 2; i < 8; ++i)
         vec_tmp.push_back(i);
 
-    vec.swap(vec_tmp);  //½»»»ÄÚ²¿Ö¸Õë£¬ËÙ¶È¿ì
-    //vec = vec_tmp;    //Í¨¹ı¸´ÖÆ£ºËÙ¶ÈÂı
+    vec.swap(vec_tmp);  //äº¤æ¢å†…éƒ¨æŒ‡é’ˆï¼Œé€Ÿåº¦å¿«
+    //vec = vec_tmp;    //é€šè¿‡å¤åˆ¶ï¼šé€Ÿåº¦æ…¢
 
     cout << "\n\nswap for vec: ";
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));

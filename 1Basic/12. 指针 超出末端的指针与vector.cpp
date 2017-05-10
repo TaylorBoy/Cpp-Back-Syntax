@@ -1,16 +1,16 @@
 #include <iostream>
 #include <vector>
 
-/*³¬³öÄ©¶ËµÄÖ¸ÕëÓëVectorµü´úÆ÷*/
+/*è¶…å‡ºæœ«ç«¯çš„æŒ‡é’ˆä¸Vectorè¿­ä»£å™¨*/
 
 using namespace std;
 
 int main()
 {
-    //Ö¸Õë
+    //æŒ‡é’ˆ
     const size_t arr_size = 5;
     int arr[arr_size] = {10,20,30,40,50};
-    //int *ptr2 = ptr1 + arr_size;  //³¬³öÄ©¶ËµÄÖ¸Õë
+    //int *ptr2 = ptr1 + arr_size;  //è¶…å‡ºæœ«ç«¯çš„æŒ‡é’ˆ
 
     for (int *p_bgn = arr, *p_end = arr + arr_size; p_bgn != p_end; ++p_bgn){
         cout << *p_bgn << ",";

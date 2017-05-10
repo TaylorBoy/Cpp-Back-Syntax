@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// ÏúÊÛÏîÄ¿
+// é”€å”®é¡¹ç›®
 class Sales_item
 {
 public:
@@ -24,26 +24,26 @@ public:
     }
 
 private:
-    string isbn;  //ÊéºÅ
-    unsigned units_sold;  //ÏúÊÛÊıÁ¿
-    double revenue;  //×Ü½ğ¶î
+    string isbn;  //ä¹¦å·
+    unsigned units_sold;  //é”€å”®æ•°é‡
+    double revenue;  //æ€»é‡‘é¢
 };
 
 
-//Àà   ÈË
+//ç±»   äºº
 class Person
 {
 
 public:
 
-    //:ÕâÑù³õÊ¼»¯ºÃ,ËÙ¶È¿ì
+    //:è¿™æ ·åˆå§‹åŒ–å¥½,é€Ÿåº¦å¿«
     Person(const string &p_name, const string &p_address):name(p_name),address(p_address)
     {
         //name = p_name;
         //address = p_address;
     }
 
-    string getName() const  //²»ĞŞ¸ÄÊı¾İ³ÉÔ±
+    string getName() const  //ä¸ä¿®æ”¹æ•°æ®æˆå‘˜
     {
         return name;
     }

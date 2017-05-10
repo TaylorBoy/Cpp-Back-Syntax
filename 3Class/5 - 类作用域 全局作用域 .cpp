@@ -3,11 +3,11 @@
 using namespace std;
 
 /*
- * ÀàµÄ×÷ÓÃÓò
+ * ç±»çš„ä½œç”¨åŸŸ
  *
  */
 
-//È«¾Ö×÷ÓÃÓò
+//å…¨å±€ä½œç”¨åŸŸ
 int age;
 
 class Person
@@ -20,21 +20,21 @@ public :
 
     const string &GetName(void) const;
 
-    //±äÁ¿×÷ÓÃÓò
+    //å˜é‡ä½œç”¨åŸŸ
     int GetAge(int age)
     {
-        cout << "³ÉÔ±º¯Êı: " << age << endl;  //SetAge()µÄage
-        cout << "³ÉÔ±±äÁ¿: " << this->age << endl;  //PersonµÄ
-        cout << "È«¾Ö±äÁ¿: " << ::age << endl; // È«¾Ö±äÁ¿
+        cout << "æˆå‘˜å‡½æ•°: " << age << endl;  //SetAge()çš„age
+        cout << "æˆå‘˜å˜é‡: " << this->age << endl;  //Personçš„
+        cout << "å…¨å±€å˜é‡: " << ::age << endl; // å…¨å±€å˜é‡
     }
 
-    //×÷ÓÃÓò, ·µ»ØÀàÄÚ²¿ÀàĞÍ
+    //ä½œç”¨åŸŸ, è¿”å›ç±»å†…éƒ¨ç±»å‹
     const index &GetCursor(void ) const;
 
 private:
     string name;
     index cursor;
-    int age;  //Àà³ÉÔ±
+    int age;  //ç±»æˆå‘˜
 };
 
 const string &Person::GetName(void) const
@@ -42,7 +42,7 @@ const string &Person::GetName(void) const
     return name;
 }
 
-//×÷ÓÃÓò, Ç°ÃæĞèÒª×÷ÓÃÓòPerson
+//ä½œç”¨åŸŸ, å‰é¢éœ€è¦ä½œç”¨åŸŸPerson
 const Person::index &Person::GetCursor(void) const
 {
     return cursor;
@@ -50,7 +50,7 @@ const Person::index &Person::GetCursor(void) const
 
 int main()
 {
-    //ÀàÖĞ¶¨ÒåµÄÀàĞÍĞèÒª×÷ÓÃÓò²Ù×÷·ûPerson::,²»ÄÜÖ±½ÓÓÃ
+    //ç±»ä¸­å®šä¹‰çš„ç±»å‹éœ€è¦ä½œç”¨åŸŸæ“ä½œç¬¦Person::,ä¸èƒ½ç›´æ¥ç”¨
     Person::index i = 10;
     cout << "Person::index i = " << i << endl;
 

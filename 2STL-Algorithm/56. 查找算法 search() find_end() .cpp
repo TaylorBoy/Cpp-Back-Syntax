@@ -6,9 +6,9 @@
 using namespace std;
 
 /*
- * ²éÕÒËã·¨--
-   search() ´ÓÇ°Ãæ
-   find_end() ´ÓºóÃæ
+ * æŸ¥æ‰¾ç®—æ³•--
+   search() ä»å‰é¢
+   find_end() ä»åé¢
  */
 
 int main()
@@ -34,8 +34,8 @@ int main()
     for (list<int>::iterator it = lst.begin(); it != lst.end(); ++it)
         cout << *it << ',';  cout << endl;
 
-    /// search(): ´ÓÍ·¿ªÊ¼ÕÒ3,4,5
-    cout << "\nÊ¹ÓÃsearch()²éÕÒ£º" << endl;
+    /// search(): ä»å¤´å¼€å§‹æ‰¾3,4,5
+    cout << "\nä½¿ç”¨search()æŸ¥æ‰¾ï¼š" << endl;
     deque<int>::iterator pos;
 
     pos = search(deq.begin(),deq.end(), lst.begin(),lst.end());
@@ -49,8 +49,8 @@ int main()
 
     }while (deq.end() != pos);
 
-    /// find_end(): ´ÓÎ²²¿¿ªÊ¼ÕÒ3,4,5
-    cout << "\nÊ¹ÓÃfind_end()²éÕÒ£º" << endl;
+    /// find_end(): ä»å°¾éƒ¨å¼€å§‹æ‰¾3,4,5
+    cout << "\nä½¿ç”¨find_end()æŸ¥æ‰¾ï¼š" << endl;
 
     pos = find_end(deq.begin(),deq.end(), lst.begin(),lst.end());
 

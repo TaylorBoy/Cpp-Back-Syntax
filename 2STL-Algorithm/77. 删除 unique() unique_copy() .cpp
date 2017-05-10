@@ -4,7 +4,7 @@
 #include <iterator>
 using namespace std;
 
-/* É¾³ıËã·¨--
+/* åˆ é™¤ç®—æ³•--
     unique(b,e)
     unique(b,e,p)
     unique_copy(b1,e1,b2)
@@ -12,7 +12,7 @@ using namespace std;
  *
  */
 
-//Á¬ĞøµÄÁ½¸öÊıÏà²î1£¬É¾³ıºóÒ»¸ö
+//è¿ç»­çš„ä¸¤ä¸ªæ•°ç›¸å·®1ï¼Œåˆ é™¤åä¸€ä¸ª
 bool difference_one(int elem1, int elem2)
 {
     return elem1 + 1 == elem2 || elem1 - 1 == elem2;
@@ -30,7 +30,7 @@ int main()
     copy(lst.begin(),lst.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    lst.sort();  //ĞèÒªÅÅĞò->ÔªËØÒª°¤ÔÚÒ»Æğ
+    lst.sort();  //éœ€è¦æ’åº->å…ƒç´ è¦æŒ¨åœ¨ä¸€èµ·
 
     //unique(b,e)
     list<int>::iterator pos;
@@ -40,12 +40,12 @@ int main()
         cout << *it << " ";
     cout << endl;
 
-    //unique(b,e,p)£¬uniqueÊ¹ÓÃÎ½´Ê
+    //unique(b,e,p)ï¼Œuniqueä½¿ç”¨è°“è¯
     copy(source,source+sourceNum,lst.begin());
     copy(lst.begin(),lst.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    pos = unique(lst.begin(),lst.end(), greater<int>()); //Âú×ãÇ°Ò»¸ö±ÈºóÒ»¸ö´ó£¬É¾³ıºóÒ»¸ö
+    pos = unique(lst.begin(),lst.end(), greater<int>()); //æ»¡è¶³å‰ä¸€ä¸ªæ¯”åä¸€ä¸ªå¤§ï¼Œåˆ é™¤åä¸€ä¸ª
     for (list<int>::iterator it = lst.begin(); it != pos; ++it)
         cout << *it << " ";
     cout << endl;

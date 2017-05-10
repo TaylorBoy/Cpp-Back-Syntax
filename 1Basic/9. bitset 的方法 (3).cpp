@@ -1,6 +1,6 @@
 #include <iostream>
 
-/*bitset方法*/
+/*bitset鏂规硶*/
 #include <bitset>
 
 using namespace std;
@@ -12,8 +12,8 @@ int main()
     cin >> bit;
     cout << "bit: " << bit << endl;
 
-    cout << "1的个数：" << bit.count() << endl;
-    cout << "0的个数：" << bit.size()-bit.count() << endl;
+    cout << "1鐨勪釜鏁帮細" << bit.count() << endl;
+    cout << "0鐨勪釜鏁帮細" << bit.size()-bit.count() << endl;
 
     bitset<8> flipBit(bit);
     flipBit.flip();

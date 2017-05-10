@@ -5,17 +5,17 @@
 
 using namespace std;
 
-/* STL queue¶ÓÁĞ
- * FIFO£¬ÏÈ½øÏÈ³ö
- * ¿ÉÒÔÓÃlistºÍdeque×öqueue¡£²»ÄÜÓÃvector¡£
+/* STL queueé˜Ÿåˆ—
+ * FIFOï¼Œå…ˆè¿›å…ˆå‡º
+ * å¯ä»¥ç”¨listå’Œdequeåšqueueã€‚ä¸èƒ½ç”¨vectorã€‚
  */
 
 int main()
 {
-    //queueÊÇÒ»¸öÈİÆ÷ÊÊÅäÆ÷£¬Ä¬ÈÏÊ¹ÓÃdeque
+    //queueæ˜¯ä¸€ä¸ªå®¹å™¨é€‚é…å™¨ï¼Œé»˜è®¤ä½¿ç”¨deque
     queue<int, queue<int> > a;
     queue<int> q;
-    //queue<double, queue<double> > a; Ö»ÄÜÊÇintĞÍÊı¾İ
+    //queue<double, queue<double> > a; åªèƒ½æ˜¯intå‹æ•°æ®
     queue<int, list<int> >  b;
 
     q.push(23);
@@ -24,16 +24,16 @@ int main()
     q.push(-2);
 
 
-    cout << "²é¿´¶ÓÊ×ÔªËØ£º" << q.front() << endl;  //²é¿´£¬²»É¾³ı
-    cout << "²é¿´¶ÓÎ²ÔªËØ£º" << q.back()  << endl;
-    cout << "×Ü¹²°üº¬ÔªËØ¸öÊı£º" << q.size() << endl;
+    cout << "æŸ¥çœ‹é˜Ÿé¦–å…ƒç´ ï¼š" << q.front() << endl;  //æŸ¥çœ‹ï¼Œä¸åˆ é™¤
+    cout << "æŸ¥çœ‹é˜Ÿå°¾å…ƒç´ ï¼š" << q.back()  << endl;
+    cout << "æ€»å…±åŒ…å«å…ƒç´ ä¸ªæ•°ï¼š" << q.size() << endl;
     q.pop();
-    cout << "PopºóĞÂ¶ÓÊ×µÄÔªËØ£º"<< q.front() << endl;
+    cout << "Popåæ–°é˜Ÿé¦–çš„å…ƒç´ ï¼š"<< q.front() << endl;
 
-    cout << "q¶ÓÁĞÔªËØ£º";
+    cout << "qé˜Ÿåˆ—å…ƒç´ ï¼š";
     int x = 0;
     while (q.size() != 0){
-        cout << "É¾³ı£º" << q.front() << " "; //²»ÔÊĞíÔÚÖĞ¼ä²Ù×÷Êı¾İ£¬ËùÒÔÃ»ÓĞµü´úÆ÷
+        cout << "åˆ é™¤ï¼š" << q.front() << " "; //ä¸å…è®¸åœ¨ä¸­é—´æ“ä½œæ•°æ®ï¼Œæ‰€ä»¥æ²¡æœ‰è¿­ä»£å™¨
         q.pop();
     }
 

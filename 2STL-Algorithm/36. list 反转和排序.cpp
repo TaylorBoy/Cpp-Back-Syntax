@@ -3,9 +3,9 @@
 
 using namespace std;
 
-/*list·´×ªºÍÅÅĞò*/
+/*liståè½¬å’Œæ’åº*/
 
-//ÏÔÊ¾
+//æ˜¾ç¤º
 void display(list<int>list_a);
 
 int main()
@@ -17,15 +17,15 @@ int main()
     a.push_front(36);
     a.push_front(22);
 
-    cout << "Ô­list£º" << endl;
+    cout << "åŸlistï¼š" << endl;
     display(a);
 
     a.sort();
-    cout << "ÅÅĞòºó£º" << endl;
+    cout << "æ’åºåï¼š" << endl;
     display(a);
 
     a.reverse();
-    cout << "·´×ªºó£º" << endl;
+    cout << "åè½¬åï¼š" << endl;
     display(a);
 
 
@@ -33,7 +33,7 @@ int main()
     return 0;
 }
 
-//ÏÔÊ¾
+//æ˜¾ç¤º
 void display(list<int>list_a)
 {
     list<int>::const_iterator it;

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-/*Ë³ĞòÈİÆ÷µÄ²Ù×÷4*/
+/*é¡ºåºå®¹å™¨çš„æ“ä½œ4*/
 
 int main()
 {
@@ -14,31 +14,31 @@ int main()
     list_int.push_back(20);
     list_int.push_back(30);
 
-    cout << "ÈİÆ÷µÄÊı¾İ¸öÊı£º" << list_int.size() << endl;
+    cout << "å®¹å™¨çš„æ•°æ®ä¸ªæ•°ï¼š" << list_int.size() << endl;
 
-    cout << "ÈİÆ÷µÄmax size£º" << list_int.max_size() << endl;
+    cout << "å®¹å™¨çš„max sizeï¼š" << list_int.max_size() << endl;
 
-    //×¢Òâ£ºresize()¿ÉÄÜÊ¹µü´úÆ÷Ê§Ğ§(Ôö¼Ó»òÕß¼õÉÙÊ±£¬µü´úÆ÷Ö¸ÏòµÄÎ»ÖÃ¿ÉÄÜÊ§Ğ§)
+    //æ³¨æ„ï¼šresize()å¯èƒ½ä½¿è¿­ä»£å™¨å¤±æ•ˆ(å¢åŠ æˆ–è€…å‡å°‘æ—¶ï¼Œè¿­ä»£å™¨æŒ‡å‘çš„ä½ç½®å¯èƒ½å¤±æ•ˆ)
 
-    //µ÷Õû´óĞ¡,µ÷Õûµ½10,Ä¬ÈÏÌî³ä0
+    //è°ƒæ•´å¤§å°,è°ƒæ•´åˆ°10,é»˜è®¤å¡«å……0
     list_int.resize(10);
 
     for (list<int>::iterator it = list_int.begin(); it != list_int.end(); ++it ){
         cout << *it << " ";
     }
 
-    //µ÷Õû´óĞ¡£¬Ê¹ÓÃ¹Ì¶¨ÖµÌîÈë
+    //è°ƒæ•´å¤§å°ï¼Œä½¿ç”¨å›ºå®šå€¼å¡«å…¥
     list_int.resize(20, 6);
     cout << endl;
     for (list<int>::iterator it = list_int.begin(); it != list_int.end(); ++it ){
         cout << *it << " ";
     }
 
-    //Çå¿Õ
+    //æ¸…ç©º
     list_int.resize(0);
 
     if (list_int.empty()){
-        cout << "\nÈİÆ÷ÊÇ¿ÕµÄ£¡" << endl;
+        cout << "\nå®¹å™¨æ˜¯ç©ºçš„ï¼" << endl;
     }
 
 

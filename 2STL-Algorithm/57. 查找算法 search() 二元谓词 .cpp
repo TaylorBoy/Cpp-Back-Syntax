@@ -5,12 +5,12 @@
 
 using namespace std;
 
-/* search() 谓词
+/* search() 璋撹瘝
  *
  */
 
 
-//二元谓词(两个参数)
+//浜屽厓璋撹瘝(涓や釜鍙傛暟)
 bool checkEven(int elem, bool even)
 {
     if (even){
@@ -34,7 +34,7 @@ int main()
     for (vector<int>::iterator it = vec.begin(); it != vec.end(); ++it)
         cout << *it << ' ';
 
-    //查找规则
+    //鏌ユ壘瑙勫垯
     bool checkEvenArgs[] = {false,true,true,false}; //j o o j
 
     vector<int>::iterator pos;

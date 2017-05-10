@@ -4,14 +4,14 @@
 #include <vector>
 using namespace std;
 
-/* Çø¼ä±È½Ï
- * lexicongraphical_compare() ¼ì²éµÚÒ»¸öÇø¼ä ÊÇ·ñ< µÚ¶ş¸öÇø¼ä
+/* åŒºé—´æ¯”è¾ƒ
+ * lexicongraphical_compare() æ£€æŸ¥ç¬¬ä¸€ä¸ªåŒºé—´ æ˜¯å¦< ç¬¬äºŒä¸ªåŒºé—´
  */
 
-//´òÓ¡
+//æ‰“å°
 void printCollection(const list<int>& lst)
 {
-    //constÖ»ÄÜ¸³Öµ¸øconstµü´úÆ÷
+    //conståªèƒ½èµ‹å€¼ç»™constè¿­ä»£å™¨
     for (list<int>::const_iterator it = lst.begin(); it != lst.end(); ++it)
         cout << *it << ' '; cout << endl;
 }
@@ -25,7 +25,7 @@ void print_compare(const list<int>& lst1, const list<int>& lst2)
         cout << "lst zuo >= lst you"<< endl;
 }
 
-//for_each()ÅÅĞò
+//for_each()æ’åº
 bool lessForCollection(const list<int>& lst1, const list<int> lst2)
 {
     return lexicographical_compare(lst1.begin(),lst1.end(), lst2.begin(),lst2.end());
@@ -51,7 +51,7 @@ int main()
     //lexicographical_compare()
     print_compare(lst4, lst4);
     print_compare(lst4, lst1);
-    print_compare(lst1, lst3); //Ê×±ÈÔªËØ£¬´Î±È³¤¶È
+    print_compare(lst1, lst3); //é¦–æ¯”å…ƒç´ ï¼Œæ¬¡æ¯”é•¿åº¦
 
 
     //for_each()
@@ -65,13 +65,13 @@ int main()
     vec.push_back(lst4);
     vec.push_back(lst2);
 
-    cout << "\nÎ´ÅÅĞò£º" << endl;
+    cout << "\næœªæ’åºï¼š" << endl;
     for_each(vec.begin(),vec.end(), printCollection);
 
-    //Ê¹ÓÃlexicographical_compare()ÅÅĞò
+    //ä½¿ç”¨lexicographical_compare()æ’åº
     sort(vec.begin(),vec.end(), lessForCollection);
 
-    cout << "ÅÅĞò£º" << endl;
+    cout << "æ’åºï¼š" << endl;
     for_each(vec.begin(),vec.end(), printCollection);
 
 

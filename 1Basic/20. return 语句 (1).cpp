@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
 
-/*returnÓï¾ä*/
+/*returnè¯­å¥*/
 
-/// 1.·µ»ØÖµ
+/// 1.è¿”å›å€¼
 int add(int a, int b)
 {
     return a+b;
 }
 
-/// 2.½áÊø³ÌĞò
+/// 2.ç»“æŸç¨‹åº
 void swap(int &a, int &b)
 {
-    cout << "\n\nÁ½Öµ½»»»£º\n";
+    cout << "\n\nä¸¤å€¼äº¤æ¢ï¼š\n";
 
     if (a == b){
-        cout << "Á½¸ö±äÁ¿ÖµÏàµÈ.\n";
-        return;     //ÌáÇ°½áÊø£¬½ÚÊ¡Ê±¼ä
+        cout << "ä¸¤ä¸ªå˜é‡å€¼ç›¸ç­‰.\n";
+        return;     //æå‰ç»“æŸï¼ŒèŠ‚çœæ—¶é—´
     }
     int temp = a;
     a = b;
     b = temp;
-    return;         //¿ÉÒÔÊ¡ÂÔ
+    return;         //å¯ä»¥çœç•¥
 }
 
 
@@ -29,15 +29,15 @@ int main()
 {
     int num1 = 77, num2 = 22;
 
-    //·µ»ØÖµ
-    cout << "·µ»ØÖµ£º" << add(num1, num2) << endl;
+    //è¿”å›å€¼
+    cout << "è¿”å›å€¼ï¼š" << add(num1, num2) << endl;
 
-    //²»Í¬±äÁ¿½»»»
+    //ä¸åŒå˜é‡äº¤æ¢
     swap(num1, num2);
     cout << "num1 = " << num1 << endl;
     cout << "num2 = " << num2 << endl;
 
-    //Í¬Ò»¸ö±äÁ¿½»»»
+    //åŒä¸€ä¸ªå˜é‡äº¤æ¢
     swap(num1, num1);
 
     return 0;

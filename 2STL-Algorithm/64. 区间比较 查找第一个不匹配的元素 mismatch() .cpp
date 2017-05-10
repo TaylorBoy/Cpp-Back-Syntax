@@ -4,9 +4,9 @@
 #include <list>
 using namespace std;
 
-/* Çø¼ä±È½Ï
- * mismatch() ²éÕÒµÚÒ»¸ö²»Æ¥ÅäµÄÔªËØ
-   ¡¾eg.ÈôµÚ¶şÇø¼ä½Ï³¤£¬ÎŞ·¨±È½Ï¡¿
+/* åŒºé—´æ¯”è¾ƒ
+ * mismatch() æŸ¥æ‰¾ç¬¬ä¸€ä¸ªä¸åŒ¹é…çš„å…ƒç´ 
+   ã€eg.è‹¥ç¬¬äºŒåŒºé—´è¾ƒé•¿ï¼Œæ— æ³•æ¯”è¾ƒã€‘
  */
 
 int main()
@@ -20,18 +20,18 @@ int main()
         lst.push_back(i);
     lst.push_back(3);
 
-    //ÏÔÊ¾
+    //æ˜¾ç¤º
     for (vector<int>::iterator it = vec.begin(); it != vec.end(); ++it)
         cout << *it << ' ';  cout << endl;
     for (list<int>::iterator it = lst.begin(); it != lst.end(); ++it)
         cout << *it << ' ';  cout << endl;
 
-    //mismatch() ÕÒ²»ÏàµÈµÄÔªËØ£¬·µ»ØÒ»¶Ôµü´úÆ÷
+    //mismatch() æ‰¾ä¸ç›¸ç­‰çš„å…ƒç´ ï¼Œè¿”å›ä¸€å¯¹è¿­ä»£å™¨
     pair<vector<int>::iterator, list<int>::iterator> values;
 
     values = mismatch(vec.begin(),vec.end(), lst.begin());
     if (vec.end() == values.first)
-        cout << "Can¡®t not find unequaly numbers!" << endl;
+        cout << "Canâ€˜t not find unequaly numbers!" << endl;
     else
         cout << "First mismatch: " << *values.first << " Second mismatch: " << *values.second << endl;
 

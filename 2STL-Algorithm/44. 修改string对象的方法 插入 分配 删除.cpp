@@ -3,51 +3,51 @@
 
 using namespace std;
 
-/*ĞŞ¸Ästring¶ÔÏóµÄ·½·¨
+/*ä¿®æ”¹stringå¯¹è±¡çš„æ–¹æ³•
  *
- * Ê¹ÓÃµü´úÆ÷£¬¶ÔÆäËûÈİÆ÷Í¨ÓÃ
+ * ä½¿ç”¨è¿­ä»£å™¨ï¼Œå¯¹å…¶ä»–å®¹å™¨é€šç”¨
  */
 int main()
 {
-    //²åÈë
+    //æ’å…¥
 
     string str("hello");
     string str2("ABC");
 
-    str.insert(0,3,'K'); //ÔÚ0Î»ÖÃ²åÈë3¸öK
-    cout << "²åÈë3¸öK£º" << str << endl;
+    str.insert(0,3,'K'); //åœ¨0ä½ç½®æ’å…¥3ä¸ªK
+    cout << "æ’å…¥3ä¸ªKï¼š" << str << endl;
 
-    str.insert(2,str2);  //ÔÚµÚ2¸öÎ»ÖÃ²åÈëstr2
-    cout << "²åÈëstr2£º " << str << endl;
+    str.insert(2,str2);  //åœ¨ç¬¬2ä¸ªä½ç½®æ’å…¥str2
+    cout << "æ’å…¥str2ï¼š " << str << endl;
 
-    str.insert(0,str2,0,2);  //ÔÚ0²åÈëstr2(´Ó0¿ªÊ¼Ñ¡Ôñ2Î»)
-    cout << "²åÈë²¿·Östr2£º" << str << endl;
+    str.insert(0,str2,0,2);  //åœ¨0æ’å…¥str2(ä»0å¼€å§‹é€‰æ‹©2ä½)
+    cout << "æ’å…¥éƒ¨åˆ†str2ï¼š" << str << endl;
 
-    //·ÖÅä
+    //åˆ†é…
 
-    char *cp = "Start eating Now"; //cÓïÑÔ·ç¸ñÒ²ĞĞ
+    char *cp = "Start eating Now"; //cè¯­è¨€é£æ ¼ä¹Ÿè¡Œ
 
-    str.assign(cp,5); //µÚÒ»¸öµ¥´Ê
+    str.assign(cp,5); //ç¬¬ä¸€ä¸ªå•è¯
     cout << str << endl;
 
-    str.assign(cp);   //È«²¿
+    str.assign(cp);   //å…¨éƒ¨
     cout << str << endl;
 
     str.assign(cp,2,5);
     cout << str << endl;
 
-    //É¾³ı
+    //åˆ é™¤
 
-    str.erase(1,2);  //´Ó1¿ªÊ¼É¾³ıÁ½¸ö
+    str.erase(1,2);  //ä»1å¼€å§‹åˆ é™¤ä¸¤ä¸ª
     cout << str << endl;
 
-    //×Ö·û´®ÓëÏÂ±ê
+    //å­—ç¬¦ä¸²ä¸ä¸‹æ ‡
     str = "ccccccccc";
 
     str[0] = 'A';
     cout << str << endl;
 
-    //µÈ¼ÛÓÚ
+    //ç­‰ä»·äº
     str.erase(0,1).insert(1,"A");
     cout << str << endl;
 

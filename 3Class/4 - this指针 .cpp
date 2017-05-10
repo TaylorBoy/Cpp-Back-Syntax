@@ -3,12 +3,12 @@
 using namespace std;
 
 /*
- * thisÖ¸Õë:
-        * ·µ»Ø *this
-        * ´Óconst³ÉÔ±º¯Êı·µ»Ø*this
-        * »ùÓÚconstÖØÔØ:Èç¹ûconst·µ»Ø*thisĞèÒªĞŞ¸Ä
+ * thisæŒ‡é’ˆ:
+        * è¿”å› *this
+        * ä»constæˆå‘˜å‡½æ•°è¿”å›*this
+        * åŸºäºconsté‡è½½:å¦‚æœconstè¿”å›*thiséœ€è¦ä¿®æ”¹
  *
-        * ¿É±äÊı¾İ³ÉÔ±: mutable,ÆÁ±ÎÁËconst
+        * å¯å˜æ•°æ®æˆå‘˜: mutable,å±è”½äº†const
  *
  */
 
@@ -26,24 +26,24 @@ public :
 
     string GetAddress() const  { return this->address; }
 
-    Person &SetPerson(const string &name)  //ÒıÓÃ
+    Person &SetPerson(const string &name)  //å¼•ç”¨
     {
         this->name = name;
-        return *this;  //·µ»ØÀàµÄÒıÓÃÀàĞÍ,¿ÉÒÔÓĞp.GET().Set()
+        return *this;  //è¿”å›ç±»çš„å¼•ç”¨ç±»å‹,å¯ä»¥æœ‰p.GET().Set()
     }
 
-    //´Óconst³ÉÔ±º¯Êı·µ»Øthis,constĞèÒª·µ»ØÊ±,·µ»ØÖµÀàĞÍÒ²ÒªÊÇconstĞŞÊÎµÄ
+    //ä»constæˆå‘˜å‡½æ•°è¿”å›this,constéœ€è¦è¿”å›æ—¶,è¿”å›å€¼ç±»å‹ä¹Ÿè¦æ˜¯constä¿®é¥°çš„
     const Person &GetAge(void) const
     {
-        ++age;   //ÔÚconstÖĞÒª¸Ä±äÒ»¸ö±äÁ¿,ĞèÒªÊ¹ÓÃ¿É±äÊı¾İ³ÉÔ±mutable
+        ++age;   //åœ¨constä¸­è¦æ”¹å˜ä¸€ä¸ªå˜é‡,éœ€è¦ä½¿ç”¨å¯å˜æ•°æ®æˆå‘˜mutable
         PrintAge();
         return *this;
     }
 
-    //»ùÓÚconstÖØÔØ
+    //åŸºäºconsté‡è½½
     Person &GetAge(void)
     {
-        ++age;  //ÕâÀï²»ĞèÒªÊ¹ÓÃmutable
+        ++age;  //è¿™é‡Œä¸éœ€è¦ä½¿ç”¨mutable
         PrintAge();
         return *this;
     }
@@ -52,7 +52,7 @@ public :
 private:
     string name;
     string address;
-    mutable int age;  //¿É±äÊı¾İ³ÉÔ±
+    mutable int age;  //å¯å˜æ•°æ®æˆå‘˜
 
     void PrintAge(void) const
     {
@@ -66,15 +66,15 @@ int main()
 {
     Person p("DouBi", "Beijing");
 
-    cout << p.GetAddress() << "µÄ¶º±È" << p.GetName() << endl;
+    cout << p.GetAddress() << "çš„é€—æ¯”" << p.GetName() << endl;
 
     cout << p.SetPerson("Sbi").GetName() << endl;
 
     cout << "**  this  **" << endl;
-    //·µ»ØthisµÄconst¶ÔÏó
+    //è¿”å›thisçš„constå¯¹è±¡
     cout << p.GetAge().GetAddress() << endl;
 
-    //Èç¹ûÒª¶Ôthis·µ»ØµÄconst¶ÔÏó½øĞĞĞŞ¸Ä,¾ÍÒªÖØÔØconstº¯Êı
+    //å¦‚æœè¦å¯¹thisè¿”å›çš„constå¯¹è±¡è¿›è¡Œä¿®æ”¹,å°±è¦é‡è½½constå‡½æ•°
     cout << p.GetAge().SetPerson("Mdzz").GetName() << endl;
 
 

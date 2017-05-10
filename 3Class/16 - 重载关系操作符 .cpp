@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
- * ¹ØÏµ²Ù×÷·û:  >  <
+ * å…³ç³»æ“ä½œç¬¦:  >  <
                >=  <=
                ==  !=
  *
@@ -37,7 +37,7 @@ bool operator==(const People &p1, const People &p2)
 // !=
 bool operator!=(const People &p1, const People &p2)
 {
-    return !(p1 == p2);  //½èÖú¸ÕÖØÔØµÄ==
+    return !(p1 == p2);  //å€ŸåŠ©åˆšé‡è½½çš„==
 }
 
 // >
@@ -60,9 +60,9 @@ int main()
     People p2(string("350583199"), string("Double"), 55);
     People p3(string("555fe8f88"), string("Double"), 52);
 
-    if (p1 == p2)  cout << "p1ºÍp2ÊÇÍ¬Ò»¸öÈË" << endl;
+    if (p1 == p2)  cout << "p1å’Œp2æ˜¯åŒä¸€ä¸ªäºº" << endl;
 
-    if (p2 != p3)  cout << "p2ºÍp3²»ÊÇÍ¬Ò»¸öÈË" << endl;
+    if (p2 != p3)  cout << "p2å’Œp3ä¸æ˜¯åŒä¸€ä¸ªäºº" << endl;
 
     cout << (p1 > p2) << endl;
     cout << (p1 < p2) << endl;

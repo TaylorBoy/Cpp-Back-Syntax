@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-/*Ö¸Õë¡¢constÏŞ¶¨·û*/
+/*æŒ‡é’ˆã€consté™å®šç¬¦*/
 
 using namespace std;
 
@@ -12,20 +12,20 @@ int main()
 
     *p = 2.2;
 
-    const double pi = 3.14; //³£double
-    const double *cptr;     //Ö¸Ïò³£¶ÔÏóµÄÖ¸Õë
+    const double pi = 3.14; //å¸¸double
+    const double *cptr;     //æŒ‡å‘å¸¸å¯¹è±¡çš„æŒ‡é’ˆ
     cptr = &pi;
 
     int num = 0;
     int num2 = 9;
     int *const constPtr = &num;
-    //Error : constPtr = &num2 //²»ÄÜ¸Ä±äÖ¸ÕëÖ¸Ïò
+    //Error : constPtr = &num2 //ä¸èƒ½æ”¹å˜æŒ‡é’ˆæŒ‡å‘
 
 
-    //const ÏŞ¶¨·û
+    //const é™å®šç¬¦
     string str("Hello World!");
     const string *cstr1;
-    string *const cstr2 = &str;  //³£Ö¸Õë£¬±ØĞë³õÊ¼»¯
+    string *const cstr2 = &str;  //å¸¸æŒ‡é’ˆï¼Œå¿…é¡»åˆå§‹åŒ–
     const string *const str2 = &str;
 
 

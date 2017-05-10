@@ -6,25 +6,25 @@
 
 using namespace std;
 
-// ²»Ö§³Öc++11, ×Ô¶¨Òåtolower()
+// ä¸æ”¯æŒc++11, è‡ªå®šä¹‰tolower()
 char str_tolower(char c)
 {
     return (char)tolower(c);
 }
 
-// set<string, ¶şÔªÎ½´Ê>
+// set<string, äºŒå…ƒè°“è¯>
 class CCompareStringNoCase
 {
 public:
-    // ²»Çø·Ö´óĞ¡Ğ´
+    // ä¸åŒºåˆ†å¤§å°å†™
     bool operator()(const string &str1, const string &str2) const
     {
         string str1LowerCase;
         str1LowerCase.resize(str1.size());
-        //std::string::value_typeÊÇchar, tolower²ÎÊıÊÇint. ÀàĞÍ²»Æ¥Åä
+        //std::string::value_typeæ˜¯char, tolowerå‚æ•°æ˜¯int. ç±»å‹ä¸åŒ¹é…
         transform(str1.begin(),str1.end(),str1LowerCase.begin(),str_tolower);
 
-        // ¿ÉÒÔÓÃlambda±í´ïÊ½: À´×Ôcsdn  jiqiang01234
+        // å¯ä»¥ç”¨lambdaè¡¨è¾¾å¼: æ¥è‡ªcsdn  jiqiang01234
         //transform(str1.begin(),str1.end(),[](unsigned char c){return std::tolower(c);});
 
         string str2LowerCase;

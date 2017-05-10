@@ -4,7 +4,7 @@
 int main()
 {
     int source = 7788;
-    int &reference = source; //ÒıÓÃ
+    int &reference = source; //å¼•ç”¨
     std::cout << reference << std::endl;
 
     reference = 1024;

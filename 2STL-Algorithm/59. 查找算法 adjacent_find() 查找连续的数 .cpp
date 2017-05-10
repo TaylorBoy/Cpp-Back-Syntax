@@ -4,12 +4,12 @@
 
 using namespace std;
 
-/* ²éÕÒËã·¨
- * adjacent_find() ¶ÔÆäËûÈİÆ÷Í¨ÓÃ
+/* æŸ¥æ‰¾ç®—æ³•
+ * adjacent_find() å¯¹å…¶ä»–å®¹å™¨é€šç”¨
  */
 
 
- //Î½´Ê,µÚ¶ş¸öÊıÊÇµÚÒ»¸öÊıµÄÁ½±¶
+ //è°“è¯,ç¬¬äºŒä¸ªæ•°æ˜¯ç¬¬ä¸€ä¸ªæ•°çš„ä¸¤å€
  bool double_num(int elem1,int elem2)
  {
      return 2*elem1 == elem2;
@@ -29,7 +29,7 @@ int main()
 
     vector<int>::iterator pos;
 
-    //Ä¬ÈÏ£ºÁ¬ĞøÁ½¸öÏàµÈµÄÖµ
+    //é»˜è®¤ï¼šè¿ç»­ä¸¤ä¸ªç›¸ç­‰çš„å€¼
     pos = adjacent_find(vec.begin(),vec.end());
 
     if (vec.end() != pos){
@@ -38,7 +38,7 @@ int main()
         cout << "Not Found!\n" ;
     }
 
-    //Î½´Ê: µÚ¶ş¸öÊıÊÇµÚÒ»¸öÊıµÄÁ½±¶
+    //è°“è¯: ç¬¬äºŒä¸ªæ•°æ˜¯ç¬¬ä¸€ä¸ªæ•°çš„ä¸¤å€
     pos = adjacent_find(vec.begin(),vec.end(), double_num);
 
     if (vec.end() != pos){

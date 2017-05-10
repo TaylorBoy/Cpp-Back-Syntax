@@ -1,16 +1,16 @@
 #include <iostream>
-#include <memory>  // ÖÇÄÜÖ¸Õë, Ö»ÊÇ»ù±¾µÄ
+#include <memory>  // æ™ºèƒ½æŒ‡é’ˆ, åªæ˜¯åŸºæœ¬çš„
 using namespace std;
 
 /*
-    ÖÇÄÜÖ¸Õë
-    1. ³£¹æÖ¸Õë: ÈÝÒ×²úÉúÄÚ´æÐ¹Â©(Ã»ÓÐdelete, Õ¼ÓÃÄÚ´æ)
-                 ¼´Ê¹newºÍdeleteÅä¶ÔÁË, µ«¹ý³ÌÖÐ¿ÉÄÜ³öÏÖÒì³£Ã»ÓÐ»ú»ádelete
-    2. ÖÇÄÜÖ¸Õë:
-       * ×Ô¶¨Òå: Éî¶È¸´ÖÆ / Ð´Ê±¸´ÖÆ / ÒýÓÃ¼ÆÊý / ÒýÓÃÁ´½Ó / ÆÆ»µÐÔ¸´ÖÆ
-       * Ê¹ÓÃstd::auto_ptrÖÇÄÜÖ¸Õë (ÆÆ»µÐÔ¸´ÖÆ, ÓÃÓÚ»ù±¾Ö¸Õë)
-       * Ê¹ÓÃBoostÖÇÄÜÖ¸Õë
-       * Ê¹ÓÃATL¿ò¼ÜÖÐ(msvc++)µÄÖÇÄÜÖ¸Õë: CComPtr, CComQIPtrµÈ.
+    æ™ºèƒ½æŒ‡é’ˆ
+    1. å¸¸è§„æŒ‡é’ˆ: å®¹æ˜“äº§ç”Ÿå†…å­˜æ³„æ¼(æ²¡æœ‰delete, å ç”¨å†…å­˜)
+                 å³ä½¿newå’Œdeleteé…å¯¹äº†, ä½†è¿‡ç¨‹ä¸­å¯èƒ½å‡ºçŽ°å¼‚å¸¸æ²¡æœ‰æœºä¼šdelete
+    2. æ™ºèƒ½æŒ‡é’ˆ:
+       * è‡ªå®šä¹‰: æ·±åº¦å¤åˆ¶ / å†™æ—¶å¤åˆ¶ / å¼•ç”¨è®¡æ•° / å¼•ç”¨é“¾æŽ¥ / ç ´åæ€§å¤åˆ¶
+       * ä½¿ç”¨std::auto_ptræ™ºèƒ½æŒ‡é’ˆ (ç ´åæ€§å¤åˆ¶, ç”¨äºŽåŸºæœ¬æŒ‡é’ˆ)
+       * ä½¿ç”¨Boostæ™ºèƒ½æŒ‡é’ˆ
+       * ä½¿ç”¨ATLæ¡†æž¶ä¸­(msvc++)çš„æ™ºèƒ½æŒ‡é’ˆ: CComPtr, CComQIPtrç­‰.
 */
 
 class Test

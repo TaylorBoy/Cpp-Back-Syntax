@@ -3,9 +3,9 @@
 
 using namespace std;
 /*
- *  ÖØÔØ¸³Öµ²Ù×÷·û
+ *  é‡è½½èµ‹å€¼æ“ä½œç¬¦
  *
-    * ¸³Öµ²Ù×÷±ØĞë·µ»Ø¶Ô*thisµÄÒıÓÃ
+    * èµ‹å€¼æ“ä½œå¿…é¡»è¿”å›å¯¹*thisçš„å¼•ç”¨
  */
 
 class String
@@ -13,7 +13,7 @@ class String
 public :
     String(char const *chars = "");
 
-    //³£ÓÃÖØÔØ
+    //å¸¸ç”¨é‡è½½
     String& operator=(String const &str);
     String& operator=(char const *);
     String& operator=(char);
@@ -25,33 +25,33 @@ private:
 };
 
 ///////////////
-// ¹¹Ôìº¯Êı
+// æ„é€ å‡½æ•°
 String::String(char const *chars)
 {
-    chars = chars ? chars : "";  //ÈôcharsÎªnull, ÖÃÎª¿Õ
+    chars = chars ? chars : "";  //è‹¥charsä¸ºnull, ç½®ä¸ºç©º
     ptrChars = new char[ strlen(chars) + 1];
     strcpy(ptrChars, chars);
 }
 
 ///////////////
-// ÖØÔØ¸³Öµ²Ù×÷·û
+// é‡è½½èµ‹å€¼æ“ä½œç¬¦
 String& String::operator=(String const &str)
 {
     if (strlen(ptrChars) != strlen(str.ptrChars))
     {
-        //³¤¶È²»ÏàµÈ, ÖØĞÂ
+        //é•¿åº¦ä¸ç›¸ç­‰, é‡æ–°
         char *ptrHold = new char[strlen(str.ptrChars) + 1];
         delete[] ptrChars;
         ptrChars = ptrHold;
     }
 
-    //³¤¶ÈÏàµÈ, Ö±½Ó¸³Öµ
+    //é•¿åº¦ç›¸ç­‰, ç›´æ¥èµ‹å€¼
     std::strcpy(ptrChars, str.ptrChars);
     return *this;
 }
 
 ////////////////
-// ·½·¨
+// æ–¹æ³•
 void String::print(void)
 {
     cout << ptrChars << endl;

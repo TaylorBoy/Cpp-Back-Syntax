@@ -3,17 +3,17 @@
 using namespace std;
 
 /*
-    ÅÉÉúÀàµÄ¹¹Ôìº¯ÊýºÍÎö¹¹º¯Êý
+    æ´¾ç”Ÿç±»çš„æž„é€ å‡½æ•°å’Œæžæž„å‡½æ•°
 
-    ¹¹Ôìº¯Êý:
-    * Ö´ÐÐ»ùÀàµÄ¹¹Ôìº¯Êý
-    * Ö´ÐÐ³ÉÔ±¶ÔÏóµÄ¹¹Ôìº¯Êý
-    * Ö´ÐÐÅÉÉúÀàµÄ¹¹Ôìº¯Êý
+    æž„é€ å‡½æ•°:
+    * æ‰§è¡ŒåŸºç±»çš„æž„é€ å‡½æ•°
+    * æ‰§è¡Œæˆå‘˜å¯¹è±¡çš„æž„é€ å‡½æ•°
+    * æ‰§è¡Œæ´¾ç”Ÿç±»çš„æž„é€ å‡½æ•°
 
-    Îö¹¹º¯Êý:
-    * ¶ÔÅÉÉúÀàÐÂÔöÆÕÍ¨³ÉÔ±½øÐÐÇåÀí
-    * µ÷ÓÃ³ÉÔ±¶ÔÏóÎö¹¹º¯Êý
-    * µ÷ÓÃ»ùÀàÎö¹¹º¯Êý
+    æžæž„å‡½æ•°:
+    * å¯¹æ´¾ç”Ÿç±»æ–°å¢žæ™®é€šæˆå‘˜è¿›è¡Œæ¸…ç†
+    * è°ƒç”¨æˆå‘˜å¯¹è±¡æžæž„å‡½æ•°
+    * è°ƒç”¨åŸºç±»æžæž„å‡½æ•°
  */
 
 enum TypeCat {ONE, TWO, THREE, FOUR };
@@ -22,15 +22,15 @@ class TestClass
 {
 public :
     TestClass(){
-        cout << "¹¹Ôìº¯Êý: TestClass!" << endl;
+        cout << "æž„é€ å‡½æ•°: TestClass!" << endl;
     }
     ~TestClass(){
-        cout << "Îö¹¹º¯Êý: TestClass!" << endl;
+        cout << "æžæž„å‡½æ•°: TestClass!" << endl;
     }
 };
 
 ///////////////////////////////////////////////
-// ¸¸Àà
+// çˆ¶ç±»
 class Animal
 {
 public :
@@ -46,22 +46,22 @@ private:
     string name;
 };
 
-// ¹¹Ôì
+// æž„é€ 
 Animal::Animal(int a, const string &n)
 {
-    cout << "¹¹Ôìº¯Êý: Father!" << endl;
+    cout << "æž„é€ å‡½æ•°: Father!" << endl;
     age = a;
     name = n;
 }
 
-// Îö¹¹
+// æžæž„
 Animal::~Animal()
 {
-    cout << "Îö¹¹º¯Êý: Father!" << endl;
+    cout << "æžæž„å‡½æ•°: Father!" << endl;
 }
 
 ///////////////////////////////////////////////
-// ×ÓÀà
+// å­ç±»
 class Cat : public Animal
 {
 public :
@@ -73,17 +73,17 @@ private:
     TestClass t_class;
 };
 
-// ¹¹Ôì
+// æž„é€ 
 Cat::Cat(TypeCat t, int a, const string &n): Animal(a, n)
 {
-    cout << "¹¹Ôìº¯Êý: Sun !" << endl;
+    cout << "æž„é€ å‡½æ•°: Sun !" << endl;
     cat_no = t;
 }
 
-// Îö¹¹
+// æžæž„
 Cat::~Cat()
 {
-    cout << "Îö¹¹º¯Êý: Sun" << endl;
+    cout << "æžæž„å‡½æ•°: Sun" << endl;
 }
 
 
@@ -92,7 +92,7 @@ Cat::~Cat()
 int main()
 {
     Cat c(TWO, 4, "Angel Cat");
-    cout << "\n¶¨ÒåÒÔºó: " << c.GetName() << " is " << c.GetAge() << " years old!\n" << endl;
+    cout << "\nå®šä¹‰ä»¥åŽ: " << c.GetName() << " is " << c.GetAge() << " years old!\n" << endl;
 
     return 0;
 }

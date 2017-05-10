@@ -6,7 +6,7 @@
 
 using namespace std;
 
-/*Ë³ĞòÈİÆ÷µÄ²Ù×÷5*/
+/*é¡ºåºå®¹å™¨çš„æ“ä½œ5*/
 
 int main()
 {
@@ -18,29 +18,29 @@ int main()
     cout << "front: " << vec.front() << endl;
     cout << "back : " << vec.back()  << endl << endl;
 
-    //ÒıÓÃ
+    //å¼•ç”¨
     vector<int>::reference a = vec.front();
     vector<int>::reference b = vec.back();
     cout << "a: " << a;
     cout << "   b: " << b << endl << endl;
 
-    //µü´úÆ÷
-    cout << "µü´úÆ÷£º" << *vec.begin() << "   ";
-    cout << *--vec.end() << endl << endl;  //endÊÇ×îºóÒ»¸öµÄÏÂÒ»¸ö
+    //è¿­ä»£å™¨
+    cout << "è¿­ä»£å™¨ï¼š" << *vec.begin() << "   ";
+    cout << *--vec.end() << endl << endl;  //endæ˜¯æœ€åä¸€ä¸ªçš„ä¸‹ä¸€ä¸ª
 
-    //ÏÂ±ê£¬ÊÊÓÃÓÚvectorºÍdeque
-    cout << "ÏÂ±ê£º" << endl;  //ÏÂ±ê±ØĞë´æÔÚ
+    //ä¸‹æ ‡ï¼Œé€‚ç”¨äºvectorå’Œdeque
+    cout << "ä¸‹æ ‡ï¼š" << endl;  //ä¸‹æ ‡å¿…é¡»å­˜åœ¨
 
     cout << vec[0] << endl << vec[1] << endl << vec[2] << endl << endl;
 
-    // vec.at(index) ÏÂ±êÔ½½ç»áÅ×³öÒì³£
+    // vec.at(index) ä¸‹æ ‡è¶Šç•Œä¼šæŠ›å‡ºå¼‚å¸¸
     cout << "vec.at(index): " << endl;
     cout << vec.at(0) << endl << vec.at(1) << endl << vec.at(2) << endl << endl;
 
     try{
         cout << vec.at(88) << endl;
     }catch(out_of_range ){
-        cout << "***ÏÂ±êÔ½½çÁË£¡***\n";
+        cout << "***ä¸‹æ ‡è¶Šç•Œäº†ï¼***\n";
     }
 
 

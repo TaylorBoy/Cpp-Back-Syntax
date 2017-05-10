@@ -2,11 +2,11 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include <sstream>  //×Ö·û´®Á÷
+#include <sstream>  //å­—ç¬¦ä¸²æµ
 
 using namespace std;
 
-/*×Ö·û´®Á÷ÔÚÄÚ´æÀï£¬ËÙ¶È¿ì*/
+/*å­—ç¬¦ä¸²æµåœ¨å†…å­˜é‡Œï¼Œé€Ÿåº¦å¿«*/
 
 int main()
 {
@@ -29,10 +29,10 @@ int main()
     inFile.close();
 
     for (vector<string>::const_iterator it = vec.begin(); it != vec.end(); ++it){
-        //ÖğĞĞ´òÓ¡£ºcout << *it << endl;
+        //é€è¡Œæ‰“å°ï¼šcout << *it << endl;
 
-        //Öğ¸öµ¥´Ê´òÓ¡
-        isstream.str(*it);  //×Ö·û´®Á÷ÀïµÄ×Ö·û´®
+        //é€ä¸ªå•è¯æ‰“å°
+        isstream.str(*it);  //å­—ç¬¦ä¸²æµé‡Œçš„å­—ç¬¦ä¸²
         while (isstream >> word){
             cout << word << endl;
         }

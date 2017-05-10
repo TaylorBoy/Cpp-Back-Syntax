@@ -4,10 +4,10 @@
 
 using namespace std;
 
-/* ²éÕÒËã·¨__ÒÑĞòÆÚ¼äµÄËã·¨
+/* æŸ¥æ‰¾ç®—æ³•__å·²åºæœŸé—´çš„ç®—æ³•
  * power_bound() upper_bound()
  * equal_range()
-   ¹ØÁªÊ½ÈİÆ÷ÓĞµÈĞ§µÄ³ÉÔ±º¯Êı£¬Ğ§ÂÊ¸ß
+   å…³è”å¼å®¹å™¨æœ‰ç­‰æ•ˆçš„æˆå‘˜å‡½æ•°ï¼Œæ•ˆç‡é«˜
  */
 
 int main()
@@ -18,7 +18,7 @@ int main()
         lst.insert(lst.end(), i );
     for (int i = 1; i < 10; ++i )
         lst.insert(lst.end(), i );
-    lst.sort(); //ÅÅĞò
+    lst.sort(); //æ’åº
 
     for (list<int>::iterator it = lst.begin(); it != lst.end(); ++it)
         cout << *it << ' ';
@@ -31,19 +31,19 @@ int main()
     pos1 = lower_bound(lst.begin(),lst.end(), 5);
     pos2 = upper_bound(lst.begin(),lst.end(), 5);
 
-    cout << "µÚÒ»¸ö5µÄÎ»ÖÃ£º" << distance(lst.begin(),pos1)+1 << endl;
-    cout << "µÚÒ»¸ö´óÓÚ5µÄÎ»ÖÃ£º" << distance(lst.begin(),pos2)+1 << endl;
+    cout << "ç¬¬ä¸€ä¸ª5çš„ä½ç½®ï¼š" << distance(lst.begin(),pos1)+1 << endl;
+    cout << "ç¬¬ä¸€ä¸ªå¤§äº5çš„ä½ç½®ï¼š" << distance(lst.begin(),pos2)+1 << endl;
 
-    // Ê¹ÓÃ£º²åÈë±ÜÃâÖØÅÅĞò
-    lst.insert(lower_bound(lst.begin(),lst.end(),5),5); //²åÈëÇ°Ãæ
-    lst.insert(upper_bound(lst.begin(),lst.end(),5),6); //²åÈëºóÃæ
+    // ä½¿ç”¨ï¼šæ’å…¥é¿å…é‡æ’åº
+    lst.insert(lower_bound(lst.begin(),lst.end(),5),5); //æ’å…¥å‰é¢
+    lst.insert(upper_bound(lst.begin(),lst.end(),5),6); //æ’å…¥åé¢
 
     for (list<int>::iterator it = lst.begin(); it != lst.end(); ++it)
         cout << *it << ' ';
     cout << endl;
 
     /// equal_bound()
-    pair<list<int>::iterator, list<int>::iterator> range; //´æ·ÅÒ»¶Ô
+    pair<list<int>::iterator, list<int>::iterator> range; //å­˜æ”¾ä¸€å¯¹
 
     range = equal_range(lst.begin(),lst.end(), 5);
 

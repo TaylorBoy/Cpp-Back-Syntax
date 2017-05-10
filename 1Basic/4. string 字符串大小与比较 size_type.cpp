@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+ 
 /*sring (2)*/
 
 using namespace std;
@@ -10,15 +10,15 @@ int main()
     string str("Hello World!");
     cout << "The size of str: " << str.size() << endl;
 
-    //×Ö·û´®´óÐ¡ÀàÐÍ£¬>=0
+    //å­—ç¬¦ä¸²å¤§å°ç±»åž‹ï¼Œ>=0
     string::size_type num = str.size();
     cout << "size : " << num << endl;
 
-    //×Ö·û´®´óÐ¡±È½Ï,ÖÐÎÄ£ºÆ´Òô£»Ó¢ÎÄ£ºASCII
+    //å­—ç¬¦ä¸²å¤§å°æ¯”è¾ƒ,ä¸­æ–‡ï¼šæ‹¼éŸ³ï¼›è‹±æ–‡ï¼šASCII
     //string str1("big");
     //string str2("small");
-    string str1("¶º±È±È");
-    string str2("Éµµ°");
+    string str1("é€—æ¯”æ¯”");
+    string str2("å‚»è›‹");
     if (str1 > str2){
         cout << str1 << " > " << str2 << endl;
     }else if (str1 < str2){
@@ -27,11 +27,11 @@ int main()
         cout << str1 << " == "<< str2 << endl;
     }
 
-    //×Ö·û´®Ïà¼Ó
+    //å­—ç¬¦ä¸²ç›¸åŠ 
     cout << "str1 + str2: " << str1+str2 << endl;
     string str3 = str1 +"dandan"+"dandan"+"dandan" +str2;
-    //´íÎó£ºstring str3 = str2 +"doufw" +"fwef";
-    //´íÎó£ºstring str3 = "dou" + "bi"; ÖÁÉÙÒ»¸ö×Ö·û´®±äÁ¿
+    //é”™è¯¯ï¼šstring str3 = str2 +"doufw" +"fwef";
+    //é”™è¯¯ï¼šstring str3 = "dou" + "bi"; è‡³å°‘ä¸€ä¸ªå­—ç¬¦ä¸²å˜é‡
     cout << "add : " << str3 << endl;
 
 

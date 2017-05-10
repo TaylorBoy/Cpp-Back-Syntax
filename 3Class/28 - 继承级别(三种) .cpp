@@ -3,19 +3,19 @@
 using namespace std;
 
 /*
-    1. ÈıÖÖ¼Ì³Ğ (È±Ê¡ private)
-       * ¹«ÓĞ  : class B : public    A
-       * Ë½ÓĞ  : class B : private   A
-       * ÊÜ±£»¤: class B : protected A
+    1. ä¸‰ç§ç»§æ‰¿ (ç¼ºçœ private)
+       * å…¬æœ‰  : class B : public    A
+       * ç§æœ‰  : class B : private   A
+       * å—ä¿æŠ¤: class B : protected A
 
-    2. ½Ó¿Ú¼Ì³ĞºÍÊµÏÖ¼Ì³Ğ
-    3. ĞŞ¸Ä¼Ì³Ğ·ÃÎÊ(È¥³ı¸ö±ğ³ÉÔ±)
-    4. Ä¬ÈÏ¼Ì³Ğ·ÃÎÊ¼¶±ğ: private (structÄ¬ÈÏpublic)
+    2. æ¥å£ç»§æ‰¿å’Œå®ç°ç»§æ‰¿
+    3. ä¿®æ”¹ç»§æ‰¿è®¿é—®(å»é™¤ä¸ªåˆ«æˆå‘˜)
+    4. é»˜è®¤ç»§æ‰¿è®¿é—®çº§åˆ«: private (structé»˜è®¤public)
 
 */
 
 ///////////////////////////////////////////////
-// ¸¸Àà
+// çˆ¶ç±»
 class A
 {
 public :
@@ -27,40 +27,40 @@ private:
 };
 
 ///////////////////////////////////////////////
-// ×ÓÀà1
+// å­ç±»1
 class B1 : public A
 {
 public :
     void test(){
         cout << a << endl; //a: public
-        cout << b << endl; //b: protected, ¼Ì³ĞÈ¨ÏŞ²»Éı
-        // cÎªprivate²»ÄÜ·ÃÎÊ
-        //cout << c << endl; // ²»ÄÜÊ¹ÓÃusing A::cÀ´ÌáÉıprivateµÄ·ÃÎÊÈ¨ÏŞ
+        cout << b << endl; //b: protected, ç»§æ‰¿æƒé™ä¸å‡
+        // cä¸ºprivateä¸èƒ½è®¿é—®
+        //cout << c << endl; // ä¸èƒ½ä½¿ç”¨using A::cæ¥æå‡privateçš„è®¿é—®æƒé™
     }
 };
 
-// ×ÓÀà2
+// å­ç±»2
 class B2 : protected A
 {
 public :
     void test(){
         cout << a << endl; //a: protected
         cout << b << endl; //b: protected
-        // cÊÜ±£»¤
+        // cå—ä¿æŠ¤
     }
 
-    // 3. ĞŞ¸Ä¼Ì³Ğ·ÃÎÊ(È¥³ı¸ö±ğ³ÉÔ±)
-    using A::a; // Ê¹protectedµ½publicÒÔÖÁÓÚÔÚmainÖĞÄÜ·ÃÎÊ
+    // 3. ä¿®æ”¹ç»§æ‰¿è®¿é—®(å»é™¤ä¸ªåˆ«æˆå‘˜)
+    using A::a; // ä½¿protectedåˆ°publicä»¥è‡³äºåœ¨mainä¸­èƒ½è®¿é—®
 };
 
-// ×ÓÀà3
+// å­ç±»3
 class B3 : private A
 {
 public :
     void test(){
         cout << a << endl; //a: private
         cout << b << endl; //b: private
-        // cÊÜ±£»¤
+        // cå—ä¿æŠ¤
         cout << c << endl;
     }
 
@@ -71,14 +71,14 @@ private :
 };
 
 ////////////////////////////////////////////////
-// ËïÀà
+// å­™ç±»
 class C : public B1
 {
 public :
     void test(){
         cout << a << endl;
         cout << b << endl;
-        // cÊÜ±£»¤
+        // cå—ä¿æŠ¤
     }
 };
 
@@ -87,7 +87,7 @@ int main()
 {
     B2 b2;
 
-    // Ê¹ÓÃusing A::a ×ªÎªpublic
+    // ä½¿ç”¨using A::a è½¬ä¸ºpublic
     cout << b2.a << endl;
 
     return 0;

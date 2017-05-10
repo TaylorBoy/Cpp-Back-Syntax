@@ -2,7 +2,7 @@
 
 using std::endl;
 
-/*Ã¶¾Ù*/
+/*æžšä¸¾*/
 
 enum Week{
     Monday,

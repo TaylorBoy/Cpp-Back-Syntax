@@ -3,32 +3,32 @@
 using namespace std;
 
 /*
-     ´¿Ðéº¯ÊýÓë³éÏóÀà
-     # ´¿Ðéº¯Êý:
+     çº¯è™šå‡½æ•°ä¸ŽæŠ½è±¡ç±»
+     # çº¯è™šå‡½æ•°:
        virtual Type func(void) = 0;
-     # ³éÏóÀà:
-       * ÈÎºÎ°üº¬Ò»¸ö»òÕß¶à¸ö´¿Ðéº¯ÊýµÄÀà¶¼ÊÇ³éÏóÀà
-       * ²»ÄÜ´´½¨³éÏóÀàµÄ¶ÔÏó, Ö»ÄÜ¼Ì³Ð
-       * ´¿Ðéº¯Êý±ØÐë¸²¸Ç(·Ç´¿Ðé)
-    # C++½Ó¿Ú:
-      Ö»°üº¬´¿Ðéº¯ÊýµÄ³éÏóÀà
+     # æŠ½è±¡ç±»:
+       * ä»»ä½•åŒ…å«ä¸€ä¸ªæˆ–è€…å¤šä¸ªçº¯è™šå‡½æ•°çš„ç±»éƒ½æ˜¯æŠ½è±¡ç±»
+       * ä¸èƒ½åˆ›å»ºæŠ½è±¡ç±»çš„å¯¹è±¡, åªèƒ½ç»§æ‰¿
+       * çº¯è™šå‡½æ•°å¿…é¡»è¦†ç›–(éžçº¯è™š)
+    # C++æŽ¥å£:
+      åªåŒ…å«çº¯è™šå‡½æ•°çš„æŠ½è±¡ç±»
 */
 
-/* ³éÏóÀà, ²»ÄÜ´´½¨ÀàµÄ¶ÔÏó */
+/* æŠ½è±¡ç±», ä¸èƒ½åˆ›å»ºç±»çš„å¯¹è±¡ */
 class Shape
 {
 public :
     Shape(){}
-    // Ö»ÒªÀàÀï´æÔÚÐéº¯Êý, Îö¹¹º¯Êý¾ÍÒª¶¨ÒåÎªÐéµÄ
+    // åªè¦ç±»é‡Œå­˜åœ¨è™šå‡½æ•°, æžæž„å‡½æ•°å°±è¦å®šä¹‰ä¸ºè™šçš„
     virtual ~Shape(){}
 
-    //´¿Ðéº¯Êý, ¿´Çé¿öÊµÏÖ, Ò»°ã²»Ð´»òÕßÊµÏÖ¹²ÓÐµÄ
+    //çº¯è™šå‡½æ•°, çœ‹æƒ…å†µå®žçŽ°, ä¸€èˆ¬ä¸å†™æˆ–è€…å®žçŽ°å…±æœ‰çš„
     virtual double GetArea() = 0;
     virtual double GetPerim() = 0;
     virtual void Draw() = 0;
 };
 
-// Ð´¹²ÓÃ´úÂë
+// å†™å…±ç”¨ä»£ç 
 void Shape::Draw()
 {
     cout << endl << "*** Draw ***" << endl << endl;
@@ -49,10 +49,10 @@ private:
 
 void Circle::Draw()
 {
-    Shape::Draw();  // µ÷ÓÃ¸¸Ààº¯Êý
+    Shape::Draw();  // è°ƒç”¨çˆ¶ç±»å‡½æ•°
 }
 
-// ·½ÐÎ
+// æ–¹å½¢
 class Rectangle : public Shape
 {
 public :
@@ -78,10 +78,10 @@ void Rectangle::Draw()
             cout << "# ";
         cout << endl;
     }
-    Shape::Draw();  // ¸¸Àà
+    Shape::Draw();  // çˆ¶ç±»
 }
 
-// Õý·½ÐÎ
+// æ­£æ–¹å½¢
 class Square : public Rectangle
 {
 public :
@@ -97,7 +97,7 @@ Square::Square(int len) : Rectangle(len, len){}
 Square::Square(int len, int width) : Rectangle(len, width)
 {
     if (GetLength() != GetWidth())
-        cout << "³¤ºÍ¿í²»ÏàµÈ!!`" << endl;
+        cout << "é•¿å’Œå®½ä¸ç›¸ç­‰!!`" << endl;
 }
 
 
@@ -106,7 +106,7 @@ int main()
     int choise;
     bool fQuit = false;
 
-    // »ùÀà, ¶àÌ¬
+    // åŸºç±», å¤šæ€
     Shape *s;
 
     while (false == fQuit)

@@ -4,7 +4,7 @@
 using namespace std;
 
 /*
- * string¶ÔÏóµÄ±È½Ï
+ * stringå¯¹è±¡çš„æ¯”è¾ƒ
  */
 
 int main()
@@ -17,20 +17,20 @@ int main()
     if (str1 > str2)  cout << "> " << endl;
     if (str1 < str2)  cout << "< " << endl;
 
-    if (str1.compare(str2) > 0) cout << "str1´ó" << endl;
+    if (str1.compare(str2) > 0) cout << "str1å¤§" << endl;
     if (str1.compare(str2) < 0) cout << "str2da" << endl;
-    if (str1.compare(str2) == 0) cout << "ÏàµÈ"  << endl;
+    if (str1.compare(str2) == 0) cout << "ç›¸ç­‰"  << endl;
 
     cout << endl << endl;
 
-    if (str1.compare(2,2,str2) > 0) cout << "str1µÄºóÁ½¸ö > str2" << endl;
+    if (str1.compare(2,2,str2) > 0) cout << "str1çš„åä¸¤ä¸ª > str2" << endl;
     if (str1.compare(2,2,str2,2,2) == 0) cout << "str1 == str2 2" << endl;
 
     cout << endl << endl;
 
     char *str = "Hello";
 
-    if (str1.compare(2,2,str,2,2) < 0) cout << "str1µÄºóÁ½¸ö < strµÄºóÁ½¸ö" << endl;
+    if (str1.compare(2,2,str,2,2) < 0) cout << "str1çš„åä¸¤ä¸ª < strçš„åä¸¤ä¸ª" << endl;
 
 
 

@@ -3,9 +3,9 @@
 
 using namespace std;
 
-/*ĞŞ¸Ästring¶ÔÏóµÄ·½·¨
+/*ä¿®æ”¹stringå¯¹è±¡çš„æ–¹æ³•
  *
- * Ê¹ÓÃµü´úÆ÷£¬¶ÔÆäËûÈİÆ÷Í¨ÓÃ
+ * ä½¿ç”¨è¿­ä»£å™¨ï¼Œå¯¹å…¶ä»–å®¹å™¨é€šç”¨
  */
 
 int main()
@@ -16,29 +16,29 @@ int main()
     string::iterator it = s.begin();
     ++it;
 
-    //²åÈëÒ»¸ö×Ö·û
+    //æ’å…¥ä¸€ä¸ªå­—ç¬¦
     s.insert(it,'A');
-    cout << "²åÈëÒ»¸ö×Ö·û: " << s << endl;
+    cout << "æ’å…¥ä¸€ä¸ªå­—ç¬¦: " << s << endl;
 
     it = s.begin();
     ++it;
 
-    //²åÈën¸ö×Ö·û
+    //æ’å…¥nä¸ªå­—ç¬¦
     s.insert(it,3,'B');
-    cout << "²åÈën¸ö×Ö·û : " << s << endl;
+    cout << "æ’å…¥nä¸ªå­—ç¬¦ : " << s << endl;
 
-    //²åÈëstring
+    //æ’å…¥string
     string::iterator bgn = s2.begin();
     string::iterator stp = s2.end();
 
     s.insert(it,bgn,stp);
-    cout << "²åÈëstring  : " << s << endl;
+    cout << "æ’å…¥string  : " << s << endl;
 
-    //·ÖÅäassign
-    cout << "·ÖÅäassign: " << endl;
+    //åˆ†é…assign
+    cout << "åˆ†é…assign: " << endl;
 
     s = "char";
-    cout << "Ô­×Ö·û´®£º"  << s << endl;
+    cout << "åŸå­—ç¬¦ä¸²ï¼š"  << s << endl;
 
     s.assign(8,'K');
     cout << s << endl;
@@ -46,12 +46,12 @@ int main()
     s.assign(bgn,stp);
     cout << s << endl;
 
-    //É¾³ı
+    //åˆ é™¤
 
     s = "Aabcd";
     it = s.begin();
     s.erase(it);
-    cout << "É¾³ıÖ®ºó£º" << s << endl;
+    cout << "åˆ é™¤ä¹‹åï¼š" << s << endl;
 
     s = "ABCDEFGH";
     it = s.begin();
@@ -59,7 +59,7 @@ int main()
     ++it;
     string::iterator it2 = s.end();
     --it2;
-    s.erase(it, it2);  //´Óitµ½it2,°üÍ·²»°üÎ²
+    s.erase(it, it2);  //ä»itåˆ°it2,åŒ…å¤´ä¸åŒ…å°¾
     cout << s << endl;
 
 

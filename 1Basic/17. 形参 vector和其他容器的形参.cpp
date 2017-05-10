@@ -2,10 +2,10 @@
 
 using namespace std;
 
-/*vectorºÍÆäËûÈİÆ÷ÀàµÄĞÎ²Î*/
+/*vectorå’Œå…¶ä»–å®¹å™¨ç±»çš„å½¢å‚*/
 #include <vector>
 
-//ÒıÓÃĞÎ²Î
+//å¼•ç”¨å½¢å‚
 void print(vector<double> &v)
 {
     vector<double>::iterator begin = v.begin();
@@ -15,7 +15,7 @@ void print(vector<double> &v)
     }
 }
 
-//´«ÈëÈİÆ÷µü´úÆ÷(~³£ÓÃ·½·¨~)
+//ä¼ å…¥å®¹å™¨è¿­ä»£å™¨(~å¸¸ç”¨æ–¹æ³•~)
 void print_2(vector<double>::const_iterator bgn,
              vector<double>::const_iterator end)
 {
@@ -32,10 +32,10 @@ int main()
     vec.push_back(5.88);
     vec.push_back(8.44);
 
-    cout << "ÈİÆ÷ÒıÓÃ£º\n";
+    cout << "å®¹å™¨å¼•ç”¨ï¼š\n";
     print(vec);
 
-    cout << "\nÈİÆ÷µü´úÆ÷£º\n";
+    cout << "\nå®¹å™¨è¿­ä»£å™¨ï¼š\n";
     print_2(vec.begin(), vec.end());
 
     return 0;

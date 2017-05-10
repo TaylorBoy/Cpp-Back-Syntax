@@ -5,9 +5,9 @@
 
 using namespace std;
 
-/* ²éÕÒËã·¨
- * binary_search() ÒªÇóÅÅĞò
- * includes£¨£© ÔªËØ²»ĞèÒªÁ¬ĞøµÄ
+/* æŸ¥æ‰¾ç®—æ³•
+ * binary_search() è¦æ±‚æ’åº
+ * includesï¼ˆï¼‰ å…ƒç´ ä¸éœ€è¦è¿ç»­çš„
  */
 
 int main()
@@ -25,14 +25,14 @@ int main()
         cout << *it << ' ';
     cout << endl;
 
-    //binary_search()Ö»ÄÜ·µ»Ø ÕÒµ½¡¢Î´ÕÒµ½
+    //binary_search()åªèƒ½è¿”å› æ‰¾åˆ°ã€æœªæ‰¾åˆ°
     if (binary_search(list_int.begin(),list_int.end(), 6)){
         cout << "Fount !" << endl;
     }else{
         cout << "Not Found !" << endl;
     }
 
-    //includes() ÕÒ°üº¬µÄËùÓĞÔªËØ
+    //includes() æ‰¾åŒ…å«çš„æ‰€æœ‰å…ƒç´ 
     if (includes(list_int.begin(),list_int.end(), vec_int.begin(),vec_int.end()))
         cout << "Fount !" << endl;
     else

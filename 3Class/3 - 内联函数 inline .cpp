@@ -4,19 +4,19 @@
 using namespace std;
 
 /*
- * inline: ÄÚÁªº¯Êı, ËÙ¶È¿ì, ¿ÉÒÔÔÚÀàÖĞÃ÷È·Ö¸¶¨inline
-            Ò²¿ÉÒÔÔÚÍâ²¿Ã÷È·Ö¸³ö.
-            ¹¹Ôìº¯ÊıÒ²ÊÇÈç´Ë.
+ * inline: å†…è”å‡½æ•°, é€Ÿåº¦å¿«, å¯ä»¥åœ¨ç±»ä¸­æ˜ç¡®æŒ‡å®šinline
+            ä¹Ÿå¯ä»¥åœ¨å¤–éƒ¨æ˜ç¡®æŒ‡å‡º.
+            æ„é€ å‡½æ•°ä¹Ÿæ˜¯å¦‚æ­¤.
  */
 
 class Screen
 {
 public:
 
-    //±ğÃû
+    //åˆ«å
     typedef std::string::size_type index;
 
-    //¹¹Ôìº¯Êı
+    //æ„é€ å‡½æ•°
     Screen(index ht, index wd):contents(ht * wd, 'A'),cursor(0),
         height(ht),width(wd)
     {  }
@@ -34,13 +34,13 @@ private:
 };
 
 
-//ÄÚÁªº¯Êı
+//å†…è”å‡½æ•°
 inline char Screen::get() const
 {
         return contents[cursor];
 }
 
-//ÄÚÁªº¯Êı
+//å†…è”å‡½æ•°
 char Screen::get(index row, index col) const
 {
     index r = row * width;
@@ -48,7 +48,7 @@ char Screen::get(index row, index col) const
 }
 
 inline Screen::Screen(index ht, index wd, const string &str)
-    :height(ht), width(wd), cursor(0), contents(str)  //³õÊ¼»¯ÁĞ±í,ËÙ¶È¿ì
+    :height(ht), width(wd), cursor(0), contents(str)  //åˆå§‹åŒ–åˆ—è¡¨,é€Ÿåº¦å¿«
 {}
 
 

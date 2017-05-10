@@ -5,8 +5,8 @@
 
 using namespace std;
 /*
- * º¯Êı¶ÔÏó
-    * Ò»°ãÊ¹ÓÃstruct
+ * å‡½æ•°å¯¹è±¡
+    * ä¸€èˆ¬ä½¿ç”¨struct
  */
 
 //class basInt
@@ -17,37 +17,37 @@ using namespace std;
 //};
 
 
-// º¯Êı¶ÔÏó
+// å‡½æ•°å¯¹è±¡
 struct absInt{
-    // ÖØÔØ²Ù×÷·û: º¯Êıµ÷ÓÃ²Ù×÷·û
+    // é‡è½½æ“ä½œç¬¦: å‡½æ•°è°ƒç”¨æ“ä½œç¬¦
     int operator()(int val){
         return (val < 0) ? -val : val;
     }
 };
 
-// ÆÕÍ¨Ä£°åº¯Êı
+// æ™®é€šæ¨¡æ¿å‡½æ•°
 template<typename elementType>
 void FuncDisplayElement(const elementType &element)
 {
     cout << element << " ";
 }
 
-// Ä£°å: º¯Êı¶ÔÏó
+// æ¨¡æ¿: å‡½æ•°å¯¹è±¡
 template<typename elementType>
 struct DisplayElement
 {
-    // ÓëÆÕÍ¨º¯ÊıÄ£°åµÄÇø±ğ:
-    // ÕâÀï¿ÉÒÔ´¢´æ×´Ì¬µÈ, ¸üÇ¿´ó
+    // ä¸æ™®é€šå‡½æ•°æ¨¡æ¿çš„åŒºåˆ«:
+    // è¿™é‡Œå¯ä»¥å‚¨å­˜çŠ¶æ€ç­‰, æ›´å¼ºå¤§
     unsigned int count;
 
     DisplayElement()
     {
-        count = 0;  // ³õÊ¼»¯
+        count = 0;  // åˆå§‹åŒ–
     }
 
     void operator() (const elementType & element)
     {
-        ++count;  // ¼ÆÊı
+        ++count;  // è®¡æ•°
         cout << element << " ";
     }
 };
@@ -68,16 +68,16 @@ int main()
     for (char c = 'a'; c < 'k'; ++c)
         b.push_back(c);
 
-    // STLËã·¨
+    // STLç®—æ³•
     for_each(a.begin(), a.end(), DisplayElement<int>()); //
     cout << endl;
 
-    // »ñÈ¡Ê¹ÓÃ´ÎÊı
-    DisplayElement<char> mResult; // ÄäÃû¶ÔÏó
+    // è·å–ä½¿ç”¨æ¬¡æ•°
+    DisplayElement<char> mResult; // åŒ¿åå¯¹è±¡
     mResult = for_each(b.begin(), b.end(), mResult);
     cout << endl;
 
-    cout << "DisplayElement<char> Ê¹ÓÃ´ÎÊı: " << mResult.count << endl;
+    cout << "DisplayElement<char> ä½¿ç”¨æ¬¡æ•°: " << mResult.count << endl;
 
 
     return 0;

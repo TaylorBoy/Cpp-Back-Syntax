@@ -13,24 +13,24 @@ int main()
     for (vector<int>::iterator it = vec.begin(); it != vec.end(); ++it)
         cout << *it << ' ';  cout << endl;
 
-    /// Ëæ»úÖØÅÅ£¬random_shuffle()
+    /// éšæœºé‡æŽ’ï¼Œrandom_shuffle()
     random_shuffle(vec.begin(),vec.end());
 
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " ")); cout << endl;
 
-    /// ·ÖÇø,ÆæÅ¼
+    /// åˆ†åŒº,å¥‡å¶
     vector<int> vec2;
     for (int i = 1; i < 9; ++i)
         vec2.push_back(i);
 
     copy(vec2.begin(),vec2.end(), ostream_iterator<int>(cout, " ")); cout << endl;
 
-    //partition, ²»ÎÈ¶¨£¬Ëæ»úÅÅ
+    //partition, ä¸ç¨³å®šï¼ŒéšæœºæŽ’
     vector<int>::iterator pos;
     pos = partition(vec2.begin(),vec2.end(), not1(bind2nd(modulus<int>(),2)));
     copy(vec2.begin(),vec2.end(), ostream_iterator<int>(cout, " ")); cout << endl;
 
-    //ÎÈ¶¨ÅÅÐò£¬stable_partition()
+    //ç¨³å®šæŽ’åºï¼Œstable_partition()
     vector<int> vec3;
     for (int i = 1; i < 9; ++i)
         vec3.push_back(i);

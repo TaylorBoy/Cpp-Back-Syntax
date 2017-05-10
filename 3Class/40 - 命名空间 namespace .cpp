@@ -3,14 +3,14 @@
 //using namespace std;
 
 /*
-    ÃüÃû¿Õ¼ä: namespace
+    å‘½åç©ºé—´: namespace
 
-    * using namespace std;  // ÔÚÍ·ÎÄ¼şÀï²»ÒªÕâÃ´×ö, ÒªĞ´È«³Æ
-    * ¶¨Òå±ğÃû:
+    * using namespace std;  // åœ¨å¤´æ–‡ä»¶é‡Œä¸è¦è¿™ä¹ˆåš, è¦å†™å…¨ç§°
+    * å®šä¹‰åˆ«å:
         namespace bs = space_name;
         bs::test();
-    * ¿ÉÒÔÓĞÖØÃû: ÏàÍ¬µÄÃû³ÆÎªÍ¬Ò»ÃüÃû¿Õ¼ä
-    * ÃüÃû¿Õ¼ä¿ÉÒÔÇ¶Ì×:
+    * å¯ä»¥æœ‰é‡å: ç›¸åŒçš„åç§°ä¸ºåŒä¸€å‘½åç©ºé—´
+    * å‘½åç©ºé—´å¯ä»¥åµŒå¥—:
         namespace Myname{
             ...
             namespace Name{
@@ -18,7 +18,7 @@
             };
         };
 
-    * È«¾ÖÃû³Æ¿Õ¼ä: Ã»ÓĞÃû³Æ
+    * å…¨å±€åç§°ç©ºé—´: æ²¡æœ‰åç§°
         ::test();
 */
 
@@ -26,7 +26,7 @@ namespace Test
 {
     int t = 99;
 
-    // ¿ÉÒÔÇ¶Ì×
+    // å¯ä»¥åµŒå¥—
     namespace Print
     {
         void print()
@@ -36,11 +36,11 @@ namespace Test
     }
 }
 
-// ×îºÃÓÃµ½Ê²Ã´Ğ´Ê²Ã´
+// æœ€å¥½ç”¨åˆ°ä»€ä¹ˆå†™ä»€ä¹ˆ
 using std::cout;
 using std::endl;
 
-// ±ğÃû
+// åˆ«å
 namespace t = Test;
 
 int main()

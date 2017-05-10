@@ -2,27 +2,27 @@
 #include <vector>
 #include <string>
 /*
- * ĞÂ¾É´úÂëµÄ¼æÈİ
- * ×Ö·û´®ºÍstring£¬Êı×éºÍVector
+ * æ–°æ—§ä»£ç çš„å…¼å®¹
+ * å­—ç¬¦ä¸²å’Œstringï¼Œæ•°ç»„å’ŒVector
  **/
 
 using namespace std;
 
 int main()
 {
-    //×Ö·û
+    //å­—ç¬¦
     string str("Hei Girl!");
     str += " baby";,
 
-    const char *chs = str.c_str(); //×ª»¯Îª×Ö·û´®ÀàĞÍ
+    const char *chs = str.c_str(); //è½¬åŒ–ä¸ºå­—ç¬¦ä¸²ç±»å‹
     cout << "str: " << str << endl;
     cout << "chs: " << chs << endl;
 
-    //Êı×é
+    //æ•°ç»„
     const size_t arr_size = 6;
     int arr[arr_size] = {1,2,3,4,5,6};
 
-    //              °üÀ¨  ²»°üÀ¨
+    //              åŒ…æ‹¬  ä¸åŒ…æ‹¬
     vector<int> vec(arr, arr+arr_size);
 
     cout << "vec: ";

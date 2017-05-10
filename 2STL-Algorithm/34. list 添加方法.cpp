@@ -2,9 +2,9 @@
 #include <list>
 using namespace std;
 
-/*listµÄÌí¼Ó*/
+/*listçš„æ·»åŠ */
 
-//ÏÔÊ¾
+//æ˜¾ç¤º
 void display(list<int>list_a, list<int>::iterator it);
 
 int main(int argc, char *argv[])
@@ -13,48 +13,48 @@ int main(int argc, char *argv[])
 
 	list<int>::iterator it;
 
-	//ÔÚÇ°ÃæÌí¼Ó
+	//åœ¨å‰é¢æ·»åŠ 
 	list_1.push_front(100);
 	list_1.push_front(100);
 	list_1.push_front(100);
 	list_1.push_front(100);
-	list_1.push_back(11);  //ÔÚÄ©Î²Ìí¼Ó
+	list_1.push_back(11);  //åœ¨æœ«å°¾æ·»åŠ 
 
-	cout << "ÆäËû²Ù×÷Ç°: " <<  endl;
+	cout << "å…¶ä»–æ“ä½œå‰: " <<  endl;
 	display(list_1, it);
 
-	//ÔÚÇ°Ãæ²åÈë
+	//åœ¨å‰é¢æ’å…¥
 	it = list_1.begin();
 	list_1.insert(it, 55);
 
-	//ÔÚÖĞ¼ä²åÈë
+	//åœ¨ä¸­é—´æ’å…¥
 	++it;
 	++it;
 	list_1.insert(it, 56);
 
-	//ÔÚºóÃæ²åÈë
+	//åœ¨åé¢æ’å…¥
 	list_1.insert(list_1.end(), 66);
 
-    cout << "\nÌí¼ÓÖ®ºó: " <<  endl;
+    cout << "\næ·»åŠ ä¹‹å: " <<  endl;
     display(list_1, it);
 
-    //insert(intrator, n, m); ²åÈën¸öm
+    //insert(intrator, n, m); æ’å…¥nä¸ªm
 	list_1.insert(list_1.begin(), 4, 6);
 
-    //½«Õû¸ölist²åÈë
+    //å°†æ•´ä¸ªlistæ’å…¥
     list_2.push_back(8888);
     list_2.push_back(8888);
     list_2.push_back(8888);
 
-    //²åÈëlistÇø¼ä
+    //æ’å…¥liståŒºé—´
     list_1.insert(it, list_2.begin(), list_2.end());
-    cout << "\nÌí¼ÓÖ®ºó: " <<  endl;
+    cout << "\næ·»åŠ ä¹‹å: " <<  endl;
     display(list_1, it);
 
 	return 0;
 }
 
-//ÏÔÊ¾
+//æ˜¾ç¤º
 void display(list<int>list_a, list<int>::iterator it)
 {
 	cout << "[";

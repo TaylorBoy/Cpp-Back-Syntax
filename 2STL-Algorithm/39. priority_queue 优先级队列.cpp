@@ -1,32 +1,32 @@
 #include <iostream>
-#include <queue>  //╟Э╨╛сеох╪╤╤сап
+#include <queue>  //Е▄┘Е░╚Д╪≤Е┘┬Г╨╖И≤÷Е┬≈
 #include <deque>
 #include <vector>
 
 using namespace std;
 
-/* сеох╪╤╤сап priority queue
- * ╡╩дэй╧сцlistё╛пХр╙кФ╩З╡ывВ
- * вН╢Сж╣║╒вНп║ж╣сеох╪╤╤сап
+/* Д╪≤Е┘┬Г╨╖И≤÷Е┬≈ priority queue
+ * Д╦█Х┐╫Д╫©Г■╗listО╪▄И°─Х╕│И ▐Ф°╨Ф⌠█Д╫°
+ * Ф°─Е╓╖Е─╪Ц─│Ф°─Е╟▐Е─╪Д╪≤Е┘┬Г╨╖И≤÷Е┬≈
  */
 
 int main()
 {
-    //д╛хой╧сцvector
-    priority_queue<int, vector<int>, greater<int> > pq;  //greaterвНп║ж╣сеох╤сап
-    priority_queue<int> p_q; //д╛ховН╢Сж╣сеох
+    //И╩≤Х╝╓Д╫©Г■╗vector
+    priority_queue<int, vector<int>, greater<int> > pq;  //greaterФ°─Е╟▐Е─╪Д╪≤Е┘┬И≤÷Е┬≈
+    priority_queue<int> p_q; //И╩≤Х╝╓Ф°─Е╓╖Е─╪Д╪≤Е┘┬
 
     pq.push(45);
     pq.push(-4);
     pq.push(34);
     pq.push(6);
 
-    cout << "сеох╪╤╤сапюОр╩╧╡сп: " << pq.size() << endl;
+    cout << "Д╪≤Е┘┬Г╨╖И≤÷Е┬≈И┤▄Д╦─Е┘╠Ф°┴: " << pq.size() << endl;
 
     cout << "Top: " << pq.top() << endl;
 
     while (!pq.empty()){
-        cout << "╫╚р╙и╬ЁЩё╨" << pq.top() << endl;
+        cout << "Е╟├Х╕│Е┬═И≥╓О╪ " << pq.top() << endl;
         pq.pop();
     }
 

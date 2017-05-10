@@ -3,13 +3,13 @@
 #include <fstream>
 #include <string>
 
-/*¶ÁÈ¡ÎÄ¼þ£»Á¬ÐøÊäÈëÕûÊý£¬½áÊøºó¼ÌÐøÊäÒ»¸ödoubleÊý¾Ý*/
+/*è¯»å–æ–‡ä»¶ï¼›è¿žç»­è¾“å…¥æ•´æ•°ï¼Œç»“æŸåŽç»§ç»­è¾“ä¸€ä¸ªdoubleæ•°æ®*/
 
 using namespace std;
 
 std::istream& get(std::istream& in)
 {
-    //¸Ãº¯ÊýÓ¦Ò»Ö±¶ÁÈ¡Á÷
+    //è¯¥å‡½æ•°åº”ä¸€ç›´è¯»å–æµ
     int val;
 
     while (in >> val, !in.eof()){
@@ -22,7 +22,7 @@ std::istream& get(std::istream& in)
             in.ignore(200, '\n');
             continue;
         }
-        std::cout << "ÊäÈëµÄÊý¾ÝÊÇ£º" << val << std::endl;
+        std::cout << "è¾“å…¥çš„æ•°æ®æ˜¯ï¼š" << val << std::endl;
     }
 
     in.clear();
@@ -32,7 +32,7 @@ std::istream& get(std::istream& in)
 
 int main()
 {
-    cout << "²âÊÔº¯Êý1£»" << endl;
+    cout << "æµ‹è¯•å‡½æ•°1ï¼›" << endl;
     string inFileName;
     cin  >> inFileName;
     ifstream inFile(inFileName.c_str());
@@ -43,16 +43,16 @@ int main()
 
 
 
-    cout << "\n²âÊÔº¯Êý2£º" << endl;
+    cout << "\næµ‹è¯•å‡½æ•°2ï¼š" << endl;
 
     double d_val;
 
-    //Ê¹ÓÃ±ê×¼ÊäÈë
+    //ä½¿ç”¨æ ‡å‡†è¾“å…¥
     get(cin);
 
-    cout << "Ê¹ÓÃcinÊäÈëÒ»¸ödoubleÀàÐÍµÄÊý¾Ý£º" << endl;
+    cout << "ä½¿ç”¨cinè¾“å…¥ä¸€ä¸ªdoubleç±»åž‹çš„æ•°æ®ï¼š" << endl;
     cin >> d_val;
-    cout << "ÊäÈëµÄÊÇ£º" << d_val << endl;
+    cout << "è¾“å…¥çš„æ˜¯ï¼š" << d_val << endl;
 
     return 0;
 }

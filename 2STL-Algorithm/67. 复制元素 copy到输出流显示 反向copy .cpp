@@ -14,15 +14,15 @@ int main()
     for (int i = 1; i < 10; ++i)
         vec.push_back(i);
 
-    copy(vec.begin(),vec.end(), back_inserter(lst)); //lst没有初始化，为空，必须初始化或者插入迭代器
+    copy(vec.begin(),vec.end(), back_inserter(lst)); //lst娌℃湁鍒濆鍖栵紝涓虹┖锛屽繀椤诲垵濮嬪寲鎴栬�呮彃鍏ヨ凯浠ｅ櫒
     for (list<int>::iterator it = lst.begin(); it != lst.end(); ++it)
         cout << *it << ' ';   cout << endl;
 
-    //copy到输出流显示
+    //copy鍒拌緭鍑烘祦鏄剧ず
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //反向copy
+    //鍙嶅悜copy
     copy(vec.rbegin(),vec.rend(), ostream_iterator<int>(cout, " "));
     cout << endl;
 

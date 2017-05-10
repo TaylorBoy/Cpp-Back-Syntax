@@ -3,30 +3,30 @@
 using namespace std;
 
 /*
-    Òì³£Àà
-        * ²ã´Î½á¹¹ ¼Ì³Ğ¶àÌ¬
+    å¼‚å¸¸ç±»
+        * å±‚æ¬¡ç»“æ„ ç»§æ‰¿å¤šæ€
 */
 
 const int DefaultSize = 10;
 
-// ¶¯Ì¬Êı×é
+// åŠ¨æ€æ•°ç»„
 class Array
 {
 public :
     Array(int itsSize = DefaultSize);
     ~Array(){ delete[] pType; }
 
-    // ÔËËã·ûÖØÔØ
+    // è¿ç®—ç¬¦é‡è½½
     int& operator[](int offset);
     const int& operator[](int offset) const;
 
-    // ·ÃÎÊÆ÷, accessors
+    // è®¿é—®å™¨, accessors
     int GetItsSize() const { return itsSize; }
 
-    // Òì³£Àà
+    // å¼‚å¸¸ç±»
     class xBoundary{};
 
-    // ÏÂ±êÈ¡Öµ·¶Î§ÎÊÌâ
+    // ä¸‹æ ‡å–å€¼èŒƒå›´é—®é¢˜
     class xSize{
     public :
         xSize(){}
@@ -35,7 +35,7 @@ public :
         int GetSize() const { return itsSize; }
         virtual void PrintError()
         {
-            cout << "·¢Éú´íÎó, ÏÂ±ê: " << itsSize << endl;
+            cout << "å‘ç”Ÿé”™è¯¯, ä¸‹æ ‡: " << itsSize << endl;
         }
     protected:
         int itsSize;
@@ -46,7 +46,7 @@ public :
         xZero(int size): xSize(size) {}
         virtual void PrintError()
         {
-            cout << "ÏÂ±ê²»ÄÜÎª: 0" << endl;
+            cout << "ä¸‹æ ‡ä¸èƒ½ä¸º: 0" << endl;
         }
     };
 
@@ -55,7 +55,7 @@ public :
         xNegative(int size) : xSize(size) {}
         virtual void PrintError()
         {
-            cout << "ÏÂ±ê²»ÄÜÎª¸ºÊı!" << endl;
+            cout << "ä¸‹æ ‡ä¸èƒ½ä¸ºè´Ÿæ•°!" << endl;
         }
     };
 
@@ -64,7 +64,7 @@ public :
         xTooSmall(int size) : xSize(size) {}
         virtual void PrintError()
         {
-            cout << "ÏÂ±êÌ«Ğ¡ÁË: " << itsSize << endl;
+            cout << "ä¸‹æ ‡å¤ªå°äº†: " << itsSize << endl;
         }
     };
 
@@ -73,7 +73,7 @@ public :
         xTooBig(int size) : xSize(size) {}
         virtual void PrintError()
         {
-            cout << "ÏÂ±êÌ«´óÁË: " << itsSize << endl;
+            cout << "ä¸‹æ ‡å¤ªå¤§äº†: " << itsSize << endl;
         }
     };
 
@@ -85,7 +85,7 @@ private:
 
 Array::Array(int size) : itsSize(size)
 {
-    // ¼ì²éÊı×é³õÊ¼´óĞ¡
+    // æ£€æŸ¥æ•°ç»„åˆå§‹å¤§å°
     if (size == 0)
         throw xZero(size);
     else if (size < 0)
@@ -108,7 +108,7 @@ int& Array::operator[](int offset)
     if (offset >= 0 && offset < size)
         return pType[offset];
     else
-        throw xBoundary();  // Å×³öÒì³£Àà
+        throw xBoundary();  // æŠ›å‡ºå¼‚å¸¸ç±»
 }
 
 int main()
@@ -123,16 +123,16 @@ int main()
     }
     catch (Array::xBoundary e)
     {
-        cout << "ÏÂ±êÔ½½çÁËÀ²!" << endl;
+        cout << "ä¸‹æ ‡è¶Šç•Œäº†å•¦!" << endl;
     }
     catch (Array::xSize &e)
     {
-        // ¶àÌ¬
+        // å¤šæ€
         e.PrintError();
     }
     catch (...)
     {
-        cout << "·¢ÉúÎ´Öª´íÎó!" << endl;
+        cout << "å‘ç”ŸæœªçŸ¥é”™è¯¯!" << endl;
     }
 
     cout << a[1] << endl;

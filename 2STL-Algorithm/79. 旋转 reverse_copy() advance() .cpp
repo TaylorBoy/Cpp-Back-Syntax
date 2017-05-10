@@ -13,7 +13,7 @@ int main()
     cout << endl;
 
     set<int>::iterator pos = iset.begin();
-    advance(pos,1);  //前进一步，一般迭代器(随机迭代器pos+=1)
+    advance(pos,1);  //鍓嶈繘涓�姝ワ紝涓�鑸凯浠ｅ櫒(闅忔満杩唬鍣╬os+=1)
     rotate_copy(iset.begin(),pos,iset.end(),ostream_iterator<int>(cout, " "));
     cout << endl;
 
@@ -22,7 +22,7 @@ int main()
     rotate_copy(iset.begin(),pos,iset.end(),ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //内置find（）
+    //鍐呯疆find锛堬級
     rotate_copy(iset.begin(),iset.find(6),iset.end(),ostream_iterator<int>(cout, " "));
     cout << endl;
 

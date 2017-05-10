@@ -3,10 +3,10 @@
 using namespace std;
 
 /*
- * ÖØÔØ:ËãÊõ²Ù×÷·û
+ * é‡è½½:ç®—æœ¯æ“ä½œç¬¦
         + - * / += -= *= /=
- *      : ÒªÃ´¶¼ÖØÔØ, ÒªÃ´¶¼²»ÖØÔØ.
-        : ×îºÃ°Ñ²Ù×÷·ûÁªÏµÆğÀ´: Èô==ÎªÓÑÔª,²Ù×÷Ë½ÓĞ³ÉÔ±, Ôò!=²»ĞèÒªÎªÓÑÔª,½èÖú==¾ÍĞĞ
+ *      : è¦ä¹ˆéƒ½é‡è½½, è¦ä¹ˆéƒ½ä¸é‡è½½.
+        : æœ€å¥½æŠŠæ“ä½œç¬¦è”ç³»èµ·æ¥: è‹¥==ä¸ºå‹å…ƒ,æ“ä½œç§æœ‰æˆå‘˜, åˆ™!=ä¸éœ€è¦ä¸ºå‹å…ƒ,å€ŸåŠ©==å°±è¡Œ
  */
 
 class SaledItem
@@ -21,7 +21,7 @@ class SaledItem
             :isbn(book),num(c),revenue(c*price)
         {}
 
-        //ÖØÔØ+=
+        //é‡è½½+=
         SaledItem& operator+=(const SaledItem &s);
 
     private:
@@ -31,10 +31,10 @@ class SaledItem
 };
 
 /////////////////////////////////////////////////////////////////
-//ÖØÔØ+=, ³ÉÔ±º¯Êı
+//é‡è½½+=, æˆå‘˜å‡½æ•°
 SaledItem& SaledItem::operator+=(const SaledItem &s)
 {
-    //ĞŞ¸ÄÁËµ±Ç°¶ÔÏó
+    //ä¿®æ”¹äº†å½“å‰å¯¹è±¡
     this->num += s.num;
     this->revenue += s.revenue;
 
@@ -42,10 +42,10 @@ SaledItem& SaledItem::operator+=(const SaledItem &s)
 }
 
 /////////////////////////////////////////////////////////////////
-//ÖØÔØ+, ·Ç³ÉÔ±º¯Êı
+//é‡è½½+, éæˆå‘˜å‡½æ•°
 SaledItem operator+(const SaledItem &ls, const SaledItem &rs)
 {
-    //Õâ»á·µ»ØÒ»¸öĞÂµÄ¶ÔÏó, ²»ÄÜ·µ»ØÒıÓÃ
+    //è¿™ä¼šè¿”å›ä¸€ä¸ªæ–°çš„å¯¹è±¡, ä¸èƒ½è¿”å›å¼•ç”¨
     SaledItem ret(ls);
     ret += rs;
 
@@ -53,7 +53,7 @@ SaledItem operator+(const SaledItem &ls, const SaledItem &rs)
 }
 
 /////////////////////////////////////////////////////////////////
-//ÖØÔØÊä³ö²Ù×÷·û
+//é‡è½½è¾“å‡ºæ“ä½œç¬¦
 ostream& operator<<(ostream& out, const SaledItem &s)
 {
     out << s.isbn << "\t" << s.num << "\t" << s.revenue;
@@ -61,7 +61,7 @@ ostream& operator<<(ostream& out, const SaledItem &s)
 }
 
 /////////////////////////////////////////////////////////////////
-//ÖØÔØÊäÈë²Ù×÷·û
+//é‡è½½è¾“å…¥æ“ä½œç¬¦
 istream& operator>>(istream& in, SaledItem &s)
 {
     double price;

@@ -1,6 +1,6 @@
 #include <iostream>
 
-/*bitset·½·¨*/
+/*bitsetæ–¹æ³•*/
 #include <bitset>
 
 using namespace std;
@@ -10,30 +10,30 @@ int main()
     bitset<32> bit;
     cout << "bit32: " << bit << endl;
 
-    bit.set(5); //µÚ5Î»ÖÃÎª1
+    bit.set(5); //ç¬¬5ä½ç½®ä¸º1
     cout << "set: " << bit << endl;
 
-    bit.set(); //È«ÖÃÎª1
+    bit.set(); //å…¨ç½®ä¸º1
     cout << "set: " << bit << endl;
 
-    bit.reset(); //ÖØÖÃ£¬¿É´ø²ÎÖØÖÃÄ³Î»
+    bit.reset(); //é‡ç½®ï¼Œå¯å¸¦å‚é‡ç½®æŸä½
     cout << "reset: " << bit << endl;
 
-    //¿ÉÒÔÖ»ÓÃË÷Òý»òÕßset()
+    //å¯ä»¥åªç”¨ç´¢å¼•æˆ–è€…set()
     for (int index = 0; index != 32; index += 2){
         //bit[index] = 1;
         bit.set(index);
     }
     cout << bit << endl;
 
-    bit.flip(5);  //·´×ª
+    bit.flip(5);  //åè½¬
     cout << "flip: " << bit << endl;
 
 
-    bit.flip();  //·´×ª
+    bit.flip();  //åè½¬
     cout << "flip: " << bit << endl;
 
-    //×ª»»ÎªÊ®½øÖÆ
+    //è½¬æ¢ä¸ºåè¿›åˆ¶
     unsigned long b = bit.to_ulong();
     cout << "to_ulong: " << b << endl;
 

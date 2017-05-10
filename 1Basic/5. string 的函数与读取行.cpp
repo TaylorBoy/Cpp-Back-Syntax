@@ -1,37 +1,37 @@
 #include <iostream>
 
-/*×Ö·û´®string £¨3£©*/
+/*å­—ç¬¦ä¸²string ï¼ˆ3ï¼‰*/
 #include <string>
 
 using namespace std;
 
 int main()
 {
-    //string ÀàĞÍ²»ÊÇCÓïÑÔÖĞµÄ×Ö·ûÊı×é£¬µ«
+    //string ç±»å‹ä¸æ˜¯Cè¯­è¨€ä¸­çš„å­—ç¬¦æ•°ç»„ï¼Œä½†
     string str("Hello!");
 
     cout << str[1] << endl;
     cout << str[4] << endl;
 
-    //Ë÷ÒıÖµsize_typeÌæ´úint
+    //ç´¢å¼•å€¼size_typeæ›¿ä»£int
     for (string::size_type i = 0; i < str.size(); ++i){
         cout << str[i] << " ";
     }
 
-    //º¯Êı
-    //isalnum(c) ×ÖÄ¸»òÊı×Ö
-    //isdigit(c) Êı×Ö
-    //isalpha(c) ×ÖÄ¸
-    //ispunct(c) ±êµã
-    //iscntrl(c) ¿ØÖÆ×Ö·û
+    //å‡½æ•°
+    //isalnum(c) å­—æ¯æˆ–æ•°å­—
+    //isdigit(c) æ•°å­—
+    //isalpha(c) å­—æ¯
+    //ispunct(c) æ ‡ç‚¹
+    //iscntrl(c) æ§åˆ¶å­—ç¬¦
     //islower(c)
     //isupper(c)
     //isspace(c)
-    //isxdigit(c) 16½øÖÆ
+    //isxdigit(c) 16è¿›åˆ¶
     //tolower(c)
     //toupper(c)
 
-    //È¥±êµã
+    //å»æ ‡ç‚¹
     cout << "\nPlease Input Something: " << endl;
     getline(cin, str);
     string str2;

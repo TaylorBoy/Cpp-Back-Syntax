@@ -2,19 +2,19 @@
 #include <map>
 #include <string>
 
-/* mapºÍmultimap
+/* mapå’Œmultimap
  *
- * map£º²»ÔÊĞíÖØ¸´£¨¼ü£©
- * multimap£ºÔÊĞíÖØ¸´
+ * mapï¼šä¸å…è®¸é‡å¤ï¼ˆé”®ï¼‰
+ * multimapï¼šå…è®¸é‡å¤
  *
- * ×¢Òâ£º²»ÄÜÍ¨¹ıfind½øĞĞĞŞ¸Ä
+ * æ³¨æ„ï¼šä¸èƒ½é€šè¿‡findè¿›è¡Œä¿®æ”¹
  */
 
 using namespace std;
 
 int main()
 {
-    //map£º²»ÔÊĞíÖØ¸´£¨¼ü£©              ¼ü   Öµ
+    //mapï¼šä¸å…è®¸é‡å¤ï¼ˆé”®ï¼‰              é”®   å€¼
     map<int, string> m;
 
     m.insert(map<int, string>::value_type(1,"One"));
@@ -22,7 +22,7 @@ int main()
     m.insert(map<int, string>::value_type(2,"Three"));
     m.insert(make_pair(3, "San"));
     m.insert(pair<int, string>(1000, "One Thousand"));
-    m[1000] = "One Million";  //»á¸²¸ÇÇ°ÃæÏàÍ¬µÄ¼üµÄÖµ,multimap²»ÄÜÓÃ
+    m[1000] = "One Million";  //ä¼šè¦†ç›–å‰é¢ç›¸åŒçš„é”®çš„å€¼,multimapä¸èƒ½ç”¨
 
     map<int, string>::const_iterator it;
 
@@ -32,7 +32,7 @@ int main()
         cout << "Val: " << it->second.c_str() << endl;
     }
 
-    //multimap£ºÔÊĞíÖØ¸´
+    //multimapï¼šå…è®¸é‡å¤
     multimap<int, string> ms;
 
     ms.insert(make_pair(1,"ONE"));
@@ -42,7 +42,7 @@ int main()
 
     multimap<int, string>::const_iterator mit;
 
-    /// É¾³ıÏàÍ¬(·¶Î§)
+    /// åˆ é™¤ç›¸åŒ(èŒƒå›´)
     ms.erase(ms.lower_bound(-2), ms.upper_bound(-2));
 
     cout << endl << "Multimap Key and Value:" << endl;
@@ -51,16 +51,16 @@ int main()
         cout << "Val: " << mit->second.c_str() << endl;
     }
 
-    cout << "Ò»¹²ÓĞ£º" << ms.count(-2) << " ¸ö-2£¡" << endl;
+    cout << "ä¸€å…±æœ‰ï¼š" << ms.count(-2) << " ä¸ª-2ï¼" << endl;
 
-    /// ²éÕÒ
+    /// æŸ¥æ‰¾
     multimap<int,string>::const_iterator fd_it;
 
     fd_it = ms.find(1);
 
     if (fd_it != ms.end()){
         if (ms.count(1) > 1)
-            cout << "¸öÊı´óÓÚ1---";
+            cout << "ä¸ªæ•°å¤§äº1---";
         cout << "Finded! " << fd_it->first << " = " << fd_it->second.c_str() << endl;
     }else{
         cout << "Not Finded!\n" ;

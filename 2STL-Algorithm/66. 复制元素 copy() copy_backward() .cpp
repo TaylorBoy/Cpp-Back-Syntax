@@ -4,7 +4,7 @@
 #include <list>
 using namespace std;
 
-/* ¸´ÖÆÔªËØ
+/* å¤åˆ¶å…ƒç´ 
  *
  */
 

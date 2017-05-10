@@ -6,7 +6,7 @@
 using namespace std;
 
 /*
- * ²éÕÒËã·¨--search_n()
+ * æŸ¥æ‰¾ç®—æ³•--search_n()
  */
 
 int main()
@@ -22,33 +22,33 @@ int main()
         deq.push_back(i);
     }
 
-    //´òÓ¡
+    //æ‰“å°
     for (deque<int>::iterator it = deq.begin(); it != deq.end(); ++it){
         cout << *it << ' ';
     }cout << endl;
 
-    /// ²éÕÒ
+    /// æŸ¥æ‰¾
 
     // search_n(b, e, n, m)
     deque<int>::iterator pos;
 
-    //²éÕÒÁ¬ĞøµÄ4¸ö5
+    //æŸ¥æ‰¾è¿ç»­çš„4ä¸ª5
     pos = search_n(deq.begin(), deq.end(), 4, 5);
 
     if (pos != deq.end()){
-        cout << "Á¬ĞøµÄ4¸ö5Î»ÖÃ£º" << distance(deq.begin(), pos) << endl;
+        cout << "è¿ç»­çš„4ä¸ª5ä½ç½®ï¼š" << distance(deq.begin(), pos) << endl;
     }else{
         cout << "Not Found !\n";
     }
 
     // search_n(b, e, n, m, e)
 
-    //²éÕÒÁ¬Ğø4¸ö´óÓÚ5µÄÊı
+    //æŸ¥æ‰¾è¿ç»­4ä¸ªå¤§äº5çš„æ•°
     pos = search_n(deq.begin(), deq.end(), 4, 5, greater<int>());
-    //¹æ·¶(²»¿ÉÓÃ)£ºpos = search_n_if(deq.begin(),deq.end(),3,bind2nd(greater<int>(), 6));
+    //è§„èŒƒ(ä¸å¯ç”¨)ï¼špos = search_n_if(deq.begin(),deq.end(),3,bind2nd(greater<int>(), 6));
 
     if (pos != deq.end()){
-        cout << "4¸öÁ¬Ğø´óÓÚ5µÄÊıµÄÎ»ÖÃ£º" << distance(deq.begin(), pos) << endl;
+        cout << "4ä¸ªè¿ç»­å¤§äº5çš„æ•°çš„ä½ç½®ï¼š" << distance(deq.begin(), pos) << endl;
     }else{
         cout << "Not Found!\n";
     }

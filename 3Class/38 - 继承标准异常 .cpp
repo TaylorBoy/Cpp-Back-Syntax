@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-    继承标准异常
+    缁ф壙鏍囧噯寮傚父
 */
 
 int main()
@@ -21,7 +21,7 @@ int main()
     }
     catch (const exception &e)
     {
-        // cerr 错误输出
+        // cerr 閿欒杈撳嚭
         cerr << "Error: " << e.what() << endl;
     }
 
@@ -46,7 +46,7 @@ protected:
 
 public :
 
-    // 继承标准异常
+    // 缁ф壙鏍囧噯寮傚父
     class ReadEmptyStack : public std::exception
     {
     public :
@@ -65,12 +65,12 @@ public :
     {
         if (c.empty())
         {
-            // 抛出异常
+            // 鎶涘嚭寮傚父
             throw ReadEmptyStack();
         }
-        T elem(c.back()); // 取出数据
-        c.pop_back();     // 删除数据
-        return elem;      // 返回数据
+        T elem(c.back()); // 鍙栧嚭鏁版嵁
+        c.pop_back();     // 鍒犻櫎鏁版嵁
+        return elem;      // 杩斿洖鏁版嵁
     }
 
     T& top()

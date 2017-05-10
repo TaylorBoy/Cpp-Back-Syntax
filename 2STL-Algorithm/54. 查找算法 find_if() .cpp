@@ -6,12 +6,12 @@
 
 using namespace std;
 
-/*     ²éÕÒËã·¨--find_if()[ºÍfind¶¼ÊÇÏßĞÔ²éÕÒ£¬ËÙ¶ÈÂı]
+/*     æŸ¥æ‰¾ç®—æ³•--find_if()[å’Œfindéƒ½æ˜¯çº¿æ€§æŸ¥æ‰¾ï¼Œé€Ÿåº¦æ…¢]
  *
- * 1.ÈôÎªÒÑĞòÇø¼ä£¬¿ÉÊ¹ÓÃÒÑĞòÇø¼ä²éÕÒËã·¨
- * 2.¹ØÁªÊ½ÈİÆ÷£ºÊ¹ÓÃ³ÉÔ±º¯Êıfind()
-     map¡¢set£¬multimap¡¢multiset
- * 3.stringÓĞµÈĞ§µÄ³ÉÔ±º¯Êıfind()
+ * 1.è‹¥ä¸ºå·²åºåŒºé—´ï¼Œå¯ä½¿ç”¨å·²åºåŒºé—´æŸ¥æ‰¾ç®—æ³•
+ * 2.å…³è”å¼å®¹å™¨ï¼šä½¿ç”¨æˆå‘˜å‡½æ•°find()
+     mapã€setï¼Œmultimapã€multiset
+ * 3.stringæœ‰ç­‰æ•ˆçš„æˆå‘˜å‡½æ•°find()
  */
 
 int main()
@@ -29,10 +29,10 @@ int main()
 
     //
     pos = find_if(vec.begin(),vec.end(), bind2nd(greater<int>(),3));
-    cout << "±È3´óµÄÊıÊÇ£º" << *pos << endl;
+    cout << "æ¯”3å¤§çš„æ•°æ˜¯ï¼š" << *pos << endl;
 
     pos = find_if(vec.begin(),vec.end(), not1(bind2nd(modulus<int>(), 3)));
-    cout << "µÚÒ»¸öÄÜ±»3Õû³ıµÄÊı£º" << *pos << endl;
+    cout << "ç¬¬ä¸€ä¸ªèƒ½è¢«3æ•´é™¤çš„æ•°ï¼š" << *pos << endl;
 
     cout << string::npos << endl;
 

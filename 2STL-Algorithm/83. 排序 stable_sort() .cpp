@@ -5,8 +5,8 @@
 #include <iterator>
 using namespace std;
 
-/* ÅÅĞòËã·¨
- * Çø±ğ£ºstable_sort() º¯ÊıÓöµ½Á½¸öÊıÏàµÈÊ±£¬²»¶ÔÆä½»»»Ë³Ğò
+/* æ’åºç®—æ³•
+ * åŒºåˆ«ï¼šstable_sort() å‡½æ•°é‡åˆ°ä¸¤ä¸ªæ•°ç›¸ç­‰æ—¶ï¼Œä¸å¯¹å…¶äº¤æ¢é¡ºåº
  */
 
 bool lessLength(const string & str1, const string & str2)
@@ -39,7 +39,7 @@ int main()
     copy(svec.begin(),svec.end(), ostream_iterator<string>(cout, " "));
     cout << endl;
 
-    //sort(),²»ÎÈ¶¨
+    //sort(),ä¸ç¨³å®š
     sort(svec.begin(),svec.end(), lessLength);
     copy(svec.begin(),svec.end(), ostream_iterator<string>(cout, " "));
     cout << endl;

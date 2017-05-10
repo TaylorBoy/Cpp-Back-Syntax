@@ -4,7 +4,7 @@
 using namespace std;
 
 /*
- * Ëã·¨ for_each()
+ * ç®—æ³• for_each()
  */
 
 void print(int elem)
@@ -19,7 +19,7 @@ private:
     T the_value;
 
 public:
-    AddValue(const T& v):the_value(v){} //³õÊ¼»¯the_value
+    AddValue(const T& v):the_value(v){} //åˆå§‹åŒ–the_value
 
     void operator() (T& elem) const
     {
@@ -35,7 +35,7 @@ int main()
     for_each(vec.begin(),vec.end(), print);
     cout << endl;
 
-    //¼Ó10
+    //åŠ 10
     for_each(vec.begin(),vec.end(), AddValue<int>(10));
 
     for_each(vec.begin(),vec.end(), print);

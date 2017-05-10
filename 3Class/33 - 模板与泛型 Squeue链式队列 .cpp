@@ -3,12 +3,12 @@
 using namespace std;
 
 /*
-    * 链式队列
+    * 閾惧紡闃熷垪
 */
 
 int main()
 {
-    cout << "============= 链式队列 ============= " << endl;
+    cout << "============= 閾惧紡闃熷垪 ============= " << endl;
 
     Squeue<int> iQ;
     iQ.enqueue(10);
@@ -54,7 +54,7 @@ public :
 
 private:
     struct ListNode{
-    // 默认public
+    // 榛樿public
         Object element;
         ListNode *next;
 

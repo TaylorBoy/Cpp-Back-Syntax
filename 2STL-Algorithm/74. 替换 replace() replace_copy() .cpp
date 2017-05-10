@@ -6,9 +6,9 @@
 #include <iterator>
 using namespace std;
 
-/* Ìæ»»Ëã·¨
+/* æ›¿æ¢ç®—æ³•
  * replace(b,e,ov,nv): old -> new
- * replace_if(b,e,p,v): ·ûºÏ¹æÔòµÄ -> new
+ * replace_if(b,e,p,v): ç¬¦åˆè§„åˆ™çš„ -> new
  * replace_copy(b1,e1,b2,ov,nv)
  * replace_copy_if(b1,e1,b2,p,v)
  */
@@ -23,12 +23,12 @@ int main()
         int_lst.push_back(i);
 
     copy(int_lst.begin(),int_lst.end(), ostream_iterator<int>(cout, " "));
-    cout << endl << "\nËùÓÐµÄ6»»³É99£º";
+    cout << endl << "\næ‰€æœ‰çš„6æ¢æˆ99ï¼š";
 
     //relpace()
-    replace(int_lst.begin(),int_lst.end(),6,99);  //ËùÓÐµÄ6»»³É99
+    replace(int_lst.begin(),int_lst.end(),6,99);  //æ‰€æœ‰çš„6æ¢æˆ99
     copy(int_lst.begin(),int_lst.end(), ostream_iterator<int>(cout, " "));
-    cout << endl << "\n±È5Ð¡µÄ¶¼Ìæ»»³É0£º" ;
+    cout << endl << "\næ¯”5å°çš„éƒ½æ›¿æ¢æˆ0ï¼š" ;
 
     //replace_if()
     replace_if(int_lst.begin(),int_lst.end(), bind2nd(less<int>(),5), 0);
@@ -43,11 +43,11 @@ int main()
     for (int i = 4; i <10; ++i)
         lst2.push_back(i);
     copy(lst2.begin(),lst2.end(), ostream_iterator<int>(cout, " "));
-    cout << endl << "\ncopyµ½Êä³öÁ÷£º";
+    cout << endl << "\ncopyåˆ°è¾“å‡ºæµï¼š";
 
-    //replace_copy() ¸´ÖÆµ½Êä³öÁ÷£¨±ßÌæ»»±ß¸´ÖÆ£©
+    //replace_copy() å¤åˆ¶åˆ°è¾“å‡ºæµï¼ˆè¾¹æ›¿æ¢è¾¹å¤åˆ¶ï¼‰
     replace_copy(lst2.begin(),lst2.end(), ostream_iterator<int>(cout, " "), 5, 555);
-    cout << endl << "\n°ÑÐ¡ÓÚ6µÄ»»³É666£º";
+    cout << endl << "\næŠŠå°äºŽ6çš„æ¢æˆ666ï¼š";
 
     //replce_copy_if()
     replace_copy_if(lst2.begin(),lst2.end(), ostream_iterator<int>(cout, " "),

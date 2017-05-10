@@ -3,17 +3,17 @@
 
 using namespace std;
 
-/* setºÍmultimap
+/* setå’Œmultimap
  *
- * set²»ÔÊĞíÖØ¸´
- * multisetÔÊĞíÖØ¸´
+ * setä¸å…è®¸é‡å¤
+ * multisetå…è®¸é‡å¤
  *
- * ×¢Òâ£º²»ÄÜÍ¨¹ıfind½øĞĞĞŞ¸Ä
+ * æ³¨æ„ï¼šä¸èƒ½é€šè¿‡findè¿›è¡Œä¿®æ”¹
  */
 
 int main()
 {
-    /// set²»ÔÊĞíÖØ¸´
+    /// setä¸å…è®¸é‡å¤
 
     set<int> s;
 
@@ -28,7 +28,7 @@ int main()
         cout << *it << " ";
     }
 
-    //²éÕÒ
+    //æŸ¥æ‰¾
     set<int>::iterator find_it = s.find(44);
     if (find_it != s.end()){
         cout << "\nFinded: " << *find_it << endl;
@@ -36,7 +36,7 @@ int main()
         cout << "\nNot Finded!\n";
     }
 
-    /// multisetÔÊĞíÖØ¸´
+    /// multisetå…è®¸é‡å¤
 
     multiset<int> ms;
 
@@ -47,12 +47,12 @@ int main()
     ms.insert(22);
     ms.insert(11);
 
-    cout << "\n\n¹²ÓĞ£º" << ms.count(11) << "¸ö11" << endl;
+    cout << "\n\nå…±æœ‰ï¼š" << ms.count(11) << "ä¸ª11" << endl;
 
-    //É¾³ı
-    cout << "Multiset¹²ÓĞ£º" << ms.size() << endl;
+    //åˆ é™¤
+    cout << "Multisetå…±æœ‰ï¼š" << ms.size() << endl;
     ms.erase(11);
-    cout << "É¾³ı11ºóÊ£ÏÂ£º" << ms.size() << endl;
+    cout << "åˆ é™¤11åå‰©ä¸‹ï¼š" << ms.size() << endl;
 
     return 0;
 }

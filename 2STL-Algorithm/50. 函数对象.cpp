@@ -5,34 +5,34 @@
 
 using namespace std;
 
-/** Ëã·¨
- ** Èı¸öÍ·ÎÄ¼ş£º
- ** <algorithm>  Ëã·¨
- ** <numeric>    ÊıÖµ
- ** <functional> º¯ÊıÊÊÅäÆ÷£¬£¬£¬
+/** ç®—æ³•
+ ** ä¸‰ä¸ªå¤´æ–‡ä»¶ï¼š
+ ** <algorithm>  ç®—æ³•
+ ** <numeric>    æ•°å€¼
+ ** <functional> å‡½æ•°é€‚é…å™¨ï¼Œï¼Œï¼Œ
  */
 
-//º¯Êı¶ÔÏó
+//å‡½æ•°å¯¹è±¡
 class PrintInt{
 
 public :
-    void operator() (int elem) const  { //³ÉÔ±º¯Êı
+    void operator() (int elem) const  { //æˆå‘˜å‡½æ•°
         cout << elem << " ";
     }
 
 };
 
-//º¯Êı
+//å‡½æ•°
 void print(int elem){
     cout << elem << endl;
 }
 
 int main()
 {
-    //set ×Ô¶¯ÅÅĞòµÄ¶ş²æÊ÷
-    //set<int> a;                   //Ê¡ÂÔ¶¨Òå, Ä¬ÈÏ´ÓĞ¡µ½´ó£ºset<int, less<int> > a
-    set<int, greater<int> > a;      //ÍêÕû¶¨Òå, greater´Ó´óµ½Ğ¡
-                                    //greater£ºÔ¤¶¨ÒåµÄº¯Êı¶ÔÏó
+    //set è‡ªåŠ¨æ’åºçš„äºŒå‰æ ‘
+    //set<int> a;                   //çœç•¥å®šä¹‰, é»˜è®¤ä»å°åˆ°å¤§ï¼šset<int, less<int> > a
+    set<int, greater<int> > a;      //å®Œæ•´å®šä¹‰, greaterä»å¤§åˆ°å°
+                                    //greaterï¼šé¢„å®šä¹‰çš„å‡½æ•°å¯¹è±¡
 
     a.insert(13);
     a.insert(21);
@@ -45,17 +45,17 @@ int main()
         cout << *it << " " ;
     }cout << endl;
 
-    /// Ëã·¨
+    /// ç®—æ³•
 
     vector<int> vec;
     for (int i = 1; i < 9; ++i){
         vec.push_back(i*i);
     }
 
-    //Ëã·¨
-    for_each(vec.begin(), vec.end(), print);    //º¯Êı
+    //ç®—æ³•
+    for_each(vec.begin(), vec.end(), print);    //å‡½æ•°
 
-    for_each(vec.begin(), vec.end(), PrintInt() );  //class, µ÷ÓÃoperator·½·¨
+    for_each(vec.begin(), vec.end(), PrintInt() );  //class, è°ƒç”¨operatoræ–¹æ³•
 
 
     return 0;

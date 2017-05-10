@@ -1,15 +1,15 @@
 #include <iostream>
-#include <algorithm>  //¶ÔËùÓĞµÄÈİÆ÷¶¼ÊÇ¿ÉÒÔÊ¹ÓÃµÄ
+#include <algorithm>  //å¯¹æ‰€æœ‰çš„å®¹å™¨éƒ½æ˜¯å¯ä»¥ä½¿ç”¨çš„
 #include <vector>
 #include <functional> //greater
 
 using namespace std;
 
 /*
- * Ëã·¨£ºÔªËØ¼ÆÊı
+ * ç®—æ³•ï¼šå…ƒç´ è®¡æ•°
  */
 
-//Ò»ÔªÎ½´Ê
+//ä¸€å…ƒè°“è¯
 bool isEven(int elem)
 {
     return (elem % 2) == 0;
@@ -29,15 +29,15 @@ int main()
         cout << *it << " " ;
     }cout << endl;
 
-    //count                                       ¹Ì¶¨³£Á¿
+    //count                                       å›ºå®šå¸¸é‡
     cout << "Have " << count(vec.begin(),vec.end(),12) << " \"12\"!\n";
 
-    //count_if                                       Ò»ÔªÎ½´Ê
-    cout << "Have " << count_if(vec.begin(),vec.end(),isEven) << "¸öÅ¼Êı!\n";
-    //                                               ÊÊÅäÆ÷         ÇóÄ£
-    cout << "Have " << count_if(vec.begin(),vec.end(),not1(bind2nd(modulus<int>(),2))) << "ouÊı£¡\n";
-    //                                                º¯Êı¶ÔÏó(Ô¤¶¨Òå)
-    cout << "have " << count_if(vec.begin(),vec.end(),bind2nd(greater<int>(),11)) << "¸ö>11£¡\n";
+    //count_if                                       ä¸€å…ƒè°“è¯
+    cout << "Have " << count_if(vec.begin(),vec.end(),isEven) << "ä¸ªå¶æ•°!\n";
+    //                                               é€‚é…å™¨         æ±‚æ¨¡
+    cout << "Have " << count_if(vec.begin(),vec.end(),not1(bind2nd(modulus<int>(),2))) << "ouæ•°ï¼\n";
+    //                                                å‡½æ•°å¯¹è±¡(é¢„å®šä¹‰)
+    cout << "have " << count_if(vec.begin(),vec.end(),bind2nd(greater<int>(),11)) << "ä¸ª>11ï¼\n";
 
     return 0;
 }

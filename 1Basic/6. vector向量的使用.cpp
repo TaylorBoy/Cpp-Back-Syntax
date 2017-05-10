@@ -1,19 +1,19 @@
 #include <iostream>
 
 /*
-  vectorÊÇÒ»¸ö¶¯Ì¬Êı×é
-        ÊÇÒ»¸öÀàÄ£°å(class template)
+  vectoræ˜¯ä¸€ä¸ªåŠ¨æ€æ•°ç»„
+        æ˜¯ä¸€ä¸ªç±»æ¨¡æ¿(class template)
 */
 #include <vector>
 
-using std::vector;  //ÔÚstdÃû³Æ¿Õ¼ä
+using std::vector;  //åœ¨stdåç§°ç©ºé—´
 
 using namespace std;
 
 int main()
 {
-    vector<int> a;  //±£´æintÀàĞÍÊı¾İµÄÒ»¸öVector£¬aÊÇÒ»¸ö¿ÕµÄÈİÆ÷
-    vector<char> b(10,'t');  //b(10), 10¸ö¿ÕµÄ
+    vector<int> a;  //ä¿å­˜intç±»å‹æ•°æ®çš„ä¸€ä¸ªVectorï¼Œaæ˜¯ä¸€ä¸ªç©ºçš„å®¹å™¨
+    vector<char> b(10,'t');  //b(10), 10ä¸ªç©ºçš„
     a.push_back(4);
     a.push_back(77);
     a.push_back(77);
@@ -22,7 +22,7 @@ int main()
     std::cout << a.size() << std::endl;
     std::cout << b.size() << std::endl;
 		
-	//vectorÊ¹ÓÃvector::size_type×÷ÎªÏÂ±êÀàĞÍ£¬¶øÊı×éÏÂ±êµÄÕıÈ·ÀàĞÍÔòÊÇsize_t
+	//vectorä½¿ç”¨vector::size_typeä½œä¸ºä¸‹æ ‡ç±»å‹ï¼Œè€Œæ•°ç»„ä¸‹æ ‡çš„æ­£ç¡®ç±»å‹åˆ™æ˜¯size_t
     for (vector<char>::size_type i = 0; i < b.size(); ++i){
         std::cout << b[i] << "->";
     }

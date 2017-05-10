@@ -4,23 +4,23 @@
 
 using namespace std;
 
-/*×Ö·û´®Á÷*/
+/*å­—ç¬¦ä¸²æµ*/
 
 int main()
 {
-    //coutÊÇÁ÷¶ÔÏó£¬ostream
+    //coutæ˜¯æµå¯¹è±¡ï¼Œostream
     cout << "Hello cout" << endl;
 
-    //outFileÊÇÎÄ¼şÊä³öÁ÷¶ÔÏó
+    //outFileæ˜¯æ–‡ä»¶è¾“å‡ºæµå¯¹è±¡
     ofstream outFile("text.txt");
     outFile << "Hello ofstream" << endl;
     outFile.close();
 
-    //×Ö·û´®Êä³öÁ÷
+    //å­—ç¬¦ä¸²è¾“å‡ºæµ
     ostringstream outSS;
     outSS << "hello ostringstream!" << endl;
 
-    cout << "ÏÔÊ¾×Ö·û´®Á÷ÀïÃæµÄ×Ö·û´®£º" << outSS.str() << endl;
+    cout << "æ˜¾ç¤ºå­—ç¬¦ä¸²æµé‡Œé¢çš„å­—ç¬¦ä¸²ï¼š" << outSS.str() << endl;
 
     return 0;
 }

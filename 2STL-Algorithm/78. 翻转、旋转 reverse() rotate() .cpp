@@ -13,7 +13,7 @@ int main()
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //reverse(),·´Ïò
+    //reverse(),åå‘
     reverse(vec.begin(),vec.end());
     copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
@@ -24,18 +24,18 @@ int main()
 
     //////////////////////////////////////////////////////////////////////
 
-    cout << "Ğı×ª£º"<< endl;
+    cout << "æ—‹è½¬ï¼š"<< endl;
     reverse_copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    //Ğı×ª£¬rotate
+    //æ—‹è½¬ï¼Œrotate
     //                  *head*
     rotate(vec.begin(),vec.end()-2,vec.end());
 //  rotate(vec.begin(),vec.begin()+2,vec.end());
     reverse_copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 
-    rotate(vec.begin(), find(vec.begin(),vec.end(), 5),vec.end()); //5·Å¿ªÍ·
+    rotate(vec.begin(), find(vec.begin(),vec.end(), 5),vec.end()); //5æ”¾å¼€å¤´
     reverse_copy(vec.begin(),vec.end(), ostream_iterator<int>(cout, " "));
     cout << endl;
 

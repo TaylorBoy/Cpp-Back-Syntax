@@ -6,11 +6,11 @@
 #include <iterator>
 using namespace std;
 
-/* Ìî³äĞÂÖµ
- * ÖØĞÂÌî³ä£ºfill()
- * È«ĞÂÌî³ä£ºfill_n()
- * ÖØĞÂÌî³ä£ºgenerate();
- * È«ĞÂÌî³ä£ºgenerate_n(); ĞèÒªÊ¹ÓÃ²åÈëµü´úÆ÷
+/* å¡«å……æ–°å€¼
+ * é‡æ–°å¡«å……ï¼šfill()
+ * å…¨æ–°å¡«å……ï¼šfill_n()
+ * é‡æ–°å¡«å……ï¼šgenerate();
+ * å…¨æ–°å¡«å……ï¼šgenerate_n(); éœ€è¦ä½¿ç”¨æ’å…¥è¿­ä»£å™¨
  */
 
 int main()
@@ -21,34 +21,34 @@ int main()
     str_list.push_back("hello");
     str_list.push_back("hello");
 
-    //ÖØĞÂÌî³ä(È«²¿)
+    //é‡æ–°å¡«å……(å…¨éƒ¨)
     fill(str_list.begin(),str_list.end(), "Good morning!");
 
     copy(str_list.begin(),str_list.end(), ostream_iterator<string>(cout, " "));
 
     list<string> str_list_2;
 
-    //È«ĞÂÌî³ä£¬ĞèÒªÊ¹ÓÃ²åÈëµü´úÆ÷
+    //å…¨æ–°å¡«å……ï¼Œéœ€è¦ä½¿ç”¨æ’å…¥è¿­ä»£å™¨
     fill_n(back_inserter(str_list_2), 9, "Hello");
     cout << endl;
     copy(str_list_2.begin(),str_list_2.end(), ostream_iterator<string>(cout, " "));
 
-    //Ìî³äµ½Êä³öÁ÷
-    cout << endl << "Ìî³äµ½Êä³öÁ÷£º";
+    //å¡«å……åˆ°è¾“å‡ºæµ
+    cout << endl << "å¡«å……åˆ°è¾“å‡ºæµï¼š";
     fill_n(ostream_iterator<float>(cout, " "), 10, 77.77);
 
-    //ÖØĞÂÌî³ä2
+    //é‡æ–°å¡«å……2
     fill(str_list_2.begin(),str_list_2.end(), "Again");
-    cout << "\n\nÖØĞÂÌî³ästr2£º";
+    cout << "\n\né‡æ–°å¡«å……str2ï¼š";
     copy(str_list_2.begin(),str_list_2.end(), ostream_iterator<string>(cout, " "));
 
-    //Ìî³ä²¿·Ö
+    //å¡«å……éƒ¨åˆ†
     list<string>::iterator pos1,pos2;
     pos1 = str_list_2.begin();
     pos2 = str_list_2.end();
 
     fill(++pos1, --pos2, "XXXXX");
-    cout << "\n\nÖØĞÂÌî³ästr2£º";
+    cout << "\n\né‡æ–°å¡«å……str2ï¼š";
     copy(str_list_2.begin(),str_list_2.end(), ostream_iterator<string>(cout, " "));
 
 
@@ -56,7 +56,7 @@ int main()
 
     list<int> lst;
 
-    generate_n(back_inserter(lst), 5, rand);  //rand Ëæ»úÊı
+    generate_n(back_inserter(lst), 5, rand);  //rand éšæœºæ•°
     copy(lst.begin(),lst.end(), ostream_iterator<int>(cout, " "));
 
 

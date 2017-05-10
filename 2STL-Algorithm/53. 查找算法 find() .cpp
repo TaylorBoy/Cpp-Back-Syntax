@@ -5,7 +5,7 @@
 using namespace std;
 
 /*
- * ²éÕÒËã·¨--find()
+ * æŸ¥æ‰¾ç®—æ³•--find()
  */
 
 int main()
@@ -23,10 +23,10 @@ int main()
         cout << *it << " ";
     }cout << endl;
 
-    list<int>::iterator pos1 = find(iList.begin(), iList.end(), 6); //²éÕÒµÚÒ»¸ö6
-    list<int>::iterator pos2 = find(++pos1, iList.end(), 6); //²éÕÒÏÂÒ»¸ö6
+    list<int>::iterator pos1 = find(iList.begin(), iList.end(), 6); //æŸ¥æ‰¾ç¬¬ä¸€ä¸ª6
+    list<int>::iterator pos2 = find(++pos1, iList.end(), 6); //æŸ¥æ‰¾ä¸‹ä¸€ä¸ª6
 
-    //ÕÒ³öÁ½¸ö6Ö®¼äµÄÔªËØ
+    //æ‰¾å‡ºä¸¤ä¸ª6ä¹‹é—´çš„å…ƒç´ 
     if (pos1 != pos2){
         --pos1;
         ++pos2;

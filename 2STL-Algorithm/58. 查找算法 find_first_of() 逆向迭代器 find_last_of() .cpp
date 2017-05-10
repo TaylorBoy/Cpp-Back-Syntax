@@ -5,7 +5,7 @@
 
 using namespace std;
 
-/* ²éÕÒËã·¨
+/* æŸ¥æ‰¾ç®—æ³•
  *
  * find_first_of()
  *
@@ -14,7 +14,7 @@ using namespace std;
 int main()
 {
     vector<int> vec;
-    list<int> lst;  //ĞèÒª²éÕÒÊı¾İ
+    list<int> lst;  //éœ€è¦æŸ¥æ‰¾æ•°æ®
 
     for (int i = 1; i < 12; ++i)
         vec.push_back(i);
@@ -39,25 +39,25 @@ int main()
 
     }while (vec.end() != pos);
 
-    /// ÄæÏòµü´úÆ÷
+    /// é€†å‘è¿­ä»£å™¨
     vector<int>::reverse_iterator rpos;
     rpos = find_first_of(vec.rbegin(),vec.rend(), lst.begin(),lst.end());
-    cout << "\n\nFound at: " << distance(vec.begin(), rpos.base()) << endl; //base×ªÎªÕıÏòµü´úÆ÷
+    cout << "\n\nFound at: " << distance(vec.begin(), rpos.base()) << endl; //baseè½¬ä¸ºæ­£å‘è¿­ä»£å™¨
 
-    /// ÕÒÈÎÒâÒ»¸ö
+    /// æ‰¾ä»»æ„ä¸€ä¸ª
     string numerics("0123456789");
     string name("vH6K5H");
 
-    //Ç°Ãæ£¬find_first_of()
+    //å‰é¢ï¼Œfind_first_of()
     string::size_type p = name.find_first_of(numerics);
     if (string::npos != p)
-        cout << "\n\nÇ°Ãæ£ºFound at: " << p << endl;
+        cout << "\n\nå‰é¢ï¼šFound at: " << p << endl;
     else
         cout << "\n\nNot Found!";
-    //ºóÃæ£¬find_last_of()
+    //åé¢ï¼Œfind_last_of()
     p = name.find_last_of(numerics);
     if (string::npos != p)
-        cout << "\n\nºóÃæ£ºFound at: " << p << endl;
+        cout << "\n\nåé¢ï¼šFound at: " << p << endl;
     else
         cout << "\n\nNot Found!";
 

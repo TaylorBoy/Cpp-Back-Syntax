@@ -1,29 +1,29 @@
 #include <iostream>
 #include <cstdlib>
 
-/*Êı×é*/
+/*æ•°ç»„*/
 
 using namespace std;
 
 int main()
 {
-    int a[10]; //¾²Ì¬Êı×é£¬¶ÑÕ»ÉÏ´´½¨µÄ£¬´óĞ¡²»ÄÜ¸Ä±ä
+    int a[10]; //é™æ€æ•°ç»„ï¼Œå †æ ˆä¸Šåˆ›å»ºçš„ï¼Œå¤§å°ä¸èƒ½æ”¹å˜
 
     int num;
-    cout << "ÄãÏëÒª¶à´óµÄÊı×é£º" ;
+    cout << "ä½ æƒ³è¦å¤šå¤§çš„æ•°ç»„ï¼š" ;
     cin  >> num;
     int *p = (int *)malloc(num*sizeof(int));
     if (NULL != p)
-        cout << "malloc´´½¨³É¹¦£¡";
+        cout << "mallocåˆ›å»ºæˆåŠŸï¼";
 
-    //¶¯Ì¬´´½¨
-    int *ap = new int[num]();  //()³õÊ¼»¯Îª0
+    //åŠ¨æ€åˆ›å»º
+    int *ap = new int[num]();  //()åˆå§‹åŒ–ä¸º0
 
     for (int *ptr = ap; ptr != ap + num; ++ptr){
         cout << *ptr << ",";
     }
 
-    //ÓĞnew±ØĞëÓĞdelete£¬·ñÔò¿ÉÄÜ»á·¢ÉúÑÏÖØµÄÄÚ´æĞ¹Â©
+    //æœ‰newå¿…é¡»æœ‰deleteï¼Œå¦åˆ™å¯èƒ½ä¼šå‘ç”Ÿä¸¥é‡çš„å†…å­˜æ³„æ¼
     delete[] ap;
 
     return 0;
