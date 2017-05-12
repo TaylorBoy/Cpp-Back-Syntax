@@ -45,6 +45,9 @@ double Account::interest_rate = 0.015;
 ///////////////////////////////////////
 int main()
 {
+    // 类的静态成员变量永远只有一个, 可以直接访问:
+    cout << Account::iterest_rate << endl;
+       
     Account a("doubI", 888);
     Account b("ShzX", 999);
 
