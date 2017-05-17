@@ -70,7 +70,7 @@ String& String::operator++()
 String const String::operator++(int)
 {
     String str_copy(*this);
-    ++(*this);  //借用前++
+    ++(*this);  //借用前++, 所以 后++ 使用的时间比较长
     return str_copy;
 }
 
